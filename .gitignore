@@ -1,0 +1,18 @@
+.env
+node_modules/
+data/private-local-state.json
+data/private-local-state.json.tmp
+data/verse-embeddings-cache.json
+data/selected-source-text.json
+data/gita-research-translations-private.json
+cloud-config.json
+
+# Hosting metadata and local build output
+.openai/
+dist/
+outputs/
+
+# Local package-manager and editor files
+.DS_Store
+Thumbs.db
+
