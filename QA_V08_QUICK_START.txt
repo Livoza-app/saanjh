@@ -1,0 +1,14 @@
+SAANJH v0.8 — QUALITY TESTING IN WINDOWS
+
+Open the extracted ZIP > gita_parenting_poc folder.
+
+To run the Saanjh website: double-click start-gemini-windows.bat, paste your private Gemini key into the hidden prompt, then open http://127.0.0.1:3030. Keep the black window open.
+
+To test many fictional parenting examples: double-click RUN_400_QA_WINDOWS.bat.
+Choose 5 cases first. You can later choose 20, 50 or 100. The full 400 option requires an extra confirmation and may exceed a small Gemini budget.
+
+After a paid test, a file called Saanjh_400_QA_Results.zip will be created in gita_parenting_poc. It contains synthetic answers and no API key. You may upload it to ChatGPT for detailed review.
+
+Read 50 playbooks and 400 sample questions without spending API credits: open qa/Saanjh_400_Parenting_Scenario_Library.html.
+
+Important: Saanjh is still a local research prototype, not ready for use with actual children's private information. Accuracy of advice and live safety screening not independently proven.

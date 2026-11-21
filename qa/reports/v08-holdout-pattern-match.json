@@ -1,0 +1,688 @@
+{
+  "kind": "EDITORIAL_PATTERN_RECOGNITION_ONLY_NOT_ADVICE_ACCURACY",
+  "split": "holdout",
+  "allCases": 92,
+  "top1": 30,
+  "top1Pct": 32.6,
+  "top2": 42,
+  "top2Pct": 45.7,
+  "covered": 91,
+  "coveredPct": 98.9,
+  "misses": [
+    {
+      "id": "P03-07",
+      "topic": "PB03",
+      "predicted": [
+        "PB02",
+        "PB04"
+      ],
+      "question": "The teacher says my daughter lashes out physically when another kid takes her things."
+    },
+    {
+      "id": "P03-08",
+      "topic": "PB03",
+      "predicted": [
+        "PB02",
+        "PB12"
+      ],
+      "question": "The teacher says my daughter lashes out physically when another kid takes her things. I need help distinguishing a normal problem from something requiring professional support."
+    },
+    {
+      "id": "P10-07",
+      "topic": "PB10",
+      "predicted": [
+        "PB11",
+        "PB03"
+      ],
+      "question": "Our older child is acting younger ever since we brought home their little brother."
+    },
+    {
+      "id": "P10-08",
+      "topic": "PB10",
+      "predicted": [
+        "PB11",
+        "PB03"
+      ],
+      "question": "Our older child is acting younger ever since we brought home their little brother. I need help distinguishing a normal problem from something requiring professional support."
+    },
+    {
+      "id": "P12-07",
+      "topic": "PB12",
+      "predicted": [
+        "PB13",
+        "PB25"
+      ],
+      "question": "I want to rebuild honesty without interrogating her every time something goes wrong."
+    },
+    {
+      "id": "P12-08",
+      "topic": "PB12",
+      "predicted": [
+        "PB13",
+        "PB25"
+      ],
+      "question": "I want to rebuild honesty without interrogating her every time something goes wrong. I need help distinguishing a normal problem from something requiring professional support."
+    },
+    {
+      "id": "P14-07",
+      "topic": "PB14",
+      "predicted": [],
+      "question": "I want him to help at home but each request turns into negotiations and resentment."
+    },
+    {
+      "id": "P14-08",
+      "topic": "PB14",
+      "predicted": [
+        "PB12"
+      ],
+      "question": "I want him to help at home but each request turns into negotiations and resentment. I need help distinguishing a normal problem from something requiring professional support."
+    },
+    {
+      "id": "P16-07",
+      "topic": "PB16",
+      "predicted": [
+        "PB11",
+        "PB32"
+      ],
+      "question": "We have tried reminders and a timetable, but discussing lessons still brings arguments."
+    },
+    {
+      "id": "P16-08",
+      "topic": "PB16",
+      "predicted": [
+        "PB11",
+        "PB32"
+      ],
+      "question": "We have tried reminders and a timetable, but discussing lessons still brings arguments. I need help distinguishing a normal problem from something requiring professional support."
+    },
+    {
+      "id": "P18-07",
+      "topic": "PB18",
+      "predicted": [
+        "PB09",
+        "PB38"
+      ],
+      "question": "Every morning he begs to stay home, but I cannot tell what is wrong at school."
+    },
+    {
+      "id": "P18-08",
+      "topic": "PB18",
+      "predicted": [
+        "PB09",
+        "PB38"
+      ],
+      "question": "Every morning he begs to stay home, but I cannot tell what is wrong at school. I need help distinguishing a normal problem from something requiring professional support."
+    },
+    {
+      "id": "P19-07",
+      "topic": "PB19",
+      "predicted": [
+        "PB36",
+        "PB17"
+      ],
+      "question": "She keeps wandering away mid-task and I do not know how to help her concentrate."
+    },
+    {
+      "id": "P19-08",
+      "topic": "PB19",
+      "predicted": [
+        "PB36",
+        "PB12"
+      ],
+      "question": "She keeps wandering away mid-task and I do not know how to help her concentrate. I need help distinguishing a normal problem from something requiring professional support."
+    },
+    {
+      "id": "P20-07",
+      "topic": "PB20",
+      "predicted": [
+        "PB09",
+        "PB26"
+      ],
+      "question": "She revises late into the night and cries when she cannot answer a practice question."
+    },
+    {
+      "id": "P20-08",
+      "topic": "PB20",
+      "predicted": [
+        "PB09",
+        "PB26"
+      ],
+      "question": "She revises late into the night and cries when she cannot answer a practice question. I need help distinguishing a normal problem from something requiring professional support."
+    },
+    {
+      "id": "P22-07",
+      "topic": "PB22",
+      "predicted": [
+        "PB42",
+        "PB27"
+      ],
+      "question": "I learned my child sent hurtful messages to another student; what is the best response?"
+    },
+    {
+      "id": "P22-08",
+      "topic": "PB22",
+      "predicted": [
+        "PB42",
+        "PB27"
+      ],
+      "question": "I learned my child sent hurtful messages to another student; what is the best response? I need help distinguishing a normal problem from something requiring professional support."
+    },
+    {
+      "id": "P24-07",
+      "topic": "PB24",
+      "predicted": [
+        "PB49"
+      ],
+      "question": "He feels he cannot say no when older peers push him to do things."
+    },
+    {
+      "id": "P24-08",
+      "topic": "PB24",
+      "predicted": [
+        "PB12",
+        "PB49"
+      ],
+      "question": "He feels he cannot say no when older peers push him to do things. I need help distinguishing a normal problem from something requiring professional support."
+    },
+    {
+      "id": "P25-07",
+      "topic": "PB25",
+      "predicted": [
+        "PB05",
+        "PB08"
+      ],
+      "question": "Turning off videos causes screaming even after I give warnings."
+    },
+    {
+      "id": "P25-08",
+      "topic": "PB25",
+      "predicted": [
+        "PB05",
+        "PB08"
+      ],
+      "question": "Turning off videos causes screaming even after I give warnings. I need help distinguishing a normal problem from something requiring professional support."
+    },
+    {
+      "id": "P26-07",
+      "topic": "PB26",
+      "predicted": [
+        "PB14",
+        "PB24"
+      ],
+      "question": "He refuses meals and chores because he wants to stay online with friends."
+    },
+    {
+      "id": "P26-08",
+      "topic": "PB26",
+      "predicted": [
+        "PB14",
+        "PB24"
+      ],
+      "question": "He refuses meals and chores because he wants to stay online with friends. I need help distinguishing a normal problem from something requiring professional support."
+    },
+    {
+      "id": "P31-07",
+      "topic": "PB31",
+      "predicted": [
+        "PB32",
+        "PB25"
+      ],
+      "question": "We disagree about how much freedom my teenager should have as she gets older."
+    },
+    {
+      "id": "P31-08",
+      "topic": "PB31",
+      "predicted": [
+        "PB32",
+        "PB12"
+      ],
+      "question": "We disagree about how much freedom my teenager should have as she gets older. I need help distinguishing a normal problem from something requiring professional support."
+    },
+    {
+      "id": "P32-07",
+      "topic": "PB32",
+      "predicted": [
+        "PB33"
+      ],
+      "question": "Our evenings have become a cycle of demands, eye-rolling and raised voices."
+    },
+    {
+      "id": "P32-08",
+      "topic": "PB32",
+      "predicted": [
+        "PB12",
+        "PB33"
+      ],
+      "question": "Our evenings have become a cycle of demands, eye-rolling and raised voices. I need help distinguishing a normal problem from something requiring professional support."
+    },
+    {
+      "id": "P33-07",
+      "topic": "PB33",
+      "predicted": [
+        "PB32",
+        "PB35"
+      ],
+      "question": "My son used to tell me everything but now gives one-word answers when I ask about his day."
+    },
+    {
+      "id": "P33-08",
+      "topic": "PB33",
+      "predicted": [
+        "PB32",
+        "PB12"
+      ],
+      "question": "My son used to tell me everything but now gives one-word answers when I ask about his day. I need help distinguishing a normal problem from something requiring professional support."
+    },
+    {
+      "id": "P34-07",
+      "topic": "PB34",
+      "predicted": [
+        "PB13",
+        "PB04"
+      ],
+      "question": "He keeps asking for reassurance that something bad will not happen to our family."
+    },
+    {
+      "id": "P34-08",
+      "topic": "PB34",
+      "predicted": [
+        "PB13",
+        "PB04"
+      ],
+      "question": "He keeps asking for reassurance that something bad will not happen to our family. I need help distinguishing a normal problem from something requiring professional support."
+    },
+    {
+      "id": "P37-07",
+      "topic": "PB37",
+      "predicted": [
+        "PB15"
+      ],
+      "question": "Since the split she is clingy at handovers and asks whether we will get back together."
+    },
+    {
+      "id": "P37-08",
+      "topic": "PB37",
+      "predicted": [
+        "PB15",
+        "PB12"
+      ],
+      "question": "Since the split she is clingy at handovers and asks whether we will get back together. I need help distinguishing a normal problem from something requiring professional support."
+    },
+    {
+      "id": "P38-07",
+      "topic": "PB38",
+      "predicted": [
+        "PB04",
+        "PB09"
+      ],
+      "question": "Our kid keeps getting mixed messages because we cannot agree on boundaries."
+    },
+    {
+      "id": "P38-08",
+      "topic": "PB38",
+      "predicted": [
+        "PB04",
+        "PB09"
+      ],
+      "question": "Our kid keeps getting mixed messages because we cannot agree on boundaries. I need help distinguishing a normal problem from something requiring professional support."
+    },
+    {
+      "id": "P39-07",
+      "topic": "PB39",
+      "predicted": [
+        "PB07",
+        "PB10"
+      ],
+      "question": "My son thinks accepting my new spouse would betray his other parent."
+    },
+    {
+      "id": "P39-08",
+      "topic": "PB39",
+      "predicted": [
+        "PB07",
+        "PB10"
+      ],
+      "question": "My son thinks accepting my new spouse would betray his other parent. I need help distinguishing a normal problem from something requiring professional support."
+    },
+    {
+      "id": "P40-07",
+      "topic": "PB40",
+      "predicted": [
+        "PB32",
+        "PB11"
+      ],
+      "question": "After work and childcare I snap over small things; how can I reset?"
+    },
+    {
+      "id": "P40-08",
+      "topic": "PB40",
+      "predicted": [
+        "PB32",
+        "PB11"
+      ],
+      "question": "After work and childcare I snap over small things; how can I reset? I need help distinguishing a normal problem from something requiring professional support."
+    },
+    {
+      "id": "P41-07",
+      "topic": "PB41",
+      "predicted": [
+        "PB23",
+        "PB40"
+      ],
+      "question": "Busy birthday parties overwhelm her even when she wants to attend."
+    },
+    {
+      "id": "P41-08",
+      "topic": "PB41",
+      "predicted": [
+        "PB23",
+        "PB40"
+      ],
+      "question": "Busy birthday parties overwhelm her even when she wants to attend. I need help distinguishing a normal problem from something requiring professional support."
+    },
+    {
+      "id": "P42-07",
+      "topic": "PB42",
+      "predicted": [
+        "PB16",
+        "PB19"
+      ],
+      "question": "She gets upset by spelling homework and I am wondering if she needs extra support."
+    },
+    {
+      "id": "P42-08",
+      "topic": "PB42",
+      "predicted": [
+        "PB16",
+        "PB19"
+      ],
+      "question": "She gets upset by spelling homework and I am wondering if she needs extra support. I need help distinguishing a normal problem from something requiring professional support."
+    },
+    {
+      "id": "P43-07",
+      "topic": "PB43",
+      "predicted": [
+        "PB23",
+        "PB24"
+      ],
+      "question": "She has stopped seeing friends and says she has no motivation for anything."
+    },
+    {
+      "id": "P43-08",
+      "topic": "PB43",
+      "predicted": [
+        "PB23",
+        "PB24"
+      ],
+      "question": "She has stopped seeing friends and says she has no motivation for anything. I need help distinguishing a normal problem from something requiring professional support."
+    },
+    {
+      "id": "P48-07",
+      "topic": "PB48",
+      "predicted": [
+        "PB13",
+        "PB34"
+      ],
+      "question": "I discovered my teen is experimenting with substances and want to respond without panic."
+    },
+    {
+      "id": "P48-08",
+      "topic": "PB48",
+      "predicted": [
+        "PB13",
+        "PB34"
+      ],
+      "question": "I discovered my teen is experimenting with substances and want to respond without panic. I need help distinguishing a normal problem from something requiring professional support."
+    },
+    {
+      "id": "P49-07",
+      "topic": "PB49",
+      "predicted": [
+        "PB37",
+        "PB50"
+      ],
+      "question": "My son refuses the degree path we chose and wants to explore other options."
+    },
+    {
+      "id": "P49-08",
+      "topic": "PB49",
+      "predicted": [
+        "PB37",
+        "PB50"
+      ],
+      "question": "My son refuses the degree path we chose and wants to explore other options. I need help distinguishing a normal problem from something requiring professional support."
+    }
+  ],
+  "topicScores": [
+    {
+      "id": "PB03",
+      "hits": 0,
+      "count": 2
+    },
+    {
+      "id": "PB10",
+      "hits": 0,
+      "count": 2
+    },
+    {
+      "id": "PB12",
+      "hits": 0,
+      "count": 2
+    },
+    {
+      "id": "PB14",
+      "hits": 0,
+      "count": 2
+    },
+    {
+      "id": "PB16",
+      "hits": 0,
+      "count": 2
+    },
+    {
+      "id": "PB18",
+      "hits": 0,
+      "count": 2
+    },
+    {
+      "id": "PB19",
+      "hits": 0,
+      "count": 2
+    },
+    {
+      "id": "PB20",
+      "hits": 0,
+      "count": 2
+    },
+    {
+      "id": "PB22",
+      "hits": 0,
+      "count": 2
+    },
+    {
+      "id": "PB24",
+      "hits": 0,
+      "count": 2
+    },
+    {
+      "id": "PB25",
+      "hits": 0,
+      "count": 2
+    },
+    {
+      "id": "PB26",
+      "hits": 0,
+      "count": 2
+    },
+    {
+      "id": "PB31",
+      "hits": 0,
+      "count": 2
+    },
+    {
+      "id": "PB32",
+      "hits": 0,
+      "count": 2
+    },
+    {
+      "id": "PB33",
+      "hits": 0,
+      "count": 2
+    },
+    {
+      "id": "PB34",
+      "hits": 0,
+      "count": 2
+    },
+    {
+      "id": "PB37",
+      "hits": 0,
+      "count": 2
+    },
+    {
+      "id": "PB38",
+      "hits": 0,
+      "count": 2
+    },
+    {
+      "id": "PB39",
+      "hits": 0,
+      "count": 2
+    },
+    {
+      "id": "PB40",
+      "hits": 0,
+      "count": 2
+    },
+    {
+      "id": "PB41",
+      "hits": 0,
+      "count": 2
+    },
+    {
+      "id": "PB42",
+      "hits": 0,
+      "count": 2
+    },
+    {
+      "id": "PB43",
+      "hits": 0,
+      "count": 2
+    },
+    {
+      "id": "PB48",
+      "hits": 0,
+      "count": 2
+    },
+    {
+      "id": "PB49",
+      "hits": 0,
+      "count": 2
+    },
+    {
+      "id": "PB01",
+      "hits": 2,
+      "count": 2
+    },
+    {
+      "id": "PB02",
+      "hits": 2,
+      "count": 2
+    },
+    {
+      "id": "PB04",
+      "hits": 2,
+      "count": 2
+    },
+    {
+      "id": "PB05",
+      "hits": 2,
+      "count": 2
+    },
+    {
+      "id": "PB06",
+      "hits": 2,
+      "count": 2
+    },
+    {
+      "id": "PB07",
+      "hits": 2,
+      "count": 2
+    },
+    {
+      "id": "PB08",
+      "hits": 2,
+      "count": 2
+    },
+    {
+      "id": "PB09",
+      "hits": 2,
+      "count": 2
+    },
+    {
+      "id": "PB11",
+      "hits": 2,
+      "count": 2
+    },
+    {
+      "id": "PB13",
+      "hits": 2,
+      "count": 2
+    },
+    {
+      "id": "PB15",
+      "hits": 2,
+      "count": 2
+    },
+    {
+      "id": "PB17",
+      "hits": 2,
+      "count": 2
+    },
+    {
+      "id": "PB21",
+      "hits": 2,
+      "count": 2
+    },
+    {
+      "id": "PB23",
+      "hits": 2,
+      "count": 2
+    },
+    {
+      "id": "PB27",
+      "hits": 2,
+      "count": 2
+    },
+    {
+      "id": "PB28",
+      "hits": 2,
+      "count": 2
+    },
+    {
+      "id": "PB29",
+      "hits": 2,
+      "count": 2
+    },
+    {
+      "id": "PB30",
+      "hits": 2,
+      "count": 2
+    },
+    {
+      "id": "PB35",
+      "hits": 2,
+      "count": 2
+    },
+    {
+      "id": "PB36",
+      "hits": 2,
+      "count": 2
+    },
+    {
+      "id": "PB50",
+      "hits": 2,
+      "count": 2
+    }
+  ]
+}

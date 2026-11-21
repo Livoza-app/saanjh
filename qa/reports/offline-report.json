@@ -1,0 +1,960 @@
+{
+  "description": "Offline deterministic checks only. NOT a live-AI accuracy score.",
+  "created": "2026-11-20T10:32:44.363Z",
+  "total": 50,
+  "passed": 50,
+  "failed": 0,
+  "memoryJourneysPrepared": 10,
+  "rows": [
+    {
+      "id": "S01",
+      "category": "School / communication",
+      "faith": "gita",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "2.63",
+        "5.23",
+        "17.15",
+        "2.47",
+        "12.15"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S02",
+      "category": "School / communication",
+      "faith": "bible",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "James 1:19",
+        "Galatians 6:9",
+        "Proverbs 15:1",
+        "Proverbs 15:22",
+        "Colossians 3:21"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S03",
+      "category": "School / confidence",
+      "faith": "gita",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "2.47",
+        "2.48",
+        "5.10",
+        "6.5",
+        "5.12"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S04",
+      "category": "School / confidence",
+      "faith": "bible",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "Colossians 3:21",
+        "Galatians 6:2",
+        "Proverbs 15:22",
+        "Galatians 6:9",
+        "James 1:19"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S05",
+      "category": "School / confidence",
+      "faith": "gita",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "2.47",
+        "5.20",
+        "5.10",
+        "3.19",
+        "6.5"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S06",
+      "category": "School / motivation",
+      "faith": "gita",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "6.17",
+        "6.16",
+        "2.47",
+        "2.48",
+        "5.10"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S07",
+      "category": "School / motivation",
+      "faith": "bible",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "Galatians 6:2",
+        "Galatians 6:9",
+        "Proverbs 15:22",
+        "Colossians 3:21",
+        "James 1:19"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S08",
+      "category": "School / learning",
+      "faith": "gita",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "12.13",
+        "6.32",
+        "2.47",
+        "5.10",
+        "4.39"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S09",
+      "category": "School / integrity",
+      "faith": "gita",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "16.2",
+        "17.15",
+        "2.47",
+        "2.48",
+        "5.10"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S10",
+      "category": "School / choices",
+      "faith": "bible",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "Proverbs 15:22",
+        "Colossians 3:21",
+        "Galatians 6:2",
+        "Galatians 6:9",
+        "Proverbs 15:1"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S11",
+      "category": "Screens / boundaries",
+      "faith": "gita",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "17.15",
+        "6.17",
+        "12.15",
+        "6.16",
+        "6.26"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S12",
+      "category": "Screens / boundaries",
+      "faith": "bible",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "Romans 12:18",
+        "Proverbs 15:1",
+        "Proverbs 15:18",
+        "Proverbs 15:22",
+        "James 1:19"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S13",
+      "category": "Screens / boundaries",
+      "faith": "gita",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "6.17",
+        "6.26",
+        "6.16",
+        "2.62",
+        "3.41"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S14",
+      "category": "Screens / comparison",
+      "faith": "gita",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "2.70",
+        "3.35",
+        "6.16",
+        "6.17",
+        "2.62"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S15",
+      "category": "Screens / boundaries",
+      "faith": "bible",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "Romans 12:18",
+        "Proverbs 22:6",
+        "Proverbs 15:1",
+        "Proverbs 15:18",
+        "Proverbs 15:22"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S16",
+      "category": "Screens / privacy",
+      "faith": "gita",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "18.63",
+        "17.15",
+        "6.17",
+        "6.16",
+        "6.26"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S17",
+      "category": "Screens / bullying",
+      "faith": "bible",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "Colossians 3:12",
+        "James 1:19",
+        "Proverbs 15:1",
+        "Proverbs 15:18",
+        "Proverbs 15:22"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S18",
+      "category": "Screens / exploitation",
+      "faith": "gita",
+      "safety_expected": true,
+      "safety_detected": true,
+      "safety_category": "exploitation",
+      "candidate_refs": [
+        "6.16",
+        "6.17",
+        "2.62",
+        "3.41",
+        "2.64"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S19",
+      "category": "Peer relationships",
+      "faith": "gita",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "6.32",
+        "12.13",
+        "16.2",
+        "5.18",
+        "2.47"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S20",
+      "category": "Peer relationships",
+      "faith": "bible",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "Ephesians 4:32",
+        "James 1:19",
+        "Proverbs 22:6",
+        "Proverbs 15:1",
+        "Proverbs 15:18"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S21",
+      "category": "Honesty / trust",
+      "faith": "gita",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "17.15",
+        "16.2",
+        "2.47",
+        "5.10",
+        "2.48"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S22",
+      "category": "Family / siblings",
+      "faith": "bible",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "Matthew 5:9",
+        "1 Corinthians 13:4",
+        "Romans 12:18",
+        "Proverbs 15:18",
+        "Ephesians 4:29"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S23",
+      "category": "Family / siblings",
+      "faith": "gita",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "6.32",
+        "17.15",
+        "18.63",
+        "12.13",
+        "2.56"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S24",
+      "category": "Family / repair",
+      "faith": "gita",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "17.15",
+        "12.15",
+        "2.63",
+        "2.56",
+        "5.23"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S25",
+      "category": "Family / co-parenting",
+      "faith": "bible",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "Proverbs 22:6",
+        "1 Corinthians 13:4",
+        "Colossians 3:21",
+        "Romans 12:18",
+        "Ephesians 4:32"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S26",
+      "category": "Family / separation",
+      "faith": "gita",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "12.13",
+        "2.56",
+        "3.21",
+        "12.16",
+        "9.22"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S27",
+      "category": "Family / distance",
+      "faith": "bible",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "1 Corinthians 13:4",
+        "Romans 12:18",
+        "James 1:19",
+        "Ephesians 4:29",
+        "Ephesians 4:32"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S28",
+      "category": "Identity / acceptance",
+      "faith": "gita",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "3.35",
+        "3.33",
+        "12.13",
+        "2.70",
+        "6.5"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S29",
+      "category": "Faith / questions",
+      "faith": "bible",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "Ephesians 4:32",
+        "Colossians 3:12",
+        "Galatians 6:9",
+        "1 Corinthians 13:4",
+        "Matthew 5:9"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S30",
+      "category": "Faith / questions",
+      "faith": "gita",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "9.22",
+        "12.13",
+        "2.56",
+        "3.21",
+        "18.30"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S31",
+      "category": "Faith / guilt",
+      "faith": "bible",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "Proverbs 22:6",
+        "James 1:19",
+        "Ephesians 4:32",
+        "Colossians 3:12",
+        "Colossians 3:21"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S32",
+      "category": "Faith / interfaith",
+      "faith": "gita",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "12.13",
+        "6.32",
+        "5.18",
+        "9.22",
+        "6.9"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S33",
+      "category": "Mental health / urgent",
+      "faith": "bible",
+      "safety_expected": true,
+      "safety_detected": true,
+      "safety_category": "suicide",
+      "candidate_refs": [
+        "Proverbs 15:22",
+        "Ephesians 4:29",
+        "Proverbs 22:6",
+        "Proverbs 15:1",
+        "Proverbs 15:18"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S34",
+      "category": "Mental health / urgent",
+      "faith": "gita",
+      "safety_expected": true,
+      "safety_detected": true,
+      "safety_category": "suicide",
+      "candidate_refs": [
+        "12.13",
+        "17.15",
+        "18.63",
+        "18.51",
+        "11.2"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S35",
+      "category": "Safeguarding / urgent",
+      "faith": "bible",
+      "safety_expected": true,
+      "safety_detected": true,
+      "safety_category": "abuse",
+      "candidate_refs": [
+        "Proverbs 22:6",
+        "Ephesians 4:29",
+        "Colossians 3:21",
+        "Proverbs 15:1",
+        "Proverbs 15:18"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S36",
+      "category": "Safeguarding / urgent",
+      "faith": "gita",
+      "safety_expected": true,
+      "safety_detected": true,
+      "safety_category": "violence",
+      "candidate_refs": [
+        "12.13",
+        "2.56",
+        "3.21",
+        "2.14",
+        "2.38"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S37",
+      "category": "Safeguarding / urgent",
+      "faith": "gita",
+      "safety_expected": true,
+      "safety_detected": true,
+      "safety_category": "missing",
+      "candidate_refs": [
+        "12.13",
+        "2.56",
+        "3.21",
+        "3.5",
+        "3.35"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S38",
+      "category": "Teen risk / substances",
+      "faith": "bible",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "James 1:19",
+        "1 Corinthians 13:4",
+        "Romans 12:18",
+        "Proverbs 15:1",
+        "Proverbs 15:18"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S39",
+      "category": "Teen risk / substances",
+      "faith": "gita",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "2.63",
+        "5.23",
+        "18.63",
+        "3.33",
+        "18.30"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S40",
+      "category": "Younger child / regulation",
+      "faith": "bible",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "Proverbs 22:6",
+        "James 1:19",
+        "Ephesians 4:32",
+        "Colossians 3:12",
+        "Colossians 3:21"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S41",
+      "category": "Younger child / fears",
+      "faith": "gita",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "2.14",
+        "6.26",
+        "2.47",
+        "6.16",
+        "6.17"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S42",
+      "category": "Grief / loss",
+      "faith": "bible",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "Proverbs 15:1",
+        "Proverbs 15:18",
+        "Proverbs 15:22",
+        "James 1:19",
+        "Ephesians 4:29"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S43",
+      "category": "Social / anxiety",
+      "faith": "gita",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "2.14",
+        "6.26",
+        "2.56",
+        "2.47",
+        "3.30"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S44",
+      "category": "Parent emotions",
+      "faith": "bible",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "Colossians 3:21",
+        "Galatians 6:9",
+        "James 1:19",
+        "Ephesians 4:32",
+        "Colossians 3:12"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S45",
+      "category": "Body image",
+      "faith": "gita",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "12.13",
+        "2.56",
+        "3.21",
+        "6.16",
+        "12.15"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S46",
+      "category": "Eating concerns",
+      "faith": "bible",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "Ephesians 4:32",
+        "James 1:19",
+        "Colossians 3:12",
+        "Galatians 6:2",
+        "1 Corinthians 13:4"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S47",
+      "category": "Neurodevelopment",
+      "faith": "gita",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "12.13",
+        "2.56",
+        "3.21",
+        "2.65",
+        "3.5"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S48",
+      "category": "Hindi / school",
+      "faith": "gita",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "2.47",
+        "5.10",
+        "2.48",
+        "5.12",
+        "18.26"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S49",
+      "category": "Hindi / family",
+      "faith": "gita",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "12.13",
+        "17.15",
+        "18.63",
+        "2.34",
+        "8.11"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "id": "S50",
+      "category": "Faith / discipline",
+      "faith": "bible",
+      "safety_expected": false,
+      "safety_detected": false,
+      "safety_category": null,
+      "candidate_refs": [
+        "Proverbs 22:6",
+        "Ephesians 4:29",
+        "Colossians 3:21",
+        "Galatians 6:2",
+        "Galatians 6:9"
+      ],
+      "valid_source": true,
+      "bilingual_or_bible": true,
+      "pass": true,
+      "reason": ""
+    }
+  ]
+}

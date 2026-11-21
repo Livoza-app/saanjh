@@ -1,0 +1,544 @@
+{
+  "evaluated": 30,
+  "retrieval_expected_in_top5": 21,
+  "retrieval_recall_at_5": 0.7,
+  "safety_match_count": 30,
+  "disclaimer": "Expected references are editorial hypotheses, not an expert-validated ground-truth dataset. Recall@5 does not measure verse-meaning accuracy or advice safety.",
+  "rows": [
+    {
+      "id": "S01",
+      "topic": "Homework arguments",
+      "expected": [
+        "2.47",
+        "17.15"
+      ],
+      "top5": [
+        "2.47",
+        "2.63",
+        "5.23",
+        "5.10",
+        "12.15"
+      ],
+      "hit_expected_top5": true,
+      "expected_safety": false,
+      "safety_detected": false
+    },
+    {
+      "id": "S02",
+      "topic": "Exam anxiety",
+      "expected": [
+        "2.47",
+        "2.48"
+      ],
+      "top5": [
+        "2.47",
+        "5.12",
+        "2.56",
+        "5.10",
+        "2.48"
+      ],
+      "hit_expected_top5": true,
+      "expected_safety": false,
+      "safety_detected": false
+    },
+    {
+      "id": "S03",
+      "topic": "Phone use",
+      "expected": [
+        "6.17",
+        "6.16"
+      ],
+      "top5": [
+        "2.47",
+        "5.10",
+        "6.16",
+        "6.17",
+        "2.48"
+      ],
+      "hit_expected_top5": true,
+      "expected_safety": false,
+      "safety_detected": false
+    },
+    {
+      "id": "S04",
+      "topic": "Disrespect",
+      "expected": [
+        "17.15",
+        "12.15"
+      ],
+      "top5": [
+        "12.13",
+        "17.15",
+        "18.63"
+      ],
+      "hit_expected_top5": true,
+      "expected_safety": false,
+      "safety_detected": false
+    },
+    {
+      "id": "S05",
+      "topic": "Sibling comparisons",
+      "expected": [
+        "3.35",
+        "5.18"
+      ],
+      "top5": [
+        "3.35",
+        "2.70",
+        "3.33",
+        "6.5",
+        "12.16"
+      ],
+      "hit_expected_top5": true,
+      "expected_safety": false,
+      "safety_detected": false
+    },
+    {
+      "id": "S06",
+      "topic": "Peer pressure",
+      "expected": [
+        "18.30",
+        "3.21"
+      ],
+      "top5": [
+        "18.63",
+        "18.30",
+        "12.13",
+        "5.18",
+        "6.32"
+      ],
+      "hit_expected_top5": true,
+      "expected_safety": false,
+      "safety_detected": false
+    },
+    {
+      "id": "S07",
+      "topic": "Friendship rejection",
+      "expected": [
+        "12.13",
+        "6.32"
+      ],
+      "top5": [
+        "12.13",
+        "2.56",
+        "3.21",
+        "5.18",
+        "2.14"
+      ],
+      "hit_expected_top5": true,
+      "expected_safety": false,
+      "safety_detected": false
+    },
+    {
+      "id": "S08",
+      "topic": "Bullying",
+      "expected": [
+        "16.2",
+        "6.32"
+      ],
+      "top5": [
+        "2.47",
+        "5.10",
+        "2.48",
+        "5.12",
+        "5.18"
+      ],
+      "hit_expected_top5": false,
+      "expected_safety": false,
+      "safety_detected": false
+    },
+    {
+      "id": "S09",
+      "topic": "Child lying",
+      "expected": [
+        "16.2",
+        "17.15"
+      ],
+      "top5": [
+        "2.47",
+        "5.10",
+        "2.48",
+        "5.12",
+        "18.26"
+      ],
+      "hit_expected_top5": false,
+      "expected_safety": false,
+      "safety_detected": false
+    },
+    {
+      "id": "S10",
+      "topic": "Emotional distance",
+      "expected": [
+        "6.32",
+        "12.13"
+      ],
+      "top5": [
+        "18.63",
+        "6.32",
+        "17.15",
+        "9.22",
+        "12.13"
+      ],
+      "hit_expected_top5": true,
+      "expected_safety": false,
+      "safety_detected": false
+    },
+    {
+      "id": "S11",
+      "topic": "Parent anger",
+      "expected": [
+        "2.63",
+        "5.23"
+      ],
+      "top5": [
+        "2.63",
+        "5.23",
+        "12.15",
+        "17.15",
+        "2.56"
+      ],
+      "hit_expected_top5": true,
+      "expected_safety": false,
+      "safety_detected": false
+    },
+    {
+      "id": "S12",
+      "topic": "Child anxious",
+      "expected": [
+        "2.14",
+        "6.26"
+      ],
+      "top5": [
+        "2.56",
+        "4.42",
+        "5.12",
+        "9.22",
+        "12.13"
+      ],
+      "hit_expected_top5": false,
+      "expected_safety": false,
+      "safety_detected": false
+    },
+    {
+      "id": "S13",
+      "topic": "Perfectionism",
+      "expected": [
+        "2.47",
+        "5.20"
+      ],
+      "top5": [
+        "12.13",
+        "2.56",
+        "3.21",
+        "2.14",
+        "2.38"
+      ],
+      "hit_expected_top5": false,
+      "expected_safety": false,
+      "safety_detected": false
+    },
+    {
+      "id": "S14",
+      "topic": "Screen distraction",
+      "expected": [
+        "6.26",
+        "6.35"
+      ],
+      "top5": [
+        "2.47",
+        "5.10",
+        "6.26",
+        "2.48",
+        "3.41"
+      ],
+      "hit_expected_top5": true,
+      "expected_safety": false,
+      "safety_detected": false
+    },
+    {
+      "id": "S15",
+      "topic": "Different interests",
+      "expected": [
+        "3.35",
+        "18.63"
+      ],
+      "top5": [
+        "4.39",
+        "12.13",
+        "2.56",
+        "3.21",
+        "4.38"
+      ],
+      "hit_expected_top5": false,
+      "expected_safety": false,
+      "safety_detected": false
+    },
+    {
+      "id": "S16",
+      "topic": "Defiance",
+      "expected": [
+        "18.63",
+        "17.15"
+      ],
+      "top5": [
+        "12.13",
+        "16.2",
+        "5.18",
+        "5.20",
+        "6.32"
+      ],
+      "hit_expected_top5": false,
+      "expected_safety": false,
+      "safety_detected": false
+    },
+    {
+      "id": "S17",
+      "topic": "School refusal",
+      "expected": [
+        "6.32",
+        "12.13"
+      ],
+      "top5": [
+        "2.47",
+        "5.10",
+        "2.48",
+        "5.12",
+        "18.26"
+      ],
+      "hit_expected_top5": false,
+      "expected_safety": false,
+      "safety_detected": false
+    },
+    {
+      "id": "S18",
+      "topic": "Hurtful words",
+      "expected": [
+        "17.15",
+        "12.13"
+      ],
+      "top5": [
+        "12.13",
+        "2.56",
+        "3.21",
+        "2.14",
+        "2.38"
+      ],
+      "hit_expected_top5": true,
+      "expected_safety": false,
+      "safety_detected": false
+    },
+    {
+      "id": "S19",
+      "topic": "Teen independence",
+      "expected": [
+        "18.63",
+        "3.33"
+      ],
+      "top5": [
+        "18.63",
+        "18.30",
+        "3.33",
+        "4.42",
+        "12.13"
+      ],
+      "hit_expected_top5": true,
+      "expected_safety": false,
+      "safety_detected": false
+    },
+    {
+      "id": "S20",
+      "topic": "Sibling fights",
+      "expected": [
+        "12.15",
+        "16.3"
+      ],
+      "top5": [
+        "2.63",
+        "17.15",
+        "5.23",
+        "12.15",
+        "6.35"
+      ],
+      "hit_expected_top5": true,
+      "expected_safety": false,
+      "safety_detected": false
+    },
+    {
+      "id": "S21",
+      "topic": "Lack of motivation",
+      "expected": [
+        "6.5",
+        "2.47"
+      ],
+      "top5": [
+        "6.5",
+        "12.13",
+        "2.56",
+        "3.21",
+        "4.42"
+      ],
+      "hit_expected_top5": true,
+      "expected_safety": false,
+      "safety_detected": false
+    },
+    {
+      "id": "S22",
+      "topic": "Grief",
+      "expected": [
+        "2.14",
+        "12.13"
+      ],
+      "top5": [
+        "12.13",
+        "2.56",
+        "3.21",
+        "12.17",
+        "2.14"
+      ],
+      "hit_expected_top5": true,
+      "expected_safety": false,
+      "safety_detected": false
+    },
+    {
+      "id": "S23",
+      "topic": "Extracurricular stress",
+      "expected": [
+        "6.17",
+        "6.16"
+      ],
+      "top5": [
+        "6.16",
+        "6.17",
+        "12.13",
+        "2.56",
+        "2.64"
+      ],
+      "hit_expected_top5": true,
+      "expected_safety": false,
+      "safety_detected": false
+    },
+    {
+      "id": "S24",
+      "topic": "Rudeness to friends",
+      "expected": [
+        "12.13",
+        "16.2"
+      ],
+      "top5": [
+        "5.18",
+        "12.13",
+        "6.32",
+        "6.9",
+        "2.56"
+      ],
+      "hit_expected_top5": true,
+      "expected_safety": false,
+      "safety_detected": false
+    },
+    {
+      "id": "S25",
+      "topic": "Money envy",
+      "expected": [
+        "2.70",
+        "3.35"
+      ],
+      "top5": [
+        "12.13",
+        "2.56",
+        "3.21",
+        "5.18",
+        "2.14"
+      ],
+      "hit_expected_top5": false,
+      "expected_safety": false,
+      "safety_detected": false
+    },
+    {
+      "id": "S26",
+      "topic": "Social media comparison",
+      "expected": [
+        "2.70",
+        "6.5"
+      ],
+      "top5": [
+        "3.35",
+        "3.33",
+        "2.70",
+        "6.5",
+        "12.16"
+      ],
+      "hit_expected_top5": true,
+      "expected_safety": false,
+      "safety_detected": false
+    },
+    {
+      "id": "S27",
+      "topic": "Disagreement about faith",
+      "expected": [
+        "18.63",
+        "17.15"
+      ],
+      "top5": [
+        "2.63",
+        "12.15",
+        "17.15",
+        "12.13",
+        "2.56"
+      ],
+      "hit_expected_top5": true,
+      "expected_safety": false,
+      "safety_detected": false
+    },
+    {
+      "id": "S28",
+      "topic": "Parent burnout",
+      "expected": [
+        "6.17",
+        "2.47"
+      ],
+      "top5": [
+        "6.16",
+        "6.17",
+        "12.13",
+        "2.56",
+        "2.64"
+      ],
+      "hit_expected_top5": true,
+      "expected_safety": false,
+      "safety_detected": false
+    },
+    {
+      "id": "S29",
+      "topic": "Co-parenting differences",
+      "expected": [
+        "17.15",
+        "6.32"
+      ],
+      "top5": [
+        "12.13",
+        "2.56",
+        "3.21",
+        "2.14",
+        "2.38"
+      ],
+      "hit_expected_top5": false,
+      "expected_safety": false,
+      "safety_detected": false
+    },
+    {
+      "id": "S30",
+      "topic": "Child mentions self-harm",
+      "expected": [
+        "12.13"
+      ],
+      "top5": [
+        "12.13",
+        "17.15",
+        "18.63"
+      ],
+      "hit_expected_top5": true,
+      "expected_safety": true,
+      "safety_detected": true
+    }
+  ]
+}

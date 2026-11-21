@@ -1,0 +1,13 @@
+SAANJH v0.8 — FINAL LOCAL CHECKS
+
+110 of 110 automated source-code and integration tests passed (mocked API responses; no live Gemini calls).
+50 coaching themes; 400 fictional scenarios (300 development / 100 withheld).
+Core keyword retrieval among normal cases:
+- development: expected category in top 2 for 276 / 276 (100.0%).
+- withheld: expected category in top 2 for 42 / 92 (45.7%).
+Four urgent-risk categories were excluded from normal playbook matching: 24 development and 8 withheld.
+The new full 46-category Gemini reasoning menu is connected and validated in mock tests, NOT with live Gemini responses.
+Twenty memory QA journeys and twenty Hindi cases are ready for testing, not executed as live Gemini calls.
+Safety QA from v0.7 remains a release blocker: keyword-based routing recognized only 5/12 unseen safety phrasings. Secondary AI triage has only mocked tests.
+
+DO NOT PUBLISH OR USE REAL CHILDREN'S DETAILS. This is a local research prototype.

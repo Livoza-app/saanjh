@@ -1,0 +1,29 @@
+SAANJH v0.3 — NEW CHAT + PARENTING MEMORY
+=========================================
+
+WHAT'S NEW
+- Visible '+ New chat' button on the main screen and left sidebar.
+- Conversation list for each child and faith. You can reopen previous chats.
+- Older chat history is automatically migrated from the previous Saanjh browser version.
+- A new chat has an empty message area, but Gemini receives a small, relevant excerpt of earlier parent-reported conversations and earlier suggested actions for the SAME child and SAME faith.
+- Separate conversations have independent action plans and feedback.
+- 'Delete current chat' and 'Erase selected child's history' are available.
+
+ON YOUR WINDOWS LAPTOP
+1. Keep the existing Saanjh folder as a backup. Do NOT clear Chrome's site data.
+2. In your current black Saanjh server window, press Ctrl+C to stop the old server.
+3. Extract the NEW ZIP into a new folder, and open its gita_parenting_poc directory.
+4. Double-click start-gemini-windows.bat (or start-saanjh-windows.bat).
+5. Enter the SAME Gemini API key in the hidden prompt. Never paste the key into a chat, file, or screenshot.
+6. Keep the black window running. In your SAME Chrome profile, open or refresh http://127.0.0.1:3030.
+7. You should see '+ New chat'. Select Aryan, click it, and ask:
+   'Aryan is worried about studying again. What do you remember from our previous conversations, and what have we tried?'
+8. You can reopen the old conversation by choosing it from 'Conversations' in the left sidebar.
+
+IMPORTANT
+- Your history is stored ONLY in your browser's local storage under http://127.0.0.1:3030. Using a different browser, private mode, port, or clearing browsing data can make it unavailable.
+- Your API key is held only in the local server process and is not stored in website code.
+- Gemini receives limited parent-reported history and previously suggested actions. AI memory isn't guaranteed to be perfect; parents should be able to correct it. This is not a secure public product yet.
+- Use fictional family details for testing. This research prototype has no real user authentication or encrypted user database.
+- New chat does not reset the free monthly allowance and will not bypass Gemini spending caps.
+- Current Bible passages are an initial small pilot only.

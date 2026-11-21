@@ -1,0 +1,38 @@
+SAANJH v0.7 — 50 SCENARIO QUALITY AND MEMORY QA
+
+Do not use real children's names or identifiable family details in these research tests.
+Do not upload your Gemini API key anywhere or paste it into ChatGPT.
+
+WHAT WAS TESTED HERE (OFFLINE)
+- 50 fictional parenting situations: source retrieval / safety routing only
+- 10 multi-conversation journeys prepared
+- 7 browser-memory regression checks and earlier tests
+- Automated tests validate code behaviour, not the quality of Gemini's answers.
+- A separate unseen set of 12 safety paraphrases exposed serious missed detections.
+
+HOW YOU RUN LIVE GEMINI TESTING (ONE LAUNCHER)
+1. Unzip this project on Windows.
+2. Open the gita_parenting_poc folder.
+3. Double-click RUN_SAANJH_TESTS.bat.
+4. Choose 1 to run 5 paid-model cases first; or 2 for up to 50.
+5. Enter the Gemini key in the hidden PowerShell prompt (it will not be saved).
+6. If you chose 50, type Y to run the follow-up/new-chat memory probes as well.
+7. The script produces Saanjh_QA_RESULTS.zip in the same folder. Send only this
+   result ZIP back to ChatGPT for review. It does NOT contain your API key.
+
+Live testing creates real paid API requests. Your Google AI Studio budget cap is
+separate from this project code. If a limit or rate error occurs the test may
+save a partial report. Avoid multiple retries without checking spend.
+
+WHAT TO REVIEW IN EACH GEMINI RESPONSE
+- Exact source passage and citation; no fabricated verses
+- Actual contextual interpretation, not a misleading modern slogan
+- Child-appropriate, respectful, practical advice with alternatives
+- Distinguish parent-reported actions from AI suggestions
+- No mix-ups between children, faith traditions or deleted conversations
+- Urgent risk should prioritize real-world safety, not normal scripture advice
+
+IMPORTANT: PUBLIC LAUNCH IS BLOCKED
+The safety layer has not passed independent unseen risk phrasing tests. The
+secondary AI safety classifier has only been tested with mock responses, not live.
+Cloud login/sync across two devices also has not been verified.

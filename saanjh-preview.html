@@ -1,0 +1,747 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,interactive-widget=resizes-content"><title>Saanjh — A calmer space for parenting</title>
+<style>
+:root{--bg:#F8F6F0;--paper:#fffefa;--ink:#18392e;--muted:#718077;--sea:#1E6754;--sea2:#0D5042;--mint:#EAF2E9;--line:#E6E8DE;--gold:#BB8755;--rose:#FFF2EB;--shadow:0 10px 35px #14372c12}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg)}button,input,textarea,select{font:inherit}button{cursor:pointer}a{color:var(--sea2)}h1,h2,h3,p{margin:0}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #b2d3b6;outline-offset:2px}button:disabled{cursor:not-allowed;opacity:.55}
+.top{height:76px;background:#fffefaee;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;padding:0 clamp(16px,3vw,52px);gap:20px}.brand{display:flex;align-items:center;gap:12px;font-family:Georgia,serif;font-size:28px;font-weight:700;letter-spacing:-1px}.mark{height:40px;width:40px;background:var(--sea2);border-radius:13px;display:flex;align-items:center;justify-content:center;color:#f9ebd0;font-family:Georgia,serif;font-size:24px;box-shadow:0 4px 12px #15473525}.top-right{display:flex;align-items:center;gap:14px}.small{font-size:12px;color:var(--muted)}.status{display:flex;align-items:center;gap:7px;font-size:12px;color:#8a6e3f;background:#fff5df;border:1px solid #f2dfb8;border-radius:99px;padding:7px 12px;font-weight:700}.dot{height:7px;width:7px;border-radius:50%;background:#ddae59}.toplink{border:0;background:transparent;color:var(--ink);font-weight:700;padding:8px}
+.layout{display:grid;grid-template-columns:268px minmax(430px,1fr) 300px;min-height:calc(100vh - 76px);max-width:1740px;margin:auto}.aside{border-right:1px solid var(--line);background:#F3F3EB;padding:30px 17px 20px;display:flex;flex-direction:column;gap:24px}.aside.right{border-right:0;border-left:1px solid var(--line);background:#FAFAF5;padding:30px 20px}.section-title{color:#78867e;text-transform:uppercase;letter-spacing:1.4px;font-size:10px;font-weight:800;margin-bottom:10px}.pill{background:#e4eee5;border-radius:99px;display:inline-flex;gap:6px;padding:7px 11px;font-size:11px;color:#246451;font-weight:800}.planbar{background:var(--paper);border:1px solid #dfe6d8;border-radius:15px;padding:16px;box-shadow:0 2px 10px #234a2908}.planbar strong{font-size:15px}.progress{height:7px;background:#e3e7de;border-radius:10px;margin-top:12px;overflow:hidden}.progress i{display:block;background:#72a38a;height:100%;width:0;border-radius:10px;transition:.3s}.planbar p{color:var(--muted);font-size:12px;line-height:1.5;margin:9px 0 10px}.button{background:var(--sea);color:white;border:1px solid var(--sea);font-weight:700;border-radius:11px;padding:11px 15px;font-size:13px;transition:.2s}.button:hover{background:#154e40}.button.secondary{background:transparent;color:var(--sea);border:1px solid #c8dbcb}.button.secondary:hover{background:#ecf3ea}.button.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}.button.danger{color:#a14338;border-color:#f3cac5;background:#fff4f2}.button.full{width:100%}.button.sm{padding:8px 11px;font-size:12px}.parents{display:flex;align-items:center;gap:11px;padding:0 7px}.round{width:42px;height:42px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#e3e9d6;font-weight:800;color:var(--sea)}.parent-name{font-weight:800;font-size:14px}.child-list{display:grid;gap:7px}.child-item{display:flex;width:100%;align-items:center;text-align:left;gap:10px;padding:11px;background:transparent;border:1px solid transparent;border-radius:14px;color:var(--ink)}.child-item.selected{background:#fffefa;border-color:#d4e2d4;box-shadow:0 3px 13px #34634310}.child-item:hover{background:#fffefa}.avatar{height:37px;width:37px;border-radius:12px;background:#e6e9d9;color:#31644f;display:flex;align-items:center;justify-content:center;font-weight:800}.child-item strong{font-size:13px;display:block}.child-item span{font-size:11px;color:var(--muted)}.conversation-list{display:grid;gap:5px;max-height:225px;overflow-y:auto}.thread-item{width:100%;text-align:left;display:block;background:transparent;border:1px solid transparent;padding:9px 11px;border-radius:10px;color:var(--ink);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.thread-item.selected{border-color:#c7dbce;background:var(--paper);font-weight:700}.thread-item:hover{background:#fffefa}.thread-sub{font-size:10px;display:block;color:var(--muted);margin-top:3px}.hero-controls{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.conversation-note{font-size:11px;color:#627d6e;padding-top:9px}.aside-bottom{margin-top:auto;color:var(--muted);font-size:11px;line-height:1.6}
+.main{display:flex;flex-direction:column;min-height:calc(100vh - 76px)}.hero{padding:33px 38px 22px;border-bottom:1px solid var(--line);background:linear-gradient(100deg,#FBFCF5 10%,#F5F4E9)}.eyebrow{color:#a3734e;font-size:10px;letter-spacing:1.7px;text-transform:uppercase;font-weight:800}.hero h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(25px,3vw,36px);line-height:1.15;font-weight:500;margin:9px 0}.hero p{font-size:13px;color:var(--muted);line-height:1.6;max-width:690px}.faith-tabs{margin-top:20px;display:flex;gap:10px;flex-wrap:wrap}.faith{padding:9px 15px;border:1px solid #e1e5db;background:#fffefa;border-radius:10px;font-size:13px;color:#40574b;font-weight:700}.faith.active{color:#fff;background:var(--sea);border-color:var(--sea)}.chat{padding:24px clamp(16px,3vw,38px);display:flex;flex:1;flex-direction:column;gap:18px;min-height:370px;max-height:calc(100vh - 360px);overflow:auto}.welcome{text-align:center;margin:auto;max-width:560px;padding:15px}.welcome-icon{background:#e8f0e8;color:#326a56;width:63px;height:63px;display:flex;align-items:center;justify-content:center;border-radius:22px;margin:0 auto 20px;font-size:30px}.welcome h2{font-family:Georgia,serif;font-size:28px;font-weight:500;margin-bottom:12px}.welcome p{font-size:14px;line-height:1.65;color:var(--muted);margin-bottom:23px}.suggestions{display:grid;grid-template-columns:1fr 1fr;gap:9px}.suggestions button{padding:13px;text-align:left;background:#fffefa;border:1px solid var(--line);border-radius:13px;color:#415a4e;font-size:12px;line-height:1.45}.suggestions button:hover{border-color:#97b6a0;background:#f6fbf6}.bubble{max-width:88%;line-height:1.65;font-size:14px;border-radius:16px;padding:17px 20px}.bubble.parent{margin-left:auto;background:#e3efe8;border-radius:16px 16px 4px 16px;white-space:pre-wrap}.bubble.ai{background:#fffefa;max-width:95%;border:1px solid var(--line);box-shadow:0 4px 19px #405c2e07}.bubble .meta{font-size:11px;font-weight:800;letter-spacing:.2px;color:#6c8474;margin-bottom:9px}.bubble .resp-title{font-weight:800;margin-top:12px;margin-bottom:6px}.bubble ol{padding-left:20px;margin-top:5px}.bubble li{margin:8px 0}.source{margin:14px 0 9px;padding:14px;background:#f5f7ef;border-left:3px solid #83ac91;border-radius:9px}.source b{display:block;font-size:13px}.source p{color:#647365;font-size:12px;line-height:1.65;margin-top:5px}.source a{font-size:12px;font-weight:700;display:inline-block;margin-top:6px}.feedback{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}.feedback button{background:#fbfdfa;border:1px solid #dce6d9;border-radius:8px;padding:7px 9px;font-size:11px;color:var(--sea)}.feedback button.selected{background:#e3efe8;border-color:#91b69d}.composer{padding:18px clamp(16px,3vw,38px) 21px;border-top:1px solid var(--line);background:var(--paper)}.compose-box{border:1px solid #cdded0;box-shadow:0 4px 20px #1b564110;border-radius:16px;overflow:hidden;background:#fff}.compose-box textarea{width:100%;border:0;background:transparent;resize:vertical;min-height:78px;max-height:190px;outline:none;padding:15px 17px;font-size:13px;color:var(--ink)}.compose-actions{display:flex;justify-content:space-between;align-items:center;padding:9px 10px 10px 16px;border-top:1px solid #eef2e9}.compose-actions span{font-size:10px;color:#829086}.note{color:#77877c;line-height:1.5;font-size:11px;margin-top:9px}.notice-msg{color:#9b5236;font-size:12px;margin-top:7px;min-height:16px}
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:15px;padding:17px;margin-bottom:15px}.panel h3{font-size:14px;font-weight:800;margin-bottom:12px}.detail{display:flex;justify-content:space-between;gap:9px;font-size:12px;padding:10px 0;border-bottom:1px solid #f1f1e8}.detail:last-child{border:0}.detail span{color:#718177}.detail b{text-align:right;max-width:58%;overflow-wrap:anywhere}.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.tag{border-radius:9px;background:#eef3e7;font-size:11px;padding:7px 8px;color:#42644e}.insight{background:#E9EFE4;border-radius:16px;padding:19px;position:relative;overflow:hidden}.insight .scribble{position:absolute;right:2px;top:-14px;color:#bfd7bd;font-family:Georgia,serif;font-size:78px;opacity:.8}.insight h3{font-family:Georgia,serif;font-size:21px;font-weight:500;position:relative;margin-bottom:10px}.insight p{font-size:12px;line-height:1.65;color:#547064;position:relative}.divider{height:1px;background:var(--line);margin:12px 0}
+.modalback{position:fixed;inset:0;background:#142c25a6;display:none;align-items:center;justify-content:center;padding:20px;z-index:10}.modalback.on{display:flex}.modal{width:min(95vw,510px);max-height:90vh;overflow:auto;background:var(--paper);border-radius:20px;padding:27px;box-shadow:0 30px 90px #102c2340}.modal header{display:flex;align-items:center;justify-content:space-between;margin-bottom:15px}.modal h2{font-family:Georgia,serif;font-weight:500;font-size:27px}.close{border:0;background:transparent;font-size:25px;color:#708375}.fields{display:grid;gap:13px;margin:15px 0}.field{display:grid;gap:7px}.field label{font-size:12px;font-weight:800}.field input,.field textarea,.field select{background:#fff;border:1px solid #d6ded2;border-radius:11px;padding:11px;font-size:13px;color:var(--ink);width:100%}.field textarea{min-height:85px}.modal-footer{display:flex;gap:9px;justify-content:flex-end;margin-top:18px}.plans{display:grid;grid-template-columns:1fr 1fr;gap:10px}.price-card{border:1px solid #e2e6da;border-radius:13px;padding:15px}.price-card.highlight{border-color:#8fac94;background:#f2f7ee}.price-card b{font-size:13px}.price{font-family:Georgia,serif;font-size:25px;margin:10px 0 5px}.price-card p{font-size:11px;color:var(--muted);line-height:1.6}.pricing-foot{font-size:12px;color:var(--muted);line-height:1.6;margin-top:15px}
+@media(max-width:1200px){.layout{grid-template-columns:210px minmax(400px,1fr)}.aside.right{display:none}}@media(max-width:760px){.top{height:65px}.toplink{display:none}.brand{font-size:23px}.layout{display:flex;flex-direction:column;min-height:calc(100vh - 65px)}.aside{padding:10px 14px;gap:10px;display:flex;flex-direction:row;align-items:center;overflow-x:auto;border-right:0;border-bottom:1px solid var(--line)}.aside .parent-block,.aside .planbar,.aside .aside-bottom,.aside .child-label{display:none}.child-list{display:flex;gap:5px}.child-item{min-width:105px;padding:6px}.child-item .avatar{width:30px;height:30px}.aside>.button{white-space:nowrap}.hero{padding:23px 20px}.chat{max-height:none;min-height:300px;padding:18px;flex:1}.main{min-height:calc(100dvh - 134px)}.composer{padding:13px}.suggestions{grid-template-columns:1fr}.bubble{max-width:96%}.faith-tabs{gap:6px}.faith{font-size:12px;padding:9px}.status{font-size:10px;padding:6px}.plans{grid-template-columns:1fr}.top-right{gap:2px}}
+
+/* v0.6: clear, actionable support; never a substitute for clinical oversight. */
+.guide-modes{display:inline-flex;border-radius:12px;background:#edf1e9;padding:3px;gap:3px;vertical-align:middle}
+.guide-mode{border:0;background:transparent;padding:7px 12px;border-radius:9px;color:#416453;font-size:12px;font-weight:750;white-space:nowrap;cursor:pointer}
+.guide-mode.active{background:#fff;box-shadow:0 1px 5px #2849321f;color:#22573f}
+.spoken-card{margin-top:18px;background:#f0f7f0;padding:16px 18px;border-radius:14px;border:1px solid #d5e6d6}
+.spoken-card .spoken-head{font-size:11px;font-weight:800;letter-spacing:.45px;color:#3b6c51;text-transform:uppercase;margin-bottom:8px}
+.spoken-card blockquote{margin:0 0 11px;font:15px/1.65 Georgia,serif;color:#264832}
+.spoken-card button{border:1px solid #b7cfbd;border-radius:8px;padding:7px 10px;color:#2d6247;background:#fff;font-size:11px;font-weight:750;cursor:pointer}
+.repair-card{margin-top:10px;border-left:3px solid #c4aa81;background:#fbf8f2;padding:10px 14px;border-radius:0 10px 10px 0;color:#68543d;font-size:13px;line-height:1.65}
+.possible-driver{margin-top:12px;font-size:12px;color:#526b5b;background:#f7f8f3;border-radius:9px;padding:11px 13px}
+body.quick-view .guidance-section.deep{display:none}
+@media(max-width:850px){.guide-modes{order:3}.guide-mode{padding:7px 8px;font-size:11px}}
+/* v0.4: scripture-first response cards and usable guidance actions */
+.language-picker{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);font-weight:700;margin-top:20px}
+.language-picker select{border:1px solid #d4e3d3;color:var(--sea);background:white;border-radius:10px;padding:8px 11px;font-size:12px;font-weight:700}
+.guidance-section{margin:15px 0 3px}.guidance-heading{font-size:12px;font-weight:800;letter-spacing:.15px;color:#2f6251;margin:0 0 7px}
+.verse-original{font-family:Georgia,"Noto Serif Devanagari",serif;font-size:17px;color:#244f3d;white-space:pre-line;line-height:1.95;margin:13px 0 16px}
+.source-lang{font-size:10px;text-transform:uppercase;letter-spacing:1px;font-weight:800;color:#667c70;margin:11px 0 3px}
+.source-line{font-size:13px;line-height:1.75;color:#344f40;white-space:pre-line}
+.source-line.hindi{font-size:14px;line-height:1.85}
+.source-attribution{font-size:10px;color:#6f8174;margin-top:12px;line-height:1.6}
+.application-note{font-size:11px;color:#6e7d6f;margin-top:11px}
+.guidance-section p,.guidance-section ol{font-size:13px;line-height:1.85}
+.followup{margin-top:17px;padding-top:14px;border-top:1px solid var(--line);font-weight:600}
+.feedback button:not(:disabled):hover{background:#e5efe5;border-color:#83b49a}
+.feedback button:disabled{opacity:.5;cursor:not-allowed}
+@media(max-width:760px){.language-picker{margin-top:10px}.verse-original{font-size:16px}.guidance-section p{font-size:13px}}
+
+/* v0.5 · Quiet, editorial visual system / graceful responsive layout */
+:root{--bg:#f8f7f2;--paper:#fffefb;--ink:#233a33;--muted:#78857c;--sea:#356b5d;--sea2:#295547;--mint:#eaf2e9;--line:#e7e8df;--gold:#ba9770;--shadow:0 18px 48px #2840340d}
+html{scroll-behavior:smooth}body{background:var(--bg);letter-spacing:-.007em}button{transition:background .18s ease,transform .15s ease,border-color .18s ease,box-shadow .18s ease}button:not(:disabled):hover{transform:translateY(-1px)}
+.ambient-grain{position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 90% 10%, #dfeee02e, transparent 32%),radial-gradient(ellipse at 4% 82%, #e1e6d633,transparent 40%)}
+.top{height:78px;background:#fffefaed;backdrop-filter:blur(18px);border-color:#e9eae3;position:sticky;top:0;z-index:8;box-shadow:0 1px 10px #1c3b2b08}
+.brand{gap:11px;font-size:29px;line-height:1}.brand-stack{display:flex;flex-direction:column;gap:6px}.brand-stack small{font-size:10px;letter-spacing:1.1px;text-transform:uppercase;font-family:ui-sans-serif,-apple-system,Segoe UI,sans-serif;color:#8b927f;font-weight:650}.mark{width:43px;height:43px;background:#326957;color:#fff2d8;border-radius:15px;font-size:24px;box-shadow:0 8px 20px #406b5430}
+.account-btn{border-radius:25px!important;white-space:nowrap;padding:10px 15px!important;box-shadow:0 5px 17px #4e706011}.sync-status{font-size:11px;color:#78917d;white-space:nowrap;background:#f2f6f0;padding:7px 10px;border-radius:50px;border:1px solid #e4ede2}.sync-status.warn{background:#fff2ea;color:#956651;border-color:#f0d7c7}.sync-status.good{background:#edf5ed;color:#3f6b52}.mobile-menu{display:none;border:1px solid #dfe7dc;color:#2b5848;background:#fbfffa;border-radius:11px;padding:10px 13px;font-size:19px}
+.layout{grid-template-columns:262px minmax(0,1fr) 277px;max-width:1660px;background:transparent;min-height:calc(100vh - 78px)}.aside{background:#f6f7f0;border-color:#e8e9e1;padding:29px 18px 22px;gap:24px}.aside.right{background:#fbfcf7;padding:29px 18px}.section-title{font-size:10px;letter-spacing:1.45px;color:#829285}.parents{background:#ffffffa8;border:1px solid #e6eae1;border-radius:16px;padding:13px;gap:12px}.round{background:#e5ede0;color:#477153;border:1px solid #d1dfcc;border-radius:16px}.parent-name{font-size:14px;font-weight:750}.child-list{gap:7px}.child{border-radius:14px!important;min-height:61px}.child.active{box-shadow:inset 0 0 0 1px #b4d1be,0 8px 22px #2e594610;background:#fff}.thread-item{border-radius:12px!important}.thread-item.selected{background:#e8f0e8!important;color:#2c5949!important}
+.button{background:#30614f;border-radius:11px;padding:12px 17px;box-shadow:0 4px 11px #2e61511b;font-size:12px;font-weight:740}.button:hover:not(:disabled){background:#214c3d;box-shadow:0 9px 18px #2e615128}.button.secondary,.button.ghost{box-shadow:none}.button.secondary:hover:not(:disabled){background:#ebf3e8}.planbar{border-radius:16px;background:#eaf0e5;border:1px solid #dae5d7;padding:17px}.planbar strong{font-family:Georgia,serif;font-weight:500;font-size:21px}.aside-bottom{display:flex;align-items:flex-start;gap:12px;font-size:11px;line-height:1.7;color:#839083}.aside-bottom b{color:#536f5e;font-weight:650}.tiny-flower{font-size:24px;color:#b49a73}
+.hero{position:relative;overflow:hidden;padding:39px clamp(22px,5vw,62px) 27px;background:linear-gradient(117deg,#fbfaf3 10%,#f1f5eb 100%);min-height:238px}.hero-content{position:relative;z-index:1;max-width:740px}.hero h1{font-family:Georgia,Times,serif;font-weight:400;font-size:clamp(32px,3.25vw,47px);letter-spacing:-1.75px;line-height:1.1;max-width:530px;color:#2e4b3e;margin:14px 0 12px}.hero p{font-size:14px;max-width:590px;line-height:1.75;color:#687d72}.eyebrow{font-size:10px;letter-spacing:1.65px;color:#a08866;font-weight:800}.hero-art{position:absolute;width:240px;height:240px;right:0;top:-20px;opacity:.6;pointer-events:none;display:grid;place-items:center;color:#b8c8a9}.hero-art span{font-family:Georgia,serif;font-size:126px;font-weight:400;color:#c2d4ba;text-shadow:0 2px 16px #c2c5af}.orbit{position:absolute;border:1px solid #c7d5bf;border-radius:50%}.orbit-a{width:210px;height:210px}.orbit-b{width:145px;height:145px;transform:rotate(12deg)}
+.hero-controls{gap:12px;margin-top:22px;align-items:center}.faith-tabs{background:#ecf2e9;border:1px solid #dfeade;border-radius:12px;padding:4px}.faith{font-size:12px;border-radius:9px;padding:9px 12px}.faith.active{background:white;box-shadow:0 4px 11px #56785918;color:#2b5b48}.language-picker{margin-top:0}.language-picker select{border-radius:9px;padding:9px 10px}.conversation-note{font-size:11px;color:#809183;margin-top:14px}
+.main{background:#fffefa;min-width:0}.conversation-section-title{display:flex;gap:12px;align-items:center;padding:19px clamp(19px,5vw,58px) 3px;color:#8c988b;font-size:10px;font-weight:800;letter-spacing:1.8px}.soft-star{color:#b8ab84;font-size:22px}.section-title-line{flex:1;height:1px;background:#eaede4}.privacy-chip{border:1px solid #e0e9df;border-radius:50px;background:#f4f7f0;font-weight:600;color:#718a75;letter-spacing:.1px;padding:5px 10px;white-space:nowrap}
+.chat{padding:18px clamp(19px,5vw,58px) 24px;gap:22px}.welcome{background:linear-gradient(140deg,#fbfdf8,#f2f5eb);border:1px solid #e9ebdf;border-radius:26px;padding:34px 32px;box-shadow:0 17px 48px #2b5a4610}.welcome-icon{color:#759a79;font-size:32px;background:#f8fbf6;border:1px solid #e6eddf;width:62px;height:62px;border-radius:20px;display:grid;place-items:center;margin-bottom:15px}.welcome h2{font-family:Georgia,serif;font-weight:400;font-size:29px;letter-spacing:-.8px;color:#2c4e3c}.welcome p{font-size:13px;line-height:1.8;color:#687d70;max-width:560px}.suggestions{margin-top:26px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.sample{background:#fffefa;border:1px solid #e1e7db;border-radius:13px;padding:13px 15px;font-size:12px;text-align:left;line-height:1.55;color:#3d6651;box-shadow:0 6px 15px #30574309}.sample:hover{background:#eef5ea;border-color:#c9dec6}
+.bubble.parent{max-width:82%;background:#e9f2e7;border:1px solid #d4e5d2;border-radius:18px 18px 5px 18px;color:#375e4d;box-shadow:none;padding:17px 19px;line-height:1.7}.bubble.ai{border-radius:21px 21px 21px 5px;background:#fff;border:1px solid #e6e9e0;padding:25px clamp(18px,3vw,28px);box-shadow:0 13px 30px #324d3210}.bubble.ai>.meta{font-size:10px;font-weight:800;letter-spacing:1.1px;color:#719079;text-transform:uppercase;margin-bottom:14px}.bubble.ai>p{font-size:14px;line-height:1.75;color:#33483d}.source{background:#f7f9f3!important;border:1px solid #e3e9db!important;border-radius:16px!important;padding:21px!important;margin:18px 0}.source .guidance-heading{font-family:Georgia,serif;font-size:20px;color:#2f5a47;letter-spacing:-.4px;font-weight:500}.source-lang{margin-top:15px}.source-line{font-size:13px;color:#425c4c}.source-line.hindi{font-size:14px}.verse-original{color:#355b47}.guidance-heading{font-size:12px;color:#416c56}.guidance-section{margin-top:18px}.guidance-section p{font-size:13px;color:#4a6053;line-height:1.85}.guidance-section ol{color:#435f4d}.guidance-section li{padding-left:6px;margin-bottom:11px}.application-note{background:#f7f8f3;border-left:3px solid #b6c8ae;padding:10px 12px;border-radius:0 8px 8px 0}.feedback{gap:7px}.feedback button{border-radius:10px!important;font-weight:700!important}
+.composer{position:sticky;bottom:0;padding:13px clamp(19px,5vw,58px) 18px;background:linear-gradient(180deg,#fffefa80,#fffefa 17%);backdrop-filter:blur(14px)}.compose-box{border:1px solid #dbe5d8;border-radius:18px;box-shadow:0 12px 29px #225b3b12;background:#fff}.compose-box:focus-within{border-color:#92bda3;box-shadow:0 13px 31px #245c4221}.compose-box textarea{font-size:14px;min-height:65px;line-height:1.7}.compose-actions{border-top:1px solid #f0f1eb}.compose-actions span{font-size:11px}.note{line-height:1.5;color:#8c9388}
+.panel{border-radius:17px;border-color:#e6e9e0;box-shadow:0 7px 20px #183b2608}.panel h3{font-size:15px;color:#2e4f3d}.insight{border-radius:18px;background:linear-gradient(140deg,#e2ede0,#f3f3df);border:1px solid #d7e5d5;box-shadow:0 10px 24px #42644b12}.insight h3{font-family:Georgia,serif;font-size:27px;line-height:1.2;font-weight:500;color:#355540}.insight p{line-height:1.75;color:#637c6c}.insight-steps{display:flex;gap:7px;flex-wrap:wrap;margin-top:17px}.insight-steps span{background:#fffaf1a9;color:#69836b;padding:6px 9px;border-radius:30px;font-size:10px;border:1px solid #f1ead8}
+.modalback{backdrop-filter:blur(5px)}.modal{border:1px solid #e4e9dd;border-radius:23px;box-shadow:0 35px 90px #192c2150}.modal h2{font-size:28px}.account-detail{padding:14px 15px;background:#f2f7ee;border-radius:14px;line-height:1.7;font-size:13px;color:#4d6759}.account-intro{font-size:13px;line-height:1.8;margin-bottom:17px;color:#728374}.account-actions{display:flex;flex-direction:column;gap:9px}.account-actions button{width:100%}.account-notice{font-size:12px;color:#8f765d;background:#fff8ed;border:1px solid #f1e7d5;border-radius:11px;padding:11px 13px;line-height:1.6}.google-g{font-weight:800;font-size:18px;color:#4285f4;margin-right:9px}
+@media(min-width:1450px){.layout{grid-template-columns:270px minmax(0,1fr) 290px}}@media(max-width:1199px){.layout{grid-template-columns:240px minmax(0,1fr)}.aside.right{display:none}.top .toplink{display:none}}@media(max-width:850px){.sync-status{display:none}.hero-art{right:-84px;opacity:.45}}@media(max-width:760px){.top{height:68px;padding:0 15px}.brand{font-size:24px}.brand-stack small{font-size:8px}.mark{width:37px;height:37px;border-radius:12px}.status,.toplink{display:none!important}.mobile-menu{display:block}.layout{display:flex;flex-direction:column;min-height:calc(100vh - 68px)}.aside:not(.right){position:fixed;z-index:14;left:0;top:68px;bottom:0;width:min(86vw,315px);transform:translateX(-110%);transition:transform .22s ease;background:#f8f9f3;display:flex;flex-direction:column;align-items:stretch;overflow:auto;padding:21px 16px 25px;box-shadow:10px 0 30px #233d2c1c}.sidebar-open .aside:not(.right){transform:translateX(0)}.mobile-backdrop{display:none}.sidebar-open .mobile-backdrop{position:fixed;inset:68px 0 0;background:#183a2a6d;display:block;z-index:13}.hero{padding:28px 22px 23px;min-height:auto}.hero h1{font-size:32px;max-width:400px}.hero p{font-size:13px}.hero-art{width:150px;height:150px;right:-55px;top:0}.hero-art span{font-size:85px}.orbit-a{width:145px;height:145px}.orbit-b{width:96px;height:96px}.hero-controls{gap:9px;margin-top:18px;flex-wrap:wrap}.language-picker{order:3}.new-chat-top{order:2}.faith{font-size:11px;padding:9px 9px}.conversation-note{font-size:10px}.main{min-height:calc(100vh - 68px)}.conversation-section-title{padding:16px 18px 0;font-size:9px}.chat{padding:14px 14px 24px;gap:14px}.welcome{padding:25px 21px;border-radius:20px}.welcome h2{font-size:24px}.suggestions{grid-template-columns:1fr}.bubble.parent{max-width:92%;font-size:13px;padding:14px}.bubble.ai{padding:19px 16px}.source{padding:16px!important}.source .guidance-heading{font-size:17px}.composer{padding:10px 11px 15px}.compose-actions span{display:none}.account-btn{font-size:11px;padding:8px 9px!important}.privacy-chip{display:none}}
+/* Keep conversation composer beneath content, rather than overlaying empty-state cards. */
+@media(min-width:761px){.layout{height:auto;min-height:calc(100vh - 78px);overflow:visible}.aside{overflow:visible}.main{height:auto;min-height:0;overflow:visible}.hero{flex:0 0 auto}.conversation-section-title{flex:0 0 auto}.chat{flex:1;min-height:330px;max-height:none;overflow:visible;display:flex;flex-direction:column}.composer{position:relative;flex:0 0 auto;bottom:auto}.welcome{max-width:780px;width:100%;margin:22px auto}}
+@media(max-width:760px){.layout{height:auto;overflow:visible}.main{height:auto;min-height:calc(100vh - 68px)}.chat{min-height:350px;overflow:visible}.composer{position:relative;bottom:auto}.welcome{margin:6px 0 16px}}
+@media(min-width:761px){.layout{height:calc(100vh - 78px);min-height:620px;overflow:hidden}.aside{overflow-y:auto;min-height:0}.main{height:100%;min-height:0;overflow:hidden}.hero{padding:25px clamp(23px,4vw,45px) 15px;min-height:0}.hero h1{font-size:clamp(28px,2.65vw,38px);max-width:720px;margin:10px 0}.hero p{font-size:13px}.hero-controls{margin-top:15px}.conversation-note{margin-top:9px}.conversation-section-title{padding-top:9px}.chat{flex:1;min-height:0;max-height:none;overflow-y:auto;gap:12px;padding:10px clamp(19px,4vw,45px)}.welcome{max-width:750px;margin:6px auto;padding:18px 25px}.welcome-icon{width:42px;height:42px;font-size:24px;margin-bottom:10px}.welcome h2{font-size:24px;margin-bottom:7px}.welcome p{font-size:12px;line-height:1.55;margin-bottom:10px}.suggestions{margin-top:14px}.suggestions .sample{padding:10px 12px}.composer{position:relative;flex:0 0 auto;bottom:auto;padding:9px clamp(19px,4vw,45px) 10px}.compose-box textarea{min-height:52px;padding:11px 14px}.compose-actions{padding:5px 8px 7px 11px}.note{font-size:10px;margin-top:5px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+/* Chat workspace */
+:root{--muted:#53685c}
+:where(button,a,input,textarea,select,summary):focus-visible{outline:3px solid #356b5d;outline-offset:3px}
+.section-title,.conversation-note,.note,.source-attribution,.source-lang,.application-note,.thread-sub{color:var(--muted)}
+.status{color:#72531f}
+.status.live{background:#eaf3ec;border-color:#d5e6d9;color:#295747}
+.status.live .dot{background:#518064}
+.hero{padding:22px clamp(16px,4vw,45px) 16px;min-height:0}
+.hero,.composer{flex:none}
+.hero h1{font-size:clamp(25px,3vw,36px);margin:0 0 13px;letter-spacing:-.9px;overflow-wrap:anywhere}
+.hero-controls,.context-controls{justify-content:flex-start;align-items:end;gap:9px 13px}
+.context-controls{display:flex;margin-bottom:10px}
+.hero-controls{margin-top:0}
+.faith-tabs,.conversation-note{margin-top:0}
+.conversation-note{font-size:12px;line-height:1.45;overflow-wrap:anywhere}
+.picker{display:grid;gap:4px;color:var(--muted);font-size:12px;font-weight:700;min-width:0}
+.picker select{max-width:100%;height:44px;border:1px solid #bfcfc0;background:#fff;color:var(--ink);border-radius:9px;padding:0 9px;font-size:14px}
+.context-controls .picker{width:min(260px,64%)}
+.hero-controls button,.new-chat-top,.feedback button,.spoken-card button,.close{min-height:44px}
+.hero-controls .faith-tabs,.hero-controls .guide-modes{padding:2px}
+.hero-controls .guide-modes{order:0}
+.hero-controls .faith,.hero-controls .guide-mode{font-size:12px;padding:5px 10px}
+.short-faith{display:none}
+.aside .child-label,.aside .parent-block{display:block}
+.family-actions{display:grid;gap:7px;margin-top:8px}
+.aside.right>div{flex-shrink:0}
+.child-item,.thread-item{min-height:44px}
+.chat{scroll-padding-block:12px}
+.welcome{max-width:640px;padding:18px 22px}
+.welcome .suggestions{margin-top:12px}
+.welcome h2{margin-bottom:8px}
+.bubble{overflow-wrap:anywhere}
+.bubble.ai{width:min(100%,740px);max-width:100%}
+.bubble .reply-title{margin:0 0 10px;font-size:15px;font-weight:750;color:var(--sea2)}
+.reply-title:focus-visible{outline:2px solid var(--sea);outline-offset:4px}
+.source summary{cursor:pointer}
+.source .guidance-heading{display:inline}
+.source a{text-underline-offset:3px;padding-block:4px}
+.guidance-section h3{font-size:14px}
+.composer{background:var(--paper);padding:9px clamp(14px,4vw,45px) 10px}
+.compose-label{display:block;padding:8px 12px 0;color:var(--sea2);font-size:13px;font-weight:750}
+.compose-box textarea{display:block;min-height:50px;max-height:min(160px,25dvh);padding:6px 12px;font-size:16px;border-radius:0}
+.compose-box textarea:focus-visible{outline-offset:-3px}
+.compose-actions{gap:10px}
+.compose-actions .button{min-height:44px;margin-left:auto}
+.compose-actions span{color:var(--muted);font-size:12px}
+.compose-actions span:empty{display:none}
+.notice-msg{color:var(--sea2);font-size:13px;min-height:0}
+.notice-msg[data-kind="error"]{color:#8b3925}
+.notice-msg:empty{margin:0}
+.modalback{inset:0;margin:auto;width:min(calc(100% - 24px),510px);max-height:calc(100dvh - 24px);padding:0;border:0;border-radius:23px;background:var(--paper);color:var(--ink);overflow:auto}
+.modalback[open]{display:block}
+.modalback::backdrop{background:#142c25a6;backdrop-filter:blur(3px)}
+.modalback .modal{width:auto;max-height:none;overflow:visible;box-shadow:none}
+@media(min-width:761px) and (min-height:680px){
+  .layout{height:calc(100dvh - 78px);min-height:0}
+}
+@media(min-width:1380px){
+  .hero{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:8px 16px;align-items:end}
+  .hero h1,.conversation-note{grid-column:1 / -1}
+  .hero h1,.context-controls{margin:0}
+  .context-controls .picker{width:190px}
+}
+@media(max-width:760px){
+  .top{height:60px;padding:0 12px;gap:8px}
+  .brand{gap:7px}.brand-stack small{display:none}
+  .top .status{display:flex!important;padding:5px 7px;line-height:1.3}
+  .top .status .dot{display:none}
+  .top-right{gap:6px}.account-btn{min-height:44px}
+  .mobile-menu{padding:0 9px;min-width:42px;height:44px}
+  .aside:not(.right){top:60px;visibility:hidden}
+  .sidebar-open .aside:not(.right){visibility:visible}
+  .sidebar-open .mobile-backdrop{inset:60px 0 0}
+  .hero{padding:10px 13px 8px}
+  .hero h1{font-size:25px;margin-bottom:8px}
+  .context-controls{margin-bottom:7px}
+  .hero-controls{gap:7px}
+  .full-faith{display:none}.short-faith{display:inline}
+  .hero-controls .faith,.hero-controls .guide-mode{padding-inline:6px}
+  .conversation-note{font-size:11px;padding-top:6px}
+  .chat{padding:10px 12px;min-height:0;overflow:auto;overscroll-behavior:contain}
+  .welcome{margin:0;width:100%;padding:14px;text-align:left}
+  .welcome h2{font-size:22px}
+  .welcome p{margin-bottom:0}
+  .welcome .suggestions{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+  .welcome .sample{min-height:44px;padding:7px 9px}
+  .compose-actions span{display:block;font-size:10px}
+  .compose-box textarea{height:54px;line-height:1.4}
+  .composer{padding:7px 10px max(8px,env(safe-area-inset-bottom))}
+  .composer .note{font-size:10px;margin-top:4px}
+  .picker select,.field input,.field textarea,.field select{font-size:16px}
+  .layout{height:calc(100dvh - 60px);min-height:0}
+  .main{height:100%;min-height:0}
+}
+@media(max-width:360px){
+  .brand{font-size:22px}.mark{width:28px;height:32px}.top-right{gap:4px}
+  .top .status{max-width:66px}.account-btn{padding-inline:5px!important}
+}
+@media (min-width:761px) and (max-height:679px), (max-width:760px) and (max-height:519px){
+  .layout,.main{height:auto;overflow:visible}
+  .layout{min-height:calc(100dvh - 78px)}
+  .chat{min-height:200px;overflow:visible}
+  .composer{position:relative}
+}
+</style></head><body>
+<div class="ambient-grain" aria-hidden="true"></div><header class="top">
+<div class="brand"><div class="mark" aria-hidden="true">❈</div><div class="brand-stack"><span>Saanjh</span><small>Find your next kind step.</small></div></div>
+<div class="top-right"><span class="status" id="productStatus"><i class="dot"></i><span id="statusText">Sample mode</span></span><span id="syncStatus" class="sync-status" aria-live="polite">Only on this device</span><button class="toplink" id="pricingTop">Plans</button><button class="toplink" id="settingsTop">Privacy</button><button class="button secondary sm account-btn" id="accountButton" type="button">◉ &nbsp; Sign in</button><button id="mobileMenu" class="mobile-menu" type="button" aria-label="Open family and conversations" aria-expanded="false" aria-controls="familySidebar">☰</button></div>
+</header><div class="mobile-backdrop" id="mobileBackdrop" aria-hidden="true"></div>
+<div class="layout"><aside class="aside" id="familySidebar"><section class="parent-block"><div class="section-title">YOUR FAMILY SPACE</div><div class="parents"><div class="round" id="parentInitial">K</div><div><div class="parent-name" id="parentLabel">Ketan</div><div class="small">Parent profile</div></div></div><button class="button secondary sm full" id="editParent" style="margin-top:12px">Edit your profile</button></section>
+<section style="flex:1"><div class="child-label section-title">Children</div><div class="child-list" id="childList"></div><div class="family-actions"><button class="button secondary sm full" id="addChild" type="button">Add child</button><button class="button secondary sm full" id="editChild" type="button">Edit selected child</button></div></section>
+<section><div class="section-title">Conversations · selected child</div><button class="button secondary sm full" id="newChatSide" type="button">＋ New chat</button><div class="conversation-list" id="conversationList" style="margin-top:9px" aria-label="Previous conversations"></div><button class="button ghost sm full" style="margin-top:9px" id="deleteThread" type="button">Delete current chat</button><p class="small" style="font-size:10px;margin-top:8px;line-height:1.55">Past conversations stay in this browser and can inform future chats for the same child and faith.</p></section><div class="planbar"><div class="section-title">Your plan</div><strong>Free explorer</strong><p><span id="remaining">20</span> of 20 monthly guidance replies left</p><div class="progress"><i id="usageBar"></i></div><button class="button full sm" id="upgrade">See plans</button></div><div class="aside-bottom"><span class="tiny-flower">✳</span><div><b>Take this one step at a time.</b><br>Private research preview. Use fictional names until safety and privacy checks are complete.</div></div></aside>
+<main class="main" id="main">
+  <header class="hero">
+    <h1>Parenting guidance</h1>
+    <div class="context-controls">
+      <label class="picker" for="childSelect">Chat about<select id="childSelect"></select></label>
+      <button class="button secondary sm new-chat-top" id="newChatTop" type="button">New chat</button>
+    </div>
+    <div class="hero-controls">
+      <div class="faith-tabs" role="group" aria-label="Choose scripture">
+        <button type="button" class="faith active" id="faithGita" data-faith="gita" aria-label="Bhagavad Gita"><span class="full-faith">Bhagavad Gita</span><span class="short-faith">Gita</span></button>
+        <button type="button" class="faith" id="faithBible" data-faith="bible">Bible</button>
+      </div>
+      <label class="picker" for="replyLanguage">Reply language<select id="replyLanguage" aria-label="Guidance language"><option value="en">English</option><option value="hi" lang="hi">हिन्दी</option></select></label>
+      <div class="guide-modes" role="group" aria-label="Guidance depth">
+        <button type="button" id="quickGuide" class="guide-mode">Quick help</button>
+        <button type="button" id="fullGuide" class="guide-mode active">Full wisdom</button>
+      </div>
+    </div>
+    <p class="conversation-note" id="conversationContext"></p>
+  </header>
+  <section class="chat" id="chat" aria-label="Conversation" tabindex="0"></section>
+  <form class="composer" id="composer">
+    <div id="error" class="notice-msg" role="status" aria-live="polite" aria-atomic="true"></div>
+    <div class="compose-box">
+      <label for="prompt" class="compose-label">What would you like help with?</label>
+      <textarea id="prompt" rows="2" maxlength="2200" aria-describedby="composerHint" placeholder="Describe one parenting situation."></textarea>
+      <div class="compose-actions">
+        <span id="composerHint">Enter sends · Shift+Enter adds a line</span>
+        <button class="button" id="send" type="submit">Get guidance</button>
+      </div>
+    </div>
+    <p class="note" id="privacyNote">Research preview. Use fictional names and details.</p>
+  </form>
+</main>
+<aside class="aside right"><div class="section-title">A FAMILY STORY, REMEMBERED</div><div class="panel"><h3 id="rightName">Aryan's profile</h3><div class="detail"><span>Age</span><b id="rightAge">14</b></div><div class="detail"><span>Conversations</span><b id="rightCount">0</b></div><div class="detail"><span>Focus</span><b id="rightConcerns">Communication, school pressure</b></div></div>
+<div class="panel" style="margin-top:16px"><h3>Previous action plan</h3><p id="lastPlan" class="small" style="line-height:1.6">Your latest steps will appear here.</p></div><div class="panel"><h3>Independent parenting resources</h3><p class="small" style="line-height:1.7">These resources can complement spiritual reflection. They are not endorsements of Saanjh or a review of our AI advice.</p><p class="small"><a href="https://www.cdc.gov/parenting-teens/tips-coaching-emotions/index.html" target="_blank" rel="noopener noreferrer">CDC: Helping teens with emotions ↗</a></p><p class="small" style="margin-top:8px"><a href="https://www.healthychildren.org/English/family-life/family-dynamics/communication-discipline/Pages/how-to-communicate-with-a-teenager.aspx" target="_blank" rel="noopener noreferrer">AAP: Talking with teenagers ↗</a></p></div><div class="panel"><h3>Before we begin</h3><p class="small" style="line-height:1.7">Gita: all 700 Sanskrit verses and attributed English/Hindi translations. Bible: 14 verified English passages for testing, not a complete Bible engine. Hindi Bible responses are AI explanations, not a verified Hindi translation. Live Gemini requires a server-side key. Account sync requires separate Supabase setup. Payments are not active.</p><p class="small" style="line-height:1.65;margin-top:12px">Gita source: <a href="https://gitabhawan.org.in/gita/research" target="_blank" rel="noopener noreferrer">Hansi Gita Bhawan Trust</a>. Bible excerpts: <a href="https://ebible.org/details.php?id=engwebp" target="_blank" rel="noopener noreferrer">World English Bible (public domain)</a>.</p><button class="button danger sm full" id="eraseChild" style="margin-top:13px">Erase selected child's history</button></div></aside></div>
+<dialog class="modalback" id="modalBack" aria-labelledby="modalTitle"><div class="modal"><header><h2 id="modalTitle">Edit profile</h2><button class="close" id="closeModal" aria-label="Close">×</button></header><div id="modalBody"></div></div></dialog>
+<script type="module" src="/cloud-client.js"></script>
+<script>const GITA_CURATED=[{"reference": "2.14", "title": "Temporary experiences", "source_url": "https://heritage.iitk.ac.in/SBG/2.14", "tags": ["transience", "discomfort", "resilience", "emotional-regulation", "frustration", "change", "patience"]}, {"reference": "2.38", "title": "Equanimity in difficulties", "source_url": "https://heritage.iitk.ac.in/SBG/2.38", "tags": ["failure", "success", "loss", "exams", "grades", "setbacks", "equanimity"]}, {"reference": "2.47", "title": "Action without attachment to results", "source_url": "https://heritage.iitk.ac.in/SBG/2.47", "tags": ["grades", "results", "outcome", "effort", "future", "school", "exams", "homework", "expectations", "pressure", "study", "anxiety"]}, {"reference": "2.48", "title": "Equanimity while acting", "source_url": "https://heritage.iitk.ac.in/SBG/2.48", "tags": ["effort", "grades", "performance", "success", "failure", "anxiety"]}, {"reference": "2.56", "title": "Steady understanding", "source_url": "https://heritage.iitk.ac.in/SBG/2.56", "tags": ["anger", "fear", "anxiety", "emotional", "outburst", "calm", "parenting"]}, {"reference": "2.62", "title": "Attention and attachment", "source_url": "https://heritage.iitk.ac.in/SBG/2.62", "tags": ["phone", "screen", "gaming", "social-media", "temptation", "addiction", "desire"]}, {"reference": "2.63", "title": "Anger and poor judgment", "source_url": "https://heritage.iitk.ac.in/SBG/2.63", "tags": ["anger", "yelling", "fight", "argument", "shouting", "reactive", "conflict"]}, {"reference": "2.64", "title": "Self-mastery", "source_url": "https://heritage.iitk.ac.in/SBG/2.64", "tags": ["screens", "smartphone", "balance", "peer-pressure", "impulsivity"]}, {"reference": "2.65", "title": "Peace and clear thinking", "source_url": "https://heritage.iitk.ac.in/SBG/2.65", "tags": ["stress", "sadness", "conflict", "calm", "decisions"]}, {"reference": "2.70", "title": "Desires and contentment", "source_url": "https://heritage.iitk.ac.in/SBG/2.70", "tags": ["social-media", "desire", "comparison", "envy", "materialism", "peer-pressure"]}, {"reference": "3.5", "title": "Action is unavoidable", "source_url": "https://heritage.iitk.ac.in/SBG/3.5", "tags": ["motivation", "inactivity", "avoidance", "initiative", "chores"]}, {"reference": "3.8", "title": "Perform needed duties", "source_url": "https://heritage.iitk.ac.in/SBG/3.8", "tags": ["discipline", "homework", "responsibilities", "chores", "study"]}, {"reference": "3.19", "title": "Work without attachment", "source_url": "https://heritage.iitk.ac.in/SBG/3.19", "tags": ["duty", "chores", "effort", "homework", "motivation", "responsibility"]}, {"reference": "3.21", "title": "Lead by example", "source_url": "https://heritage.iitk.ac.in/SBG/3.21", "tags": ["parenting", "example", "role-model", "modeling", "honesty", "behavior", "habits"]}, {"reference": "3.30", "title": "Act without agitation", "source_url": "https://heritage.iitk.ac.in/SBG/3.30", "tags": ["worry", "overwhelm", "anxious", "pressure", "school", "stress"]}, {"reference": "3.33", "title": "Nature and habits", "source_url": "https://heritage.iitk.ac.in/SBG/3.33", "tags": ["individuality", "personality", "teen", "temperament", "stubborn", "identity"]}, {"reference": "3.35", "title": "Own duty and comparison", "source_url": "https://heritage.iitk.ac.in/SBG/3.35", "tags": ["comparison", "sibling", "grades", "identity", "perfectionism"]}, {"reference": "3.37", "title": "Desire and anger", "source_url": "https://heritage.iitk.ac.in/SBG/3.37", "tags": ["anger", "temper", "craving", "emotion", "aggression"]}, {"reference": "3.41", "title": "Regulating impulses", "source_url": "https://heritage.iitk.ac.in/SBG/3.41", "tags": ["gaming", "screens", "impulses", "discipline", "distraction"]}, {"reference": "4.38", "title": "Value of insight", "source_url": "https://heritage.iitk.ac.in/SBG/4.38", "tags": ["learning", "understanding", "reflection", "school", "education", "curiosity"]}, {"reference": "4.39", "title": "Commitment and learning", "source_url": "https://heritage.iitk.ac.in/SBG/4.39", "tags": ["discipline", "study", "patience", "learning", "effort"]}, {"reference": "4.42", "title": "Move beyond paralyzing doubt", "source_url": "https://heritage.iitk.ac.in/SBG/4.42", "tags": ["indecision", "fear", "uncertainty", "worries", "confidence", "choices"]}, {"reference": "5.10", "title": "Do duty without possessiveness", "source_url": "https://heritage.iitk.ac.in/SBG/5.10", "tags": ["effort", "grades", "work", "expectations", "pressure"]}, {"reference": "5.12", "title": "Peace through non-attachment", "source_url": "https://heritage.iitk.ac.in/SBG/5.12", "tags": ["anxiety", "outcomes", "exams", "results", "future", "worry"]}, {"reference": "5.18", "title": "Equal regard", "source_url": "https://heritage.iitk.ac.in/SBG/5.18", "tags": ["bullying", "prejudice", "empathy", "inclusion", "friendships", "classmates"]}, {"reference": "5.20", "title": "Steadiness with good or bad news", "source_url": "https://heritage.iitk.ac.in/SBG/5.20", "tags": ["exam", "failure", "success", "rejection", "disappointment"]}, {"reference": "5.23", "title": "Regulate anger and desire", "source_url": "https://heritage.iitk.ac.in/SBG/5.23", "tags": ["anger", "yelling", "arguing", "conflict", "impulses"]}, {"reference": "6.5", "title": "Help lift yourself", "source_url": "https://heritage.iitk.ac.in/SBG/6.5", "tags": ["confidence", "esteem", "self-respect", "motivation", "helplessness"]}, {"reference": "6.6", "title": "The mind as friend or obstacle", "source_url": "https://heritage.iitk.ac.in/SBG/6.6", "tags": ["habits", "self-talk", "discipline", "distraction", "routine"]}, {"reference": "6.9", "title": "Fairness and impartiality", "source_url": "https://heritage.iitk.ac.in/SBG/6.9", "tags": ["friendships", "conflict", "fairness", "sibling", "discrimination", "bullying"]}, {"reference": "6.16", "title": "Avoid extremes", "source_url": "https://heritage.iitk.ac.in/SBG/6.16", "tags": ["sleep", "late-night", "phone", "gaming", "routine", "burnout"]}, {"reference": "6.17", "title": "Healthy moderation", "source_url": "https://heritage.iitk.ac.in/SBG/6.17", "tags": ["sleep", "screen", "routine", "gaming", "food", "exercise", "balance"]}, {"reference": "6.26", "title": "Gently return wandering attention", "source_url": "https://heritage.iitk.ac.in/SBG/6.26", "tags": ["focus", "attention", "distracted", "homework", "exams", "anxious", "overthinking"]}, {"reference": "6.32", "title": "Empathetic perspective", "source_url": "https://heritage.iitk.ac.in/SBG/6.32", "tags": ["empathy", "listen", "feelings", "communication", "friends", "bullying", "emotions"]}, {"reference": "6.35", "title": "Practice and detachment", "source_url": "https://heritage.iitk.ac.in/SBG/6.35", "tags": ["attention", "habits", "anger", "patience", "consistency", "focus"]}, {"reference": "9.22", "title": "Faith and devotion", "source_url": "https://heritage.iitk.ac.in/SBG/9.22", "tags": ["faith", "trust", "worry", "uncertainty", "devotion"]}, {"reference": "12.13", "title": "Compassion without hostility", "source_url": "https://heritage.iitk.ac.in/SBG/12.13", "tags": ["kindness", "compassion", "empathy", "patience", "parenting", "anger", "relationships"]}, {"reference": "12.14", "title": "Steadfast devotion", "source_url": "https://heritage.iitk.ac.in/SBG/12.14", "tags": ["consistency", "patience", "routine", "commitment"]}, {"reference": "12.15", "title": "Avoid causing distress", "source_url": "https://heritage.iitk.ac.in/SBG/12.15", "tags": ["arguments", "shouting", "fights", "upset", "emotions", "conflict"]}, {"reference": "12.16", "title": "Care without selfish demands", "source_url": "https://heritage.iitk.ac.in/SBG/12.16", "tags": ["fairness", "expectations", "comparison", "boundaries", "impartial"]}, {"reference": "12.17", "title": "Evenness in emotional reactions", "source_url": "https://heritage.iitk.ac.in/SBG/12.17", "tags": ["mood", "swings", "anger", "rejection", "disappointment"]}, {"reference": "13.8", "title": "Humility and non-harm", "source_url": "https://heritage.iitk.ac.in/SBG/13.8", "tags": ["humility", "bullying", "kindness", "honesty", "forgiveness"]}, {"reference": "16.1", "title": "Cultivating constructive traits", "source_url": "https://heritage.iitk.ac.in/SBG/16.1", "tags": ["courage", "values", "generosity", "anxiety", "character"]}, {"reference": "16.2", "title": "Truthful and gentle conduct", "source_url": "https://heritage.iitk.ac.in/SBG/16.2", "tags": ["lying", "honesty", "anger", "cruelty", "empathy", "kindness"]}, {"reference": "16.3", "title": "Forgiveness and patience", "source_url": "https://heritage.iitk.ac.in/SBG/16.3", "tags": ["forgiveness", "resentment", "conflict", "patience", "sibling"]}, {"reference": "17.15", "title": "Thoughtful speech", "source_url": "https://heritage.iitk.ac.in/SBG/17.15", "tags": ["communication", "scolding", "criticism", "shouting", "arguing", "rude", "language", "trust"]}, {"reference": "17.16", "title": "Inner composure", "source_url": "https://heritage.iitk.ac.in/SBG/17.16", "tags": ["mindfulness", "calm", "anger", "anxiety", "reactivity"]}, {"reference": "18.26", "title": "Steadfast and non-egoistic action", "source_url": "https://heritage.iitk.ac.in/SBG/18.26", "tags": ["resilience", "effort", "grades", "exams", "sports", "perseverance"]}, {"reference": "18.30", "title": "Discerning responsible choices", "source_url": "https://heritage.iitk.ac.in/SBG/18.30", "tags": ["choices", "morals", "boundaries", "discipline", "peer-pressure", "decisions"]}, {"reference": "18.63", "title": "Reflect and choose", "source_url": "https://heritage.iitk.ac.in/SBG/18.63", "tags": ["independence", "autonomy", "teenager", "choices", "dialogue", "decisions", "listen"]}];const BIBLE_PILOT=[{"id": "BIBLE_PRO_15_1", "reference": "Proverbs 15:1", "title": "A gentle answer", "text": "A gentle answer turns away wrath, but a harsh word stirs up anger.", "tags": ["anger", "shouting", "yelling", "arguments", "communication", "calm"], "source_url": "https://ebible.org/engwebp/PRO15.htm"}, {"id": "BIBLE_PRO_15_18", "reference": "Proverbs 15:18", "title": "Slow to anger", "text": "A wrathful man stirs up contention, but one who is slow to anger appeases strife.", "tags": ["anger", "patience", "conflict", "temper", "fighting"], "source_url": "https://ebible.org/engwebp/PRO15.htm"}, {"id": "BIBLE_PRO_15_22", "reference": "Proverbs 15:22", "title": "Seek wise counsel", "text": "Where there is no counsel, plans fail; but in a multitude of counselors they are established.", "tags": ["advice", "decisions", "uncertainty", "school", "help", "support"], "source_url": "https://ebible.org/engwebp/PRO15.htm"}, {"id": "BIBLE_JAS_1_19", "reference": "James 1:19", "title": "Listen first", "text": "So, then, my beloved brothers, let every man be swift to hear, slow to speak, and slow to anger;", "tags": ["listen", "communication", "anger", "argument", "understanding", "teen"], "source_url": "https://ebible.org/engwebp/JAS01.htm"}, {"id": "BIBLE_EPH_4_29", "reference": "Ephesians 4:29", "title": "Words that build up", "text": "Let no corrupt speech proceed out of your mouth, but only what is good for building others up as the need may be, that it may give grace to those who hear.", "tags": ["criticism", "talk", "kindness", "self-esteem", "insult", "words"], "source_url": "https://ebible.org/engwebp/EPH04.htm"}, {"id": "BIBLE_EPH_4_32", "reference": "Ephesians 4:32", "title": "Kindness and forgiveness", "text": "And be kind to one another, tender hearted, forgiving each other, just as God also in Christ forgave you.", "tags": ["kindness", "forgiveness", "relationships", "conflict", "reconnect", "trust"], "source_url": "https://ebible.org/engwebp/EPH04.htm"}, {"id": "BIBLE_COL_3_12", "reference": "Colossians 3:12", "title": "Compassion and humility", "text": "Put on therefore, as God’s chosen ones, holy and beloved, a heart of compassion, kindness, lowliness, humility, and perseverance;", "tags": ["compassion", "kindness", "patience", "bullying", "empathy", "relationship"], "source_url": "https://ebible.org/engwebp/COL03.htm"}, {"id": "BIBLE_COL_3_21", "reference": "Colossians 3:21", "title": "Don't discourage your child", "text": "Fathers, don’t provoke your children, so that they won’t be discouraged.", "tags": ["discouraged", "parenting", "criticism", "school", "pressure", "grades", "confidence"], "source_url": "https://ebible.org/engwebp/COL03.htm"}, {"id": "BIBLE_GAL_6_2", "reference": "Galatians 6:2", "title": "Carry one another's burdens", "text": "Bear one another’s burdens, and so fulfill the law of Christ.", "tags": ["stress", "anxiety", "support", "sadness", "lonely", "school", "help"], "source_url": "https://ebible.org/engwebp/GAL06.htm"}, {"id": "BIBLE_GAL_6_9", "reference": "Galatians 6:9", "title": "Persevere in doing good", "text": "Let’s not be weary in doing good, for we will reap in due season if we don’t give up.", "tags": ["patience", "effort", "grades", "school", "struggling", "hope", "persistence"], "source_url": "https://ebible.org/engwebp/GAL06.htm"}, {"id": "BIBLE_1CO_13_4", "reference": "1 Corinthians 13:4", "title": "Love is patient and kind", "text": "Love is patient and is kind. Love doesn’t envy. Love doesn’t brag, is not proud,", "tags": ["patience", "love", "kindness", "envy", "comparison", "family", "teen"], "source_url": "https://ebible.org/engwebp/1CO13.htm"}, {"id": "BIBLE_ROM_12_18", "reference": "Romans 12:18", "title": "Seek peace where possible", "text": "If it is possible, as much as it is up to you, be at peace with all men.", "tags": ["peace", "argument", "fight", "family", "respect", "boundaries"], "source_url": "https://ebible.org/engwebp/ROM12.htm"}, {"id": "BIBLE_MAT_5_9", "reference": "Matthew 5:9", "title": "Peacemakers", "text": "Blessed are the peacemakers, for they shall be called children of God.", "tags": ["conflict", "siblings", "peace", "fighting", "arguments"], "source_url": "https://ebible.org/engwebp/MAT05.htm"}, {"id": "BIBLE_PRO_22_6", "reference": "Proverbs 22:6", "title": "Patient guidance", "text": "Train up a child in the way he should go, and when he is old he will not depart from it.", "tags": ["parenting", "responsibility", "discipline", "habit", "guidance", "growth"], "source_url": "https://ebible.org/engwebp/PRO22.htm"}];
+const SAMPLE_GITA_TEXTS={"2.14":{"sanskrit":"मात्रास्पर्शास्तु कौन्तेय शीतोष्णसुखदुःखदाः ।\nआगमापायिनोऽनित्यास्तांस्तितिक्षस्व भारत ॥","english":"Kaunteya, contact with things brings cold and heat, pleasure and pain. They come and they go. They do not last. Bear them, Bharata.","hindi":"हे कौंतेय, विषयों का स्पर्श ही सर्दी-गर्मी और सुख-दुःख देता है। वे आते हैं और चले जाते हैं, टिकते नहीं। हे भारत, उन्हें सह लो।","url":"https://gitabhawan.org.in/gita/chapters/2#bg-2-14"},"2.38":{"sanskrit":"सुखदुःखे समे कृत्वा लाभालाभौ जयाजयौ ।\nततो युद्धाय युज्यस्व नैवं पापमवाप्स्यसि ॥","english":"Treat pleasure and pain alike, gain and loss alike, victory and defeat alike, and then prepare for the fight. That way you take on no wrong.","hindi":"सुख और दुःख को, लाभ और हानि को, जय और पराजय को एक समान मानकर फिर युद्ध के लिए तैयार हो जाओ। इस प्रकार तुम्हें पाप नहीं लगेगा।","url":"https://gitabhawan.org.in/gita/chapters/2#bg-2-38"},"2.47":{"sanskrit":"कर्मण्येवाधिकारस्ते मा फलेषु कदाचन ।\nमा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि ॥","english":"Your right is to the action alone, never to its fruits. Do not let the fruit be your reason for acting, and do not be attached to inaction either.","hindi":"तुम्हारा अधिकार केवल कर्म में है, उसके फलों में कभी नहीं। फल को कर्म का कारण मत बनाओ, और अकर्म में भी आसक्त मत हो।","url":"https://gitabhawan.org.in/gita/chapters/2#bg-2-47"},"2.48":{"sanskrit":"योगस्थः कुरु कर्माणि सङ्गं त्यक्त्वा धनञ्जय ।\nसिद्ध्यसिद्ध्योः समो भूत्वा समत्वं योग उच्यते ॥","english":"Do your work standing in yoga, Dhananjaya, letting attachment go, the same whether it succeeds or fails. That evenness is what yoga means.","hindi":"हे धनंजय, योग में स्थित होकर, आसक्ति छोड़कर कर्म करो — सिद्धि और असिद्धि में समान रहकर। यही समता योग कहलाती है।","url":"https://gitabhawan.org.in/gita/chapters/2#bg-2-48"},"2.56":{"sanskrit":"दुःखेष्वनुद्विग्नमनाः सुखेषु विगतस्पृहः ।\nवीतरागभयक्रोधः स्थितधीर्मुनिरुच्यते ॥","english":"Untroubled in sorrow, without craving in happiness, free of longing, fear and anger — such a person is called a sage of steady understanding.","hindi":"जो दुःख में विचलित नहीं होता, सुख में जिसकी चाह नहीं रहती, और जो राग, भय और क्रोध से मुक्त है — वही स्थिर बुद्धि वाला मुनि कहा जाता है।","url":"https://gitabhawan.org.in/gita/chapters/2#bg-2-56"},"2.62":{"sanskrit":"ध्यायतो विषयान्पुंसः सङ्गस्तेषूपजायते ।\nसङ्गात्सञ्जायते कामः कामात्क्रोधोऽभिजायते ॥","english":"Dwelling on things, a man grows attached to them. From attachment desire is born. From desire comes anger.","hindi":"विषयों का चिंतन करते रहने से मनुष्य को उनमें आसक्ति हो जाती है। आसक्ति से कामना जन्म लेती है, और कामना से क्रोध उत्पन्न होता है।","url":"https://gitabhawan.org.in/gita/chapters/2#bg-2-62"},"2.63":{"sanskrit":"क्रोधाद्भवति सम्मोहः सम्मोहात्स्मृतिविभ्रमः ।\nस्मृतिभ्रंशाद्बुद्धिनाशो बुद्धिनाशात्प्रणश्यति ॥","english":"From anger comes confusion. From confusion, memory fails. When memory fails, understanding is lost, and when understanding is lost, the man is lost.","hindi":"क्रोध से मोह होता है, मोह से स्मृति भ्रमित हो जाती है। स्मृति के नष्ट होने पर बुद्धि नष्ट होती है, और बुद्धि के नष्ट होने पर मनुष्य नष्ट हो जाता है।","url":"https://gitabhawan.org.in/gita/chapters/2#bg-2-63"},"3.21":{"sanskrit":"यद्यदाचरति श्रेष्ठस्तत्तदेवेतरो जनः ।\nस यत्प्रमाणं कुरुते लोकस्तदनुवर्तते ॥","english":"Whatever a great man does, other people do the same. Whatever standard he sets by his own conduct, the world follows it.","hindi":"श्रेष्ठ पुरुष जो-जो करता है, दूसरे लोग भी वही करते हैं। वह जिसे प्रमाण मान लेता है, संसार उसी के पीछे चलता है।","url":"https://gitabhawan.org.in/gita/chapters/3#bg-3-21"},"6.5":{"sanskrit":"उद्धरेदात्मनात्मानं नात्मानमवसादयेत् ।\nआत्मैव ह्यात्मनो बन्धुरात्मैव रिपुरात्मनः ॥","english":"Lift yourself by your own effort; do not let yourself sink. You are your own friend, and you are your own enemy.","hindi":"अपने आप को अपने ही बल से ऊपर उठाओ, अपने आप को गिरने मत दो। मनुष्य स्वयं ही अपना मित्र है और स्वयं ही अपना शत्रु।","url":"https://gitabhawan.org.in/gita/chapters/6#bg-6-5"},"6.17":{"sanskrit":"युक्ताहारविहारस्य युक्तचेष्टस्य कर्मसु ।\nयुक्तस्वप्नावबोधस्य योगो भवति दुःखहा ॥","english":"For the man who is measured in eating and in rest, measured in the effort he puts into work, measured in sleep and waking, yoga becomes the end of sorrow.","hindi":"जो खाने और घूमने-फिरने में संतुलित है, काम में अपना श्रम संतुलित रखता है, और सोने-जागने में संतुलित है, उसके लिए योग दुख का अंत बन जाता है।","url":"https://gitabhawan.org.in/gita/chapters/6#bg-6-17"},"6.26":{"sanskrit":"यतो यतो निश्चरति मनश्चञ्चलमस्थिरम् ।\nततस्ततो नियम्यैतदात्मन्येव वशं नयेत् ॥","english":"Wherever the restless and unsteady mind wanders off to, from there he should draw it back and bring it under the self again.","hindi":"यह चंचल और अस्थिर मन जहाँ-जहाँ भटक जाए, वहीं से उसे रोककर वह फिर से आत्मा के वश में ले आए।","url":"https://gitabhawan.org.in/gita/chapters/6#bg-6-26"},"6.32":{"sanskrit":"आत्मौपम्येन सर्वत्र समं पश्यति योऽर्जुन ।\nसुखं वा यदि वा दुःखं स योगी परमो मतः ॥","english":"The one who measures everything by himself, Arjuna, and sees the pleasure and pain of others as he sees his own, is held to be the highest yogi.","hindi":"अर्जुन, जो हर किसी को अपने ही समान मानकर देखता है, और दूसरों के सुख-दुख को अपना ही सुख-दुख समझता है, वही सबसे ऊँचा योगी माना गया है।","url":"https://gitabhawan.org.in/gita/chapters/6#bg-6-32"},"12.13":{"sanskrit":"अद्वेष्टा सर्वभूतानां मैत्रः करुण एव च ।\nनिर्ममो निरहङ्कारः समदुःखसुखः क्षमी ॥","english":"He bears no ill will towards any living being, is friendly and kind to all, free of the sense of mine and of pride, the same in pain and pleasure, and forgiving.","hindi":"वह किसी भी प्राणी से द्वेष नहीं करता, सबके प्रति मैत्री और करुणा रखता है, ममता और अहंकार से मुक्त है, सुख-दुःख में समान है, और क्षमाशील है।","url":"https://gitabhawan.org.in/gita/chapters/12#bg-12-13"},"17.15":{"sanskrit":"अनुद्वेगकरं वाक्यं सत्यं प्रियहितं च यत् ।\nस्वाध्यायाभ्यसनं चैव वाङ्मयं तप उच्यते ॥","english":"Speech that disturbs no one, that is true, kind and to the listener’s good, along with the regular study of scripture — this is called the tapas of speech.","hindi":"ऐसा बोलना जो किसी को उद्विग्न न करे, जो सत्य हो, प्रिय हो और हितकारी हो, तथा स्वाध्याय का नियमित अभ्यास — इसे वाणी का तप कहा जाता है।","url":"https://gitabhawan.org.in/gita/chapters/17#bg-17-15"},"18.30":{"sanskrit":"प्रवृत्तिं च निवृत्तिं च कार्याकार्ये भयाभये ।\nबन्धं मोक्षं च या वेत्ति बुद्धिः सा पार्थ सात्त्विकी ॥","english":"The understanding that knows engagement and withdrawal, what is to be done and what is not, fear and fearlessness, bondage and liberation — that understanding, O Partha, is of goodness.","hindi":"जो बुद्धि प्रवृत्ति और निवृत्ति को, कर्तव्य और अकर्तव्य को, भय और अभय को, तथा बन्धन और मोक्ष को यथार्थ जानती है — हे पार्थ! वह सात्त्विकी है।","url":"https://gitabhawan.org.in/gita/chapters/18#bg-18-30"},"18.63":{"sanskrit":"इति ते ज्ञानमाख्यातं गुह्याद्गुह्यतरं मया ।\nविमृश्यैतदशेषेण यथेच्छसि तथा कुरु ॥","english":"Thus has knowledge more secret than every secret been told to you by Me. Weigh it fully, and then act as you wish.","hindi":"इस प्रकार गुह्य से भी गुह्यतर ज्ञान मैंने तुझसे कह दिया। इस पर पूरी तरह विचार कर, फिर जैसा तू चाहे वैसा कर।","url":"https://gitabhawan.org.in/gita/chapters/18#bg-18-63"}};
+const LOCAL_KEY='saanjh-beta-research-v1';const $=id=>document.getElementById(id);const id=()=>Math.random().toString(36).slice(2,12);const month=()=>new Date().toISOString().slice(0,7);
+const defaults=()=>({parent:'Ketan',faith:'gita',selected:'aryan-sample',children:[{id:'aryan-sample',name:'Aryan',age:14,concerns:'Communication and school pressure'}],language:'en',chats:{},plan:{},feedback:{},usage:{},threads:{},activeThreads:{}});
+let st;try{st=JSON.parse(localStorage.getItem(LOCAL_KEY))||defaults()}catch{st=defaults()}if(!st||!Array.isArray(st.children))st=defaults();if(!['en','hi'].includes(st.language))st.language='en';let live=false,busy=false,serverAvailable=false,modalOpener=null;
+const drafts=new Map();
+const sourcesInFlight=new WeakSet();
+let composerThreadId=null;
+function save(){if(typeof window!=='undefined'&&window.SaanjhCloud?.isSignedIn()){window.SaanjhCloud.changed();return}try{localStorage.setItem(LOCAL_KEY,JSON.stringify(st))}catch{message('Browser storage is unavailable. Your changes may not be saved.')}}
+function escape(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function message(text,kind='status'){
+ const notice=$('error');
+ notice.setAttribute?.('data-kind',kind);
+ notice.textContent=text||'';
+}
+function child(){return st.children.find(c=>c.id===st.selected)||st.children[0]||null}
+function chatKey(){return(st.faith||'gita')+':'+(child()?.id||'none')}
+// Keep the old browser data in place, and migrate each old conversation once.
+function initThreads(){
+ if(!st.threads||typeof st.threads!=='object'||Array.isArray(st.threads))st.threads={};
+ if(!st.activeThreads||typeof st.activeThreads!=='object'||Array.isArray(st.activeThreads))st.activeThreads={};
+ for(const [scope,messages] of Object.entries(st.chats||{})){
+  if(!Array.isArray(messages)||!messages.length)continue;
+  if(Object.values(st.threads).some(t=>t&&t.legacyScope===scope))continue;
+  const tid='legacy-'+scope.replace(/[^a-z0-9:-]/gi,'-');
+  st.threads[tid]={id:tid,scope,title:'Earlier conversation',createdAt:messages[0].at||new Date().toISOString(),updatedAt:messages[messages.length-1].at||new Date().toISOString(),messages:messages.slice(),plan:(st.plan?.[scope]||[]).slice(),legacyScope:scope};
+  if(!st.activeThreads[scope])st.activeThreads[scope]=tid;
+ }
+}
+function createThread(){
+ const scope=chatKey(),tid='chat-'+id()+'-'+Date.now();
+ st.threads[tid]={id:tid,scope,title:'New conversation',createdAt:new Date().toISOString(),updatedAt:new Date().toISOString(),messages:[],plan:[]};
+ st.activeThreads[scope]=tid;save();return st.threads[tid];
+}
+function currentThread(){
+ initThreads();const scope=chatKey(),tid=st.activeThreads[scope];
+ if(tid&&st.threads[tid]&&st.threads[tid].scope===scope)return st.threads[tid];
+ const candidates=Object.values(st.threads).filter(t=>t&&t.scope===scope).sort((a,b)=>(b.updatedAt||'').localeCompare(a.updatedAt||''));
+ if(candidates.length){st.activeThreads[scope]=candidates[0].id;return candidates[0]}
+ return createThread();
+}
+function history(){return currentThread().messages||[]}
+function getPlan(){return currentThread().plan||[]}
+function usage(){return st.usage[month()]||0}
+// Only parent-written reports from earlier chats of the same child and same faith.
+// No cross-child leakage. These are user reports, never established facts or diagnoses.
+function earlierParentNotes(){
+ const current=currentThread(),scope=chatKey();
+ return Object.values(st.threads).filter(t=>t&&t.scope===scope&&t.id!==current.id)
+  .sort((a,b)=>(b.updatedAt||'').localeCompare(a.updatedAt||''))
+  .flatMap(t=>(t.messages||[]).filter(m=>m.role==='parent').slice(-3).reverse().map(m=>String(m.text||'').slice(0,400)))
+  .filter(Boolean).slice(0,5);
+}
+function earlierSuggestedActions(){
+ const current=currentThread(),scope=chatKey();
+ return Object.values(st.threads).filter(t=>t&&t.scope===scope&&t.id!==current.id)
+  .sort((a,b)=>(b.updatedAt||'').localeCompare(a.updatedAt||''))
+  .flatMap(t=>(t.messages||[]).filter(m=>m.role==='assistant').slice(-1).flatMap(m=>Array.isArray(m.actions)?m.actions:[]))
+  .filter(a=>typeof a==='string').slice(0,4).map(a=>a.slice(0,300));
+}
+function clearDrafts(){
+ drafts.clear();
+ composerThreadId=null;
+}
+function showThreadDraft(threadId){
+ const prompt=$('prompt');
+ if(composerThreadId===threadId)return;
+ if(composerThreadId)drafts.set(composerThreadId,prompt.value);
+ prompt.value=drafts.get(threadId)||'';
+ composerThreadId=threadId;
+}
+function closeDrawer(focusMenu=false){
+ const wasOpen=document.body?.classList?.contains?.('sidebar-open');
+ document.body?.classList?.remove('sidebar-open');
+ $('mobileMenu').setAttribute?.('aria-expanded','false');
+ if(focusMenu&&wasOpen)$('mobileMenu').focus();
+}
+function showConversation(focusId){
+ closeDrawer();
+ message('');
+ $('chat').scrollTop=0;
+ render();
+ $(focusId).focus();
+ void hydrateStoredSources();
+}
+function newChat(){
+ if(busy||!child())return;
+ if(history().length||$('prompt').value.trim())createThread();
+ showConversation('prompt');
+}
+function switchThread(threadId){
+ if(busy||st.threads[threadId]?.scope!==chatKey())return;
+ st.activeThreads[chatKey()]=threadId;
+ save();
+ showConversation('chat');
+}
+function selectChild(childId,focusId='childSelect'){
+ if(busy||!st.children.some(c=>c.id===childId))return;
+ st.selected=childId;
+ save();
+ showConversation(focusId);
+}
+function deleteThread(){
+ if(busy)return;
+ const thread=currentThread();
+ if(!confirm('Delete this conversation from this browser? This cannot retract messages already sent to the AI provider.'))return;
+ delete st.threads[thread.id];
+ if(thread.legacyScope){
+  delete st.chats[thread.legacyScope];
+  delete st.plan[thread.legacyScope];
+ }
+ delete st.activeThreads[chatKey()];
+ drafts.delete(thread.id);
+ composerThreadId=null;
+ createThread();
+ showConversation('chat');
+}
+function renderThreadList(current){
+ const threads=Object.values(st.threads).filter(t=>t&&t.scope===chatKey())
+  .sort((a,b)=>(b.updatedAt||'').localeCompare(a.updatedAt||''));
+ $('conversationList').innerHTML=threads.map(thread=>{
+  const replies=thread.messages.filter(m=>m.role==='assistant').length;
+  return `<button type="button" class="thread-item ${thread.id===current.id?'selected':''}" data-thread="${escape(thread.id)}" title="${escape(thread.title)}" aria-current="${thread.id===current.id}" ${busy?'disabled':''}>${escape(thread.title)}<span class="thread-sub">${replies} repl${replies===1?'y':'ies'}</span></button>`;
+ }).join('');
+ for(const button of $('conversationList').querySelectorAll('[data-thread]')){
+  button.onclick=()=>switchThread(button.dataset.thread);
+ }
+ const earlier=earlierParentNotes().length;
+ const signedIn=typeof window!=='undefined'&&window.SaanjhCloud?.isSignedIn();
+ $('conversationContext').textContent=earlier
+  ? 'Earlier chats for this child and scripture can inform replies.'
+  : signedIn?'Signed-in history':'History is saved in this browser.';
+}
+function getSuggestion(){return ['My teenager has stopped talking to me.','We argue about schoolwork every evening.','My child spends too much time on their phone.','I worry about my child’s future and grades.']}
+function sourceSection(m){
+ if(m.mode==='safety')return '';
+ const gita=st.faith==='gita';
+ const original=m.source_sanskrit?`<div class="source-lang">Original Sanskrit · मूल श्लोक</div><div class="verse-original" lang="sa">${escape(m.source_sanskrit)}</div>`:'';
+ const english=m.source_english||m.source_text||'';
+ const englishBlock=english?`<div class="source-lang">${gita?'English translation · अंग्रेज़ी अनुवाद':'Original English · World English Bible'}</div><div class="source-line" lang="en">${escape(english)}</div>`:'';
+ const hindiBlock=m.source_hindi?`<div class="source-lang">Hindi translation · हिंदी अनुवाद</div><div class="source-line hindi" lang="hi">${escape(m.source_hindi)}</div>`:'';
+ const rights=m.source_attribution|| (gita?'Source: Hansi Gita Bhawan Trust · translations reproduced for research.':'Source: World English Bible · public domain.');
+ const link=/^https?:\/\//i.test(m.source_url||'')
+  ? `<a href="${escape(m.source_url)}" target="_blank" rel="noopener noreferrer">View source (opens in a new tab)</a>`
+  : '';
+ const empty=(!original&&!englishBlock)?'<p>Verse text is unavailable in this saved reply.</p>':'';
+ return `<details class="source" ${st.guideView==='quick'?'':'open'}>
+  <summary><span class="guidance-heading">${gita?'Bhagavad Gita':'Bible'} ${escape(m.reference||'')}</span></summary>
+  ${original}${englishBlock}${hindiBlock}${empty}
+  <p class="source-attribution">${escape(rights)}</p>${link}
+ </details>`;
+}
+function guidanceSection(m,i){
+ const safety=m.mode==='safety',meaning=m.meaning||m.explanation||'',connection=m.connection||'';
+ const language=m.language||'en';
+ const meaningLabel=language==='hi'?'इस श्लोक का अर्थ':'What the passage means';
+ const connectionLabel=language==='hi'?'यह आपकी स्थिति से कैसे जुड़ता है':'Why it may relate to your situation';
+ const actionsLabel=language==='hi'?'आप क्या कोशिश कर सकते हैं':'Possible next steps';
+ const meaningBlock=safety?'':`<section class="guidance-section deep"><h3 class="guidance-heading">${meaningLabel}</h3><p>${escape(meaning)}</p></section>`;
+ const connectBlock=safety?`<section class="guidance-section"><p>${escape(m.connection||m.explanation||'')}</p></section>`:connection?`<section class="guidance-section deep"><h3 class="guidance-heading">${connectionLabel}</h3><p>${escape(connection)}</p></section>`:`<p class="application-note">Earlier response: the application to your circumstances was not separately recorded.</p>`;
+ const actionsBlock=`<section class="guidance-section"><h3 class="guidance-heading">${actionsLabel}</h3><ol>${(m.actions||[]).map(a=>`<li>${escape(a)}</li>`).join('')}</ol>${safety?'':`<div class="application-note">${m.mode==='sample'?'Illustrative sample suggestions':'AI-generated suggestions'}</div>`}</section>`;
+ const likely=safety||!m.possible_driver?'':`<div class="possible-driver"><b>${language==='hi'?'क्या हो सकता है':'What may be happening'}:</b> ${escape(m.possible_driver)}</div>`;
+ const spoken=safety||!m.say_this?'':`<section class="spoken-card"><div class="spoken-head">${language==='hi'?'आज आप यह कह सकते हैं':'Words you could use today'}</div><blockquote>“${escape(m.say_this)}”</blockquote><button type="button" data-copy-script="${i}">Copy these words</button></section>`;
+ const repair=safety||!m.repair_line?'':`<div class="repair-card"><b>${language==='hi'?'बात सुधारने के लिए':'If you need to repair after an argument'}:</b> “${escape(m.repair_line)}”</div>`;
+ const followUp=m.question?`<p class="followup">${escape(m.question)}</p>`:'';
+ const feedbackKey=currentThread().id+':'+i;
+ const helpful=st.feedback[feedbackKey+':helpful']??(st.feedback[feedbackKey]==='helpful');
+ const checkedIn=Object.hasOwn(outcomeLabels,st.feedback[feedbackKey]);
+ const controls=safety?'':`<div class="feedback" role="group" aria-label="Reply actions">
+  <button type="button" data-feedback="helpful" data-index="${i}" class="${helpful?'selected':''}" aria-pressed="${helpful}">Helpful</button>
+  <button type="button" data-feedback="nothelpful" data-index="${i}" ${busy||usage()>=20?'disabled':''}>Another approach</button>
+  <button type="button" data-feedback="tried" data-index="${i}" ${busy||usage()>=20?'disabled':''}>${checkedIn?'Update check-in':'Check in'}</button>
+ </div>`;
+ return `${meaningBlock}${connectBlock}${likely}${actionsBlock}${spoken}${repair}${followUp}${controls}`;
+}
+const outcomeLabels={
+ helped:'It helped',partly:'It helped a little',didnt:'It did not help',notyet:'I have not tried it yet'
+};
+function openCheckIn(index){
+ const thread=currentThread(),answer=thread.messages[index];
+ if(busy||!answer||answer.role!=='assistant'||answer.mode==='safety')return;
+ const key=thread.id+':'+index;
+ const options=Object.entries(outcomeLabels).map(([value,label])=>
+  `<option value="${value}" ${value===st.feedback[key]?'selected':''}>${label}</option>`).join('');
+ openModal('How did it go?',`<form id="checkinForm">
+  <p class="small">Tell Saanjh what actually happened. You can review and edit your follow-up before sending it.</p>
+  <div class="fields">
+    <div class="field"><label for="outcome">What was the result?</label><select id="outcome" required><option value="">Choose an outcome</option>${options}</select></div>
+    <div class="field"><label for="checkinNote">What did your child do or say? (optional)</label><textarea id="checkinNote" maxlength="700" placeholder="Use fictional details only."></textarea></div>
+  </div>
+  <div class="modal-footer"><button class="button secondary" type="button" id="closeCheckin">Cancel</button><button class="button" type="submit">Review follow-up message</button></div>
+ </form>`);
+ $('closeCheckin').onclick=closeModal;
+ $('checkinForm').onsubmit=event=>{
+  event.preventDefault();
+  const outcome=$('outcome').value;
+  if(!Object.hasOwn(outcomeLabels,outcome)||busy||currentThread()!==thread)return;
+  if($('prompt').value.trim()&&!confirm('Replace the draft in the message box with this check-in?'))return;
+  const note=$('checkinNote').value.trim();
+  const priorStep=String(answer.actions?.[0]||'').slice(0,350);
+  const context=priorStep?` about this suggested step: “${priorStep}”`:' about your previous guidance';
+  $('prompt').value=`Checking in${context}: ${outcomeLabels[outcome]}. ${note?`Here is what I observed: ${note}`:'Please ask one brief clarifying question before suggesting a next step.'}`;
+  if(st.feedback[key]==='helpful')st.feedback[key+':helpful']??=true;
+  st.feedback[key]=outcome;
+  save();
+  closeModal();
+  render();
+  message('Check-in drafted. Review it, then select Get guidance.');
+  $('prompt').focus();
+ };
+}
+function renderPreferences(){
+ const quick=st.guideView==='quick';
+ document.body?.classList?.toggle('quick-view',quick);
+ for(const [id,active] of [['quickGuide',quick],['fullGuide',!quick],['faithGita',st.faith==='gita'],['faithBible',st.faith==='bible']]){
+  $(id).classList.toggle('active',active);
+  $(id).setAttribute?.('aria-pressed',String(active));
+ }
+ $('replyLanguage').value=st.language;
+}
+function render(){
+ const ch=child();
+ if(ch)st.selected=ch.id;
+ const thread=currentThread();
+ showThreadDraft(thread.id);
+ renderThreadList(thread);
+ renderPreferences();
+ $('parentLabel').textContent=st.parent;
+ $('parentInitial').textContent=(st.parent||'P')[0].toUpperCase();
+ $('childSelect').innerHTML=ch
+  ? st.children.map(c=>`<option value="${escape(c.id)}">${escape(c.name)} · age ${c.age}</option>`).join('')
+  : '<option value="">Add a child to start</option>';
+ $('childSelect').value=ch?.id||'';
+ $('childList').innerHTML=st.children.map(c=>`<button type="button" class="child-item ${c.id===st.selected?'selected':''}" data-id="${escape(c.id)}" aria-pressed="${c.id===st.selected}" ${busy?'disabled':''}><div class="avatar" aria-hidden="true">${escape(c.name[0]?.toUpperCase())}</div><div><strong>${escape(c.name)}</strong><span>Age ${c.age}</span></div></button>`).join('');
+ for(const button of $('childList').querySelectorAll('button')){
+  button.onclick=()=>selectChild(button.dataset.id);
+ }
+ for(const id of ['childSelect','newChatTop','newChatSide','deleteThread','editChild','eraseChild']){
+  $(id).disabled=busy||!ch;
+ }
+ for(const id of ['addChild','editParent','faithGita','faithBible','replyLanguage','settingsTop']){
+  $(id).disabled=busy;
+ }
+ const remaining=Math.max(0,20-usage());
+ $('remaining').textContent=remaining;
+ $('usageBar').style.width=Math.min(100,usage()*5)+'%';
+ $('prompt').disabled=!ch||!remaining;
+ $('prompt').readOnly=busy;
+ $('send').disabled=busy||!ch||!remaining;
+ $('send').textContent=busy?'Preparing reply…':remaining?'Get guidance':'Monthly limit reached';
+ $('rightName').textContent=ch?ch.name+"'s profile":'No child yet';
+ $('rightAge').textContent=ch?.age||'—';
+ $('rightConcerns').textContent=ch?.concerns||'None added';
+ $('rightCount').textContent=Object.values(st.threads).filter(t=>t&&t.scope===chatKey()).length;
+ const plan=getPlan();
+ const shownPlan=plan.length?plan:earlierSuggestedActions();
+ $('lastPlan').textContent=shownPlan.length?(plan.length?'Current chat:':'From earlier chat:')+'\n'+shownPlan.map((step,i)=>`${i+1}. ${step}`).join('\n'):'Your latest steps will appear here.';
+ $('lastPlan').style.whiteSpace='pre-line';
+ renderMessages(thread);
+}
+function renderMessages(thread){
+ const chat=$('chat'),ch=child(),previousScroll=chat.scrollTop;
+ const openSources=new Map();
+ for(const details of chat.querySelectorAll('details.source')){
+  openSources.set(details.closest('article').id,details.open);
+ }
+ if(!thread.messages.length){
+  chat.innerHTML=`<div class="welcome"><h2>${ch?`Start a chat about ${escape(ch.name)}`:'Add a child profile to begin'}</h2>
+   <p>${ch?'Write a question or choose an example to get started.':'Open the family menu to add a fictional profile.'}</p>
+   ${ch?`<div class="suggestions">${getSuggestion().map(s=>`<button type="button" class="sample" ${busy||usage()>=20?'disabled':''}>${escape(s)}</button>`).join('')}</div>`:''}
+  </div>`;
+  for(const button of chat.querySelectorAll('.sample')){
+   button.onclick=()=>{
+    if(!$('prompt').value.trim()||confirm('Replace the draft in the message box with this example?')){
+     $('prompt').value=button.textContent;
+     $('prompt').focus();
+    }
+   };
+  }
+ }else{
+  chat.innerHTML=thread.messages.map((m,i)=>m.role==='parent'
+   ? `<div class="bubble parent">${escape(m.text)}</div>`
+   : `<article class="bubble ai" id="reply-${escape(thread.id)}-${i}">
+      <h2 class="reply-title" id="reply-heading-${i}" tabindex="-1">${m.mode==='safety'?'Safety guidance':m.response_mode==='alternative'?'Another approach':'Saanjh guidance'}</h2>
+      ${m.mode==='safety'?'':`<div class="meta">${m.mode==='gemini'?'Gemini · source checked':'Sample reply · no live AI'}</div>`}
+      <p>${escape(m.acknowledgement||'')}</p>${sourceSection(m)}${guidanceSection(m,i)}
+     </article>`).join('');
+  for(const details of chat.querySelectorAll('details.source')){
+   const replyId=details.closest('article').id;
+   if(openSources.has(replyId))details.open=openSources.get(replyId);
+  }
+  for(const button of chat.querySelectorAll('[data-feedback]')){
+   button.onclick=()=>{
+    const index=Number(button.dataset.index);
+    if(button.dataset.feedback==='nothelpful')return send({type:'alternative',index});
+    if(button.dataset.feedback==='tried')return openCheckIn(index);
+    const key=thread.id+':'+index;
+    const helpful=!(st.feedback[key+':helpful']??(st.feedback[key]==='helpful'));
+    st.feedback[key+':helpful']=helpful;
+    button.classList.toggle('selected',helpful);
+    button.setAttribute('aria-pressed',String(helpful));
+    message(helpful?'Marked helpful.':'Helpful mark removed.');
+    save();
+   };
+  }
+  for(const button of chat.querySelectorAll('[data-copy-script]')){
+   button.onclick=async()=>{
+    try{
+     await navigator.clipboard.writeText(thread.messages[Number(button.dataset.copyScript)].say_this);
+     message('Suggested words copied.');
+    }catch{
+     message('Copy is unavailable. You can select the suggested words to copy them.','error');
+    }
+   };
+  }
+ }
+ chat.scrollTop=previousScroll;
+}
+function setGuideView(view){
+ st.guideView=view;
+ save();
+ renderPreferences();
+ for(const details of $('chat').querySelectorAll('details.source'))details.open=view==='full';
+}
+function pickDemo(faith,text){const src=faith==='gita'?GITA_CURATED:BIBLE_PILOT;let t=text.toLowerCase(),words=t.match(/[a-z]{3,}/g)||[];const theme=t.includes('grade')||t.includes('school')||t.includes('homework')||t.includes('stud')?'school':t.includes('phone')||t.includes('screen')||t.includes('game')?'screens':t.includes('fight')||t.includes('argu')||t.includes('rude')||t.includes('shout')?'anger':'listening';
+ const targets=faith==='gita'?{school:'2.47',screens:'2.62',anger:'2.63',listening:'12.13'}:{school:'Colossians 3:21',screens:'Galatians 6:9',anger:'Proverbs 15:1',listening:'James 1:19'};let chosen=src.find(x=>x.reference===targets[theme])||src[0];return {chosen,theme}}
+function sampleReply(txt,alternate=false,priorActions=[]){const ch=child();const {chosen,theme}=pickDemo(st.faith,txt);
+ let actions=alternate?(theme==='school'?[`Ask ${ch.name} whether one specific subject or task is causing the most difficulty; offer to involve a teacher together.`,`Let ${ch.name} choose between two small support options, such as a short study break or a shared planning session.`,`Agree on when to check back without turning every conversation into a test.`]:[`Try approaching ${ch.name} during a low-pressure shared activity rather than a formal discussion.`,`Ask what support ${ch.name} would find useful, and offer two choices.`,`Revisit the plan after a few days and adjust together.`]):theme==='school'?[`Ask ${ch.name} which part of learning is most stressful; listen without correcting.`,`Agree on one manageable study goal together, rather than demanding a particular result.`,`Revisit the plan in three days and notice the effort, not only grades.`]:theme==='screens'?[`Ask ${ch.name} what they enjoy about screens and what feels hard about stopping.`,`Agree on a realistic bedtime routine and model the same limits yourself.`,`Check in after three evenings and adjust the agreement together.`]:theme==='anger'?[`Invite ${ch.name} to talk at a calm time, without criticism or scolding.`,`Describe one concern using 'I feel...' rather than blaming them.`,`If voices rise, pause and try again later.`]:[`Ask ${ch.name} how they see the situation. Listen for ten minutes without interruption.`,`Choose one small step that respects your child's independence.`,`Check in together after a few days and adapt if necessary.`];
+ if(alternate&&priorActions.includes(actions[0])){
+  actions=[
+   `Ask ${ch.name} to choose a time to talk about what would make this situation easier.`,
+   `Let ${ch.name} propose one small change to try together for the next few days.`,
+   'Agree on how you will both tell whether the change is helping.'
+  ];
+ }
+ const exact=st.faith==='gita'?SAMPLE_GITA_TEXTS[chosen.reference]:null;
+ const words=st.faith==='gita'?'The verse offers a principle about thoughtful effort, steadiness, or considerate communication.':'This Biblical passage offers a principle for reflection; its historical context remains important.';
+ return {mode:'sample',response_mode:alternate?'alternative':'normal',language:st.language,acknowledgement:alternate?`${st.parent}, here is a different possibility for ${ch.name}.`:`${st.parent}, this sounds difficult with ${ch.name}, especially at age ${ch.age}.`,reference:chosen.reference,title:chosen.title,source_sanskrit:exact?.sanskrit||'',source_english:exact?.english||chosen.text||'',source_hindi:exact?.hindi||'',source_text:exact?.english||chosen.text||'',source_attribution:exact?'Gita translation © Hansi Gita Bhawan Trust. Used with attribution for research.':'World English Bible (public domain).',source_url:exact?.url||chosen.source_url,meaning:words,connection:`A possible application to your concern is to support ${ch.name} without treating every outcome as a test. This connection is an illustration, not a direct scriptural command.`,actions,possible_driver:`${ch.name} may be reacting to feeling pressured or misunderstood, but we do not know yet.`,say_this:alternate?`Could we work out together what feels hardest, ${ch.name}, and choose one way I can support you?`:`${ch.name}, I want to understand what's been difficult for you. Can we talk without worrying about grades right now?`,repair_line:`I'm sorry I raised my voice earlier. I'd like us to try again calmly, and we can still work out a plan together.`,question:`${st.parent}, what response do you expect ${ch.name} would have to this approach?`};}
+function safety(txt){return /suicid|self[- ]?harm|kill (myself|himself|herself|themselves)|hurt (myself|himself|herself|themselves)|sexual abuse|rape|molest|domestic violence|immediate danger/i.test(txt)}
+async function send(request={}){
+ const c=child();
+ if(busy||!c)return;
+ const family=st,thread=currentThread(),h=thread.messages;
+ const alternative=request.type==='alternative',idx=Number(request.index);
+ const target=alternative?h[idx]:null;
+ if(alternative&&(!target||target.role!=='assistant'||target.mode==='safety')){
+  return message('Another approach is unavailable for that reply.','error');
+ }
+ const earlierIssue=alternative?h.slice(0,idx).findLast(m=>m.role==='parent'):null;
+ const issue=alternative?(earlierIssue?.originalIssue||earlierIssue?.text||''):$('prompt').value.trim();
+ if(issue.length<4||issue.length>2200){
+  return message('Enter a parenting question between 4 and 2,200 characters.','error');
+ }
+ if(usage()>=20)return openPlans();
+ busy=true;
+ render();
+ message(live?'Preparing your Gemini reply…':'Preparing a sample reply…');
+ let replyIndex=null;
+ try{
+  let result;
+  if(!live&&safety(issue))result={mode:'safety',acknowledgement:`${st.parent}, this sounds like a situation where ${c.name} may need real-world support.`,meaning:'Safety is the priority.',connection:'This cannot be assessed safely through scripture-based advice alone.',actions:[`Stay with ${c.name} if it is safe to do so and listen without judgment.`,`If anyone is in immediate danger, call your local emergency number.`,`Contact a qualified clinician or crisis service as soon as possible.`],question:'Is everyone safe right now?',reference:'',title:'Safety first',source_url:''};
+  else if(live){
+   const token=typeof window!=='undefined'&&window.SaanjhCloud?.accessToken();
+   const response=await fetch('/api/guidance',{
+    method:'POST',
+    headers:{'Content-Type':'application/json',...(token?{'Authorization':'Bearer '+token}:{})},
+    body:JSON.stringify({
+     faith:st.faith,language:st.language,parentName:st.parent,child:c,message:issue,
+     responseMode:alternative?'alternative':'normal',avoidActions:target?.actions||[],
+     previous:(alternative?h.slice(0,idx+1):h).slice(-12).map(x=>({
+      role:x.role,
+      text:x.role==='parent'?(x.originalIssue||x.text):(x.acknowledgement+' '+(x.meaning||x.explanation||'')+' '+(x.connection||'')+' '+x.actions?.join('; ')).slice(0,650)
+     })),
+     familyMemory:{parentNotes:earlierParentNotes(),suggestedActions:earlierSuggestedActions()},
+     lastPlan:alternative?(target.actions||[]):getPlan()
+    })
+   });
+   const data=await response.json();
+   if(!response.ok)throw Error(data.error||'Unable to get a reply. Please try again.');
+   result=data;
+  }else result=sampleReply(issue,alternative,target?.actions);
+  // Account sync can replace the entire family while an API request is pending.
+  if(st!==family||st.threads[thread.id]!==thread){
+   return message('The active family changed while the reply was loading. Please send a new request.','error');
+  }
+  thread.messages.push(
+   {role:'parent',text:alternative?'Please show me another approach for the same concern.':issue,at:new Date().toISOString(),originalIssue:alternative?issue:undefined},
+   {role:'assistant',...result,at:new Date().toISOString()}
+  );
+  replyIndex=thread.messages.length-1;
+  thread.plan=result.actions||[];
+  thread.updatedAt=new Date().toISOString();
+  if(thread.title==='New conversation')thread.title=issue.slice(0,49)+(issue.length>49?'…':'');
+  st.usage[month()]=(st.usage[month()]||0)+1;
+  if(!alternative)$('prompt').value='';
+  message('Reply ready.');
+  save();
+ }catch(error){
+  message(error instanceof TypeError?'Could not reach Saanjh. Please try again.':error.message||'Unable to get a reply. Please try again.','error');
+ }finally{
+  busy=false;
+  const stillInThread=st===family&&currentThread()===thread;
+  render();
+  if(stillInThread&&replyIndex!==null){
+   const heading=$('reply-heading-'+replyIndex);
+   heading.focus({preventScroll:true});
+   heading.scrollIntoView?.({block:'start',behavior:'instant'});
+  }else if(stillInThread){
+   const control=alternative?$('chat').querySelector?.(`[data-feedback="nothelpful"][data-index="${idx}"]`):$('prompt');
+   control?.focus();
+  }
+ }
+}
+async function checkHealth(){
+ if(location.protocol==='file:')return;
+ try{
+  const response=await fetch('/api/health',{signal:AbortSignal.timeout(1500)});
+  if(!response.ok)return;
+  const data=await response.json();
+  serverAvailable=true;
+  live=!!data.live;
+  $('statusText').textContent=live?'Gemini enabled':'Sample mode';
+  $('productStatus').classList.toggle('live',live);
+  $('privacyNote').textContent=live?'Research preview. Live replies send your question and relevant profile and chat context to Gemini. Use fictional details.':'Research preview. Use fictional names and details.';
+  void hydrateStoredSources();
+ }catch{}
+}
+async function hydrateStoredSources(){
+ if(!serverAvailable)return;
+ const family=st,thread=currentThread(),faith=st.faith;
+ if(sourcesInFlight.has(thread))return;
+ sourcesInFlight.add(thread);
+ let updated=false;
+ try{
+  for(const reply of thread.messages){
+   if(reply.role!=='assistant'||reply.mode==='safety'||!reply.reference||reply.source_english)continue;
+   try{
+    const response=await fetch('/api/source?faith='+encodeURIComponent(faith)+'&ref='+encodeURIComponent(reply.reference));
+    if(!response.ok)continue;
+    const source=await response.json();
+    if(st!==family||st.threads[thread.id]!==thread)return;
+    Object.assign(reply,source);
+    updated=true;
+   }catch{}
+  }
+  if(updated){
+   save();
+   const chat=$('chat'),active=document.activeElement;
+   if(!busy&&currentThread()===thread&&(active===chat||!chat.contains?.(active)))renderMessages(thread);
+  }
+ }finally{
+  sourcesInFlight.delete(thread);
+ }
+}
+function openModal(title,body){
+ const dialog=$('modalBack');
+ if(!dialog.open)modalOpener=document.activeElement;
+ $('modalTitle').textContent=title;
+ $('modalBody').innerHTML=body;
+ if(!dialog.open)dialog.showModal?.();
+}
+function closeModal(){
+ $('modalBack').close?.();
+ modalOpener?.focus();
+ modalOpener=null;
+}
+function openParent(){openModal('Your profile',`<form id="editForm"><div class="fields"><div class="field"><label for="pname">Preferred name or nickname</label><input id="pname" maxlength="65" required value="${escape(st.parent)}"></div></div><p class="small">Only use a nickname in this local preview. Profile information remains in this browser unless you enable the local Gemini server.</p><div class="modal-footer"><button type="button" class="button secondary" id="cancel">Cancel</button><button type="submit" class="button">Save</button></div></form>`);$('cancel').onclick=closeModal;$('editForm').onsubmit=e=>{e.preventDefault();st.parent=$('pname').value.trim().slice(0,65)||'Parent';save();closeModal();render()}}
+function openChild(edit=false){const c=edit?child():null;openModal(edit?'Edit child profile':'Add child',`<form id="editForm"><div class="fields"><div class="field"><label for="cname">First name or nickname</label><input id="cname" maxlength="65" required value="${escape(c?.name||'')}"></div><div class="field"><label for="cage">Age</label><input id="cage" type="number" min="1" max="17" required value="${c?.age||''}"></div><div class="field"><label for="cconc">What should this companion remember? (optional)</label><textarea id="cconc" maxlength="300" placeholder="e.g. Trouble talking about school">${escape(c?.concerns||'')}</textarea></div></div><p class="small">Only add information you have permission to share. Avoid full names, school names and sensitive health details.</p><div class="modal-footer"><button type="button" class="button secondary" id="cancel">Cancel</button><button class="button">Save</button></div></form>`);$('cancel').onclick=closeModal;$('editForm').onsubmit=e=>{e.preventDefault();const age=Number($('cage').value),name=$('cname').value.trim();if(!name||!Number.isInteger(age)||age<1||age>17)return;if(edit){Object.assign(c,{name,age,concerns:$('cconc').value.trim()})}else{let newC={id:id(),name,age,concerns:$('cconc').value.trim()};st.children.push(newC);closeModal();selectChild(newC.id,'prompt');return}save();closeModal();render()}}
+function openPlans(){openModal('Simple, transparent plans',`<p class="small" style="line-height:1.7;margin-bottom:14px">We're testing prices; these are <b>proposed plans</b>. Checkout is not connected and no payment can be taken in this preview.</p><div class="plans"><div class="price-card"><b>Free</b><div class="price">$0</div><p>20 guidance replies per month. Family profile and memory included.</p></div><div class="price-card highlight"><b>7-day pass</b><div class="price">$2.99</div><p>One-time access, no renewal. Intended for short-term premium testing.</p></div><div class="price-card"><b>Saanjh Plus</b><div class="price">$9.99 <span class="small">/month</span></div><p>Proposed 500 replies per month, ongoing conversations and progress summaries.</p></div><div class="price-card"><b>Under consideration</b><div class="price">Annual</div><p>Not offered until we've measured real retention and repeat use.</p></div></div><div class="pricing-foot">All amounts in USD. We have not built payment processing or activated premium access. Free-tier limits in this demo are enforced on this browser only, not on a secure server.</div><div class="modal-footer"><button class="button" id="gotit">Got it</button></div>`);$('gotit').onclick=closeModal}
+function openSettings(){const sync=typeof window!=='undefined'&&window.SaanjhCloud?.isSignedIn();openModal('Privacy & settings',`<p class="small" style="line-height:1.75">This is a research prototype, not yet ready for real children’s information. ${sync?'Your data is synced to a cloud account you control.':'Your data is stored only in this browser.'} A live Gemini request sends the information needed to answer to the AI provider. You can export or delete cloud family history from My account once connected.</p><div class="divider"></div><button class="button danger full" id="eraseAll">${sync?'Reset synced family information':'Delete local demo profiles and chats'}</button><p class="small" style="margin-top:10px">This resets Saanjh’s family information; it cannot retract earlier requests sent to Gemini. This does not delete your login account.</p><div class="modal-footer"><button class="button secondary" id="cancel">Close</button></div>`);$('cancel').onclick=closeModal;$('eraseAll').onclick=()=>{if(!confirm('Delete the saved Saanjh family profile and all conversations?'))return;clearDrafts();st=sync?window.SaanjhHost.newFamily('Parent'):defaults();save();closeModal();render()}}
+function eraseChild(){const c=child();if(!c||!confirm(`Erase all locally saved conversations and plans for ${c.name}?`))return;for(const f of ['gita','bible']){const scope=f+':'+c.id;delete st.chats[scope];delete st.plan[scope];delete st.activeThreads[scope];for(const [tid,t] of Object.entries(st.threads))if(t.scope===scope)delete st.threads[tid];}save();render()}
+if(typeof window!=='undefined'){
+ window.SaanjhHost={getState:()=>JSON.parse(JSON.stringify(st)),replaceState:(newState)=>{if(!newState||!Array.isArray(newState.children))throw Error('Invalid family data');clearDrafts();st=newState;st.threads=st.threads||{};st.activeThreads=st.activeThreads||{};st.chats=st.chats||{};st.plan=st.plan||{};st.usage=st.usage||{};st.feedback=st.feedback||{};if(!['en','hi'].includes(st.language))st.language='en';initThreads();render()},newFamily:(name)=>({parent:(name||'Parent').slice(0,65),faith:'gita',selected:null,children:[],language:'en',chats:{},plan:{},feedback:{},usage:{},threads:{},activeThreads:{}}),setSyncStatus:(text,kind='')=>{const status=$('syncStatus');if(status){status.textContent=text;status.className='sync-status '+kind}},showModal:(title,body)=>openModal(title,body),closeModal,guestRestore:()=>{clearDrafts();try{st=JSON.parse(localStorage.getItem(LOCAL_KEY))||defaults()}catch{st=defaults()}render()},isBusy:()=>busy,toast:message};
+ $('accountButton').onclick=()=>{if(window.SaanjhCloud?.openAccount)window.SaanjhCloud.openAccount();else openModal('Sign in and sync',`<p class="account-intro">Sign in with Google and sync family profiles across your devices once the cloud account is configured. This local preview is not connected to a cloud database yet.</p><p class="account-notice">The Gemini API key is only for generating answers. Google sign-in uses a separate identity service.</p><div class="modal-footer"><button class="button secondary" id="accountClose">Close</button></div>`),$('accountClose').onclick=closeModal};
+ $('mobileMenu').onclick=()=>{
+  if(document.body.classList.contains('sidebar-open'))return closeDrawer(true);
+  document.body.classList.add('sidebar-open');
+  $('mobileMenu').setAttribute('aria-expanded','true');
+  $('editParent').focus();
+ };
+ $('mobileBackdrop').onclick=()=>closeDrawer(true);
+}
+$('childSelect').onchange=()=>selectChild($('childSelect').value);
+$('replyLanguage').onchange=()=>{
+ st.language=$('replyLanguage').value==='hi'?'hi':'en';
+ save();
+};
+$('quickGuide').onclick=()=>setGuideView('quick');
+$('fullGuide').onclick=()=>setGuideView('full');
+$('newChatSide').onclick=newChat;
+$('newChatTop').onclick=newChat;
+$('deleteThread').onclick=deleteThread;
+$('addChild').onclick=()=>openChild();
+$('editChild').onclick=()=>openChild(true);
+$('editParent').onclick=openParent;
+$('upgrade').onclick=openPlans;
+$('pricingTop').onclick=openPlans;
+$('settingsTop').onclick=openSettings;
+$('eraseChild').onclick=eraseChild;
+$('composer').onsubmit=event=>{
+ event.preventDefault();
+ void send();
+};
+const touchKeyboard=typeof matchMedia==='function'&&matchMedia('(pointer: coarse)').matches;
+if(touchKeyboard)$('composerHint').textContent='';
+$('prompt').addEventListener('keydown',event=>{
+ if(touchKeyboard||event.key!=='Enter'||event.shiftKey||event.isComposing||event.keyCode===229)return;
+ event.preventDefault();
+ void send();
+});
+for(const button of document.querySelectorAll('[data-faith]')){
+ button.onclick=()=>{
+  if(busy||st.faith===button.dataset.faith)return;
+  st.faith=button.dataset.faith;
+  save();
+  showConversation(button.id);
+ };
+}
+$('closeModal').onclick=closeModal;
+$('modalBack').addEventListener('cancel',event=>{
+ event.preventDefault();
+ closeModal();
+});
+$('modalBack').addEventListener('click',event=>{
+ const dialog=$('modalBack');
+ if(event.target!==dialog)return;
+ const {left,top,right,bottom}=dialog.getBoundingClientRect();
+ if(event.clientX<left||event.clientX>right||event.clientY<top||event.clientY>bottom)closeModal();
+});
+document.addEventListener('keydown',event=>{
+ if(event.key==='Escape'&&!$('modalBack').open)closeDrawer(true);
+});
+render();
+checkHealth();
+</script></body></html>

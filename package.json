@@ -1,0 +1,22 @@
+{
+  "name": "gita-parenting-research-prototype",
+  "version": "0.7.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.6"
+  },
+  "scripts": {
+    "start": "node --experimental-strip-types src/preview-server.ts",
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "eval": "node --experimental-strip-types tests/evaluate.ts",
+    "import:gita": "node --experimental-strip-types scripts/import-corpus.ts",
+    "library": "node --experimental-strip-types scripts/build-offline-library.ts",
+    "start:legacy": "node --experimental-strip-types src/server.ts",
+    "eval:v2": "node --experimental-strip-types tests/evaluate_v2.ts",
+    "test:live:gemini": "node --experimental-strip-types scripts/test-live-gemini.ts",
+    "qa:offline": "node --experimental-strip-types scripts/qa-offline.ts",
+    "qa:live": "node --experimental-strip-types scripts/qa-live.ts",
+    "qa:live-memory": "node --experimental-strip-types scripts/qa-memory-live.ts"
+  }
+}

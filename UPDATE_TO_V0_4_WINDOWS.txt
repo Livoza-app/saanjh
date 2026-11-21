@@ -1,0 +1,33 @@
+SAANJH v0.4 — UPDATE AND TEST (WINDOWS)
+=======================================
+The new release shows the original Gita verse, exact English + Hindi source translations,
+AI explanation of its meaning, how it MAY connect to your situation, and possible next steps.
+The 'Another approach' button now automatically requests a different response.
+
+1. STOP the older website: in its black window press Ctrl + C.
+2. Extract the entire Saanjh_v0_4_verse_guidance_project.zip into a NEW folder.
+3. Open the gita_parenting_poc folder INSIDE the extracted ZIP.
+4. Double-click start-gemini-windows.bat.
+5. Enter your EXISTING Gemini API key when prompted. The key stays in the local server process;
+   do NOT paste it into a website field, email or chat.
+6. In the SAME Chrome profile, open http://127.0.0.1:3030 and refresh the page (Ctrl + R).
+   Previous chats saved in Chrome should still be there, because the browser address
+   and local storage key haven't changed. Back up important information first if needed.
+7. Choose the guidance language from 'English / हिन्दी' at the top.
+8. Ask a fictional parenting question, review the source verse, and click 'Another approach'.
+   The button should automatically create a NEW answer. Each alternative uses an AI request
+   and therefore counts toward the monthly free reply allowance and Gemini API usage.
+
+IMPORTANT NOTES
+- This is a private LOCAL prototype, not ready for real family data or public access.
+- Existing Gita verses come from the user-provided Hansi Gita Bhawan Trust corpus.
+  The original Sanskrit and their English/Hindi translations are displayed separately.
+  The Trust holds rights to the translations; reconfirm commercial permissions before launch.
+- Only 14 English World English Bible passages are in the Bible pilot. Hindi Bible
+  EXPLANATIONS can be generated, but no verified Hindi Bible passage is provided yet.
+- A local automated test is NOT proof of theological accuracy or safe advice. Test with
+  fictional examples and check suggested actions critically.
+- In the offline HTML demo, answers are SAMPLE responses, not live Gemini.
+- For real Gemini responses you need to start the .bat server. Keep the black window open.
+- Never share a screenshot showing an API key, and don't commit it to source control.
+- Payments and secure public accounts are not connected.

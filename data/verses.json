@@ -1,0 +1,999 @@
+[
+  {
+    "id": "BG_2_14",
+    "reference": "2.14",
+    "chapter": 2,
+    "verse": 14,
+    "title": "Temporary experiences",
+    "editorial_paraphrase": "Comfort and discomfort arise and pass; the teaching calls for steadiness.",
+    "tags": [
+      "transience",
+      "discomfort",
+      "resilience",
+      "emotional-regulation",
+      "frustration",
+      "change",
+      "patience"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/2.14",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_2_38",
+    "reference": "2.38",
+    "chapter": 2,
+    "verse": 38,
+    "title": "Equanimity in difficulties",
+    "editorial_paraphrase": "Approach gain and loss, success and failure with steadiness while fulfilling duty.",
+    "tags": [
+      "failure",
+      "success",
+      "loss",
+      "exams",
+      "grades",
+      "setbacks",
+      "equanimity"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/2.38",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_2_47",
+    "reference": "2.47",
+    "chapter": 2,
+    "verse": 47,
+    "title": "Action without attachment to results",
+    "editorial_paraphrase": "We have responsibility for action, not ownership of its fruits; the verse also warns against inaction.",
+    "tags": [
+      "grades",
+      "results",
+      "outcome",
+      "effort",
+      "future",
+      "school",
+      "exams",
+      "homework",
+      "expectations",
+      "pressure",
+      "study",
+      "anxiety"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/2.47",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_2_48",
+    "reference": "2.48",
+    "chapter": 2,
+    "verse": 48,
+    "title": "Equanimity while acting",
+    "editorial_paraphrase": "Act with steadiness, putting aside attachment to success or failure.",
+    "tags": [
+      "effort",
+      "grades",
+      "performance",
+      "success",
+      "failure",
+      "anxiety"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/2.48",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_2_56",
+    "reference": "2.56",
+    "chapter": 2,
+    "verse": 56,
+    "title": "Steady understanding",
+    "editorial_paraphrase": "A person of steady understanding is not overwhelmed by distress or carried away by pleasure, fear or anger.",
+    "tags": [
+      "anger",
+      "fear",
+      "anxiety",
+      "emotional",
+      "outburst",
+      "calm",
+      "parenting"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/2.56",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_2_62",
+    "reference": "2.62",
+    "chapter": 2,
+    "verse": 62,
+    "title": "Attention and attachment",
+    "editorial_paraphrase": "Dwelling repeatedly on desired objects can lead to attachment and craving.",
+    "tags": [
+      "phone",
+      "screen",
+      "gaming",
+      "social-media",
+      "temptation",
+      "addiction",
+      "desire"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/2.62",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_2_63",
+    "reference": "2.63",
+    "chapter": 2,
+    "verse": 63,
+    "title": "Anger and poor judgment",
+    "editorial_paraphrase": "The text describes how frustrated desire may develop into anger and cloud judgment.",
+    "tags": [
+      "anger",
+      "yelling",
+      "fight",
+      "argument",
+      "shouting",
+      "reactive",
+      "conflict"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/2.63",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_2_64",
+    "reference": "2.64",
+    "chapter": 2,
+    "verse": 64,
+    "title": "Self-mastery",
+    "editorial_paraphrase": "Balanced engagement of the senses with less attraction and aversion supports tranquility.",
+    "tags": [
+      "screens",
+      "smartphone",
+      "balance",
+      "peer-pressure",
+      "impulsivity"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/2.64",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_2_65",
+    "reference": "2.65",
+    "chapter": 2,
+    "verse": 65,
+    "title": "Peace and clear thinking",
+    "editorial_paraphrase": "Inner tranquility is associated with the easing of sorrow and a steadier intellect.",
+    "tags": [
+      "stress",
+      "sadness",
+      "conflict",
+      "calm",
+      "decisions"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/2.65",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_2_70",
+    "reference": "2.70",
+    "chapter": 2,
+    "verse": 70,
+    "title": "Desires and contentment",
+    "editorial_paraphrase": "The image of an ocean points toward steadiness despite incoming desires.",
+    "tags": [
+      "social-media",
+      "desire",
+      "comparison",
+      "envy",
+      "materialism",
+      "peer-pressure"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/2.70",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_3_5",
+    "reference": "3.5",
+    "chapter": 3,
+    "verse": 5,
+    "title": "Action is unavoidable",
+    "editorial_paraphrase": "The Gita observes that no one can remain entirely without action.",
+    "tags": [
+      "motivation",
+      "inactivity",
+      "avoidance",
+      "initiative",
+      "chores"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/3.5",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_3_8",
+    "reference": "3.8",
+    "chapter": 3,
+    "verse": 8,
+    "title": "Perform needed duties",
+    "editorial_paraphrase": "Carry out necessary responsibilities; inactivity is not presented as the answer.",
+    "tags": [
+      "discipline",
+      "homework",
+      "responsibilities",
+      "chores",
+      "study"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/3.8",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_3_19",
+    "reference": "3.19",
+    "chapter": 3,
+    "verse": 19,
+    "title": "Work without attachment",
+    "editorial_paraphrase": "Do what ought to be done without clinging to personal reward.",
+    "tags": [
+      "duty",
+      "chores",
+      "effort",
+      "homework",
+      "motivation",
+      "responsibility"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/3.19",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_3_21",
+    "reference": "3.21",
+    "chapter": 3,
+    "verse": 21,
+    "title": "Lead by example",
+    "editorial_paraphrase": "Others often follow the example set by a respected person.",
+    "tags": [
+      "parenting",
+      "example",
+      "role-model",
+      "modeling",
+      "honesty",
+      "behavior",
+      "habits"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/3.21",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_3_30",
+    "reference": "3.30",
+    "chapter": 3,
+    "verse": 30,
+    "title": "Act without agitation",
+    "editorial_paraphrase": "Offer work with concentration and without possessiveness or feverish agitation.",
+    "tags": [
+      "worry",
+      "overwhelm",
+      "anxious",
+      "pressure",
+      "school",
+      "stress"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/3.30",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_3_33",
+    "reference": "3.33",
+    "chapter": 3,
+    "verse": 33,
+    "title": "Nature and habits",
+    "editorial_paraphrase": "Beings tend to act according to their dispositions; forced control has limits.",
+    "tags": [
+      "individuality",
+      "personality",
+      "teen",
+      "temperament",
+      "stubborn",
+      "identity"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/3.33",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_3_35",
+    "reference": "3.35",
+    "chapter": 3,
+    "verse": 35,
+    "title": "Own duty and comparison",
+    "editorial_paraphrase": "Carrying out one’s own duty is preferable to imitating another’s, even imperfectly.",
+    "tags": [
+      "comparison",
+      "sibling",
+      "grades",
+      "identity",
+      "perfectionism"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/3.35",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_3_37",
+    "reference": "3.37",
+    "chapter": 3,
+    "verse": 37,
+    "title": "Desire and anger",
+    "editorial_paraphrase": "Desire and anger are presented as powerful forces that can obscure wise action.",
+    "tags": [
+      "anger",
+      "temper",
+      "craving",
+      "emotion",
+      "aggression"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/3.37",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_3_41",
+    "reference": "3.41",
+    "chapter": 3,
+    "verse": 41,
+    "title": "Regulating impulses",
+    "editorial_paraphrase": "The passage emphasizes governing the senses before impulses overwhelm discernment.",
+    "tags": [
+      "gaming",
+      "screens",
+      "impulses",
+      "discipline",
+      "distraction"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/3.41",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_4_38",
+    "reference": "4.38",
+    "chapter": 4,
+    "verse": 38,
+    "title": "Value of insight",
+    "editorial_paraphrase": "Knowledge is described as deeply purifying and transformative in the path of yoga.",
+    "tags": [
+      "learning",
+      "understanding",
+      "reflection",
+      "school",
+      "education",
+      "curiosity"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/4.38",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_4_39",
+    "reference": "4.39",
+    "chapter": 4,
+    "verse": 39,
+    "title": "Commitment and learning",
+    "editorial_paraphrase": "A person who is sincere, dedicated, and self-controlled develops understanding.",
+    "tags": [
+      "discipline",
+      "study",
+      "patience",
+      "learning",
+      "effort"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/4.39",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_4_42",
+    "reference": "4.42",
+    "chapter": 4,
+    "verse": 42,
+    "title": "Move beyond paralyzing doubt",
+    "editorial_paraphrase": "The chapter ends by urging clear understanding and purposeful action beyond confusion.",
+    "tags": [
+      "indecision",
+      "fear",
+      "uncertainty",
+      "worries",
+      "confidence",
+      "choices"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/4.42",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_5_10",
+    "reference": "5.10",
+    "chapter": 5,
+    "verse": 10,
+    "title": "Do duty without possessiveness",
+    "editorial_paraphrase": "Work can be done without clinging to outcomes or personal ownership.",
+    "tags": [
+      "effort",
+      "grades",
+      "work",
+      "expectations",
+      "pressure"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/5.10",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_5_12",
+    "reference": "5.12",
+    "chapter": 5,
+    "verse": 12,
+    "title": "Peace through non-attachment",
+    "editorial_paraphrase": "Releasing attachment to the fruits of action is linked with peace.",
+    "tags": [
+      "anxiety",
+      "outcomes",
+      "exams",
+      "results",
+      "future",
+      "worry"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/5.12",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_5_18",
+    "reference": "5.18",
+    "chapter": 5,
+    "verse": 18,
+    "title": "Equal regard",
+    "editorial_paraphrase": "Wisdom is associated with seeing a common dignity beyond outward social distinctions.",
+    "tags": [
+      "bullying",
+      "prejudice",
+      "empathy",
+      "inclusion",
+      "friendships",
+      "classmates"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/5.18",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_5_20",
+    "reference": "5.20",
+    "chapter": 5,
+    "verse": 20,
+    "title": "Steadiness with good or bad news",
+    "editorial_paraphrase": "The text describes composure when meeting pleasant and unpleasant events.",
+    "tags": [
+      "exam",
+      "failure",
+      "success",
+      "rejection",
+      "disappointment"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/5.20",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_5_23",
+    "reference": "5.23",
+    "chapter": 5,
+    "verse": 23,
+    "title": "Regulate anger and desire",
+    "editorial_paraphrase": "The verse emphasizes withstanding impulses of desire and anger before acting.",
+    "tags": [
+      "anger",
+      "yelling",
+      "arguing",
+      "conflict",
+      "impulses"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/5.23",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_6_5",
+    "reference": "6.5",
+    "chapter": 6,
+    "verse": 5,
+    "title": "Help lift yourself",
+    "editorial_paraphrase": "The teaching asks a person to uplift themselves through self-mastery rather than fall into self-defeat.",
+    "tags": [
+      "confidence",
+      "esteem",
+      "self-respect",
+      "motivation",
+      "helplessness"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/6.5",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_6_6",
+    "reference": "6.6",
+    "chapter": 6,
+    "verse": 6,
+    "title": "The mind as friend or obstacle",
+    "editorial_paraphrase": "A disciplined mind can be supportive; an undisciplined one can become an obstacle.",
+    "tags": [
+      "habits",
+      "self-talk",
+      "discipline",
+      "distraction",
+      "routine"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/6.6",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_6_9",
+    "reference": "6.9",
+    "chapter": 6,
+    "verse": 9,
+    "title": "Fairness and impartiality",
+    "editorial_paraphrase": "Steady wisdom treats friends and adversaries with even-minded regard.",
+    "tags": [
+      "friendships",
+      "conflict",
+      "fairness",
+      "sibling",
+      "discrimination",
+      "bullying"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/6.9",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_6_16",
+    "reference": "6.16",
+    "chapter": 6,
+    "verse": 16,
+    "title": "Avoid extremes",
+    "editorial_paraphrase": "Excess or deprivation in eating and sleeping is not praised as the path to yoga.",
+    "tags": [
+      "sleep",
+      "late-night",
+      "phone",
+      "gaming",
+      "routine",
+      "burnout"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/6.16",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_6_17",
+    "reference": "6.17",
+    "chapter": 6,
+    "verse": 17,
+    "title": "Healthy moderation",
+    "editorial_paraphrase": "Balanced nourishment, recreation, work and sleep are presented as supportive of yoga.",
+    "tags": [
+      "sleep",
+      "screen",
+      "routine",
+      "gaming",
+      "food",
+      "exercise",
+      "balance"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/6.17",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_6_26",
+    "reference": "6.26",
+    "chapter": 6,
+    "verse": 26,
+    "title": "Gently return wandering attention",
+    "editorial_paraphrase": "When the mind wanders, the practitioner repeatedly brings it back to a steady focus.",
+    "tags": [
+      "focus",
+      "attention",
+      "distracted",
+      "homework",
+      "exams",
+      "anxious",
+      "overthinking"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/6.26",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_6_32",
+    "reference": "6.32",
+    "chapter": 6,
+    "verse": 32,
+    "title": "Empathetic perspective",
+    "editorial_paraphrase": "A yogi regards others’ happiness and distress with an equality grounded in the self.",
+    "tags": [
+      "empathy",
+      "listen",
+      "feelings",
+      "communication",
+      "friends",
+      "bullying",
+      "emotions"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/6.32",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_6_35",
+    "reference": "6.35",
+    "chapter": 6,
+    "verse": 35,
+    "title": "Practice and detachment",
+    "editorial_paraphrase": "The restless mind may be trained through repeated practice and non-attachment.",
+    "tags": [
+      "attention",
+      "habits",
+      "anger",
+      "patience",
+      "consistency",
+      "focus"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/6.35",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_9_22",
+    "reference": "9.22",
+    "chapter": 9,
+    "verse": 22,
+    "title": "Faith and devotion",
+    "editorial_paraphrase": "The verse emphasizes devotion and reliance upon the divine; not a guarantee about worldly outcomes.",
+    "tags": [
+      "faith",
+      "trust",
+      "worry",
+      "uncertainty",
+      "devotion"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/9.22",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_12_13",
+    "reference": "12.13",
+    "chapter": 12,
+    "verse": 13,
+    "title": "Compassion without hostility",
+    "editorial_paraphrase": "A devotee is described as free from hatred, friendly, compassionate and less possessive.",
+    "tags": [
+      "kindness",
+      "compassion",
+      "empathy",
+      "patience",
+      "parenting",
+      "anger",
+      "relationships"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/12.13",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_12_14",
+    "reference": "12.14",
+    "chapter": 12,
+    "verse": 14,
+    "title": "Steadfast devotion",
+    "editorial_paraphrase": "Contentment, self-discipline and steady purpose accompany devoted conduct.",
+    "tags": [
+      "consistency",
+      "patience",
+      "routine",
+      "commitment"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/12.14",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_12_15",
+    "reference": "12.15",
+    "chapter": 12,
+    "verse": 15,
+    "title": "Avoid causing distress",
+    "editorial_paraphrase": "The verse praises a person who neither agitates others nor is easily agitated by them.",
+    "tags": [
+      "arguments",
+      "shouting",
+      "fights",
+      "upset",
+      "emotions",
+      "conflict"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/12.15",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_12_16",
+    "reference": "12.16",
+    "chapter": 12,
+    "verse": 16,
+    "title": "Care without selfish demands",
+    "editorial_paraphrase": "The verse describes a devotee who is pure, skillful, impartial and free from obsessive demands.",
+    "tags": [
+      "fairness",
+      "expectations",
+      "comparison",
+      "boundaries",
+      "impartial"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/12.16",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_12_17",
+    "reference": "12.17",
+    "chapter": 12,
+    "verse": 17,
+    "title": "Evenness in emotional reactions",
+    "editorial_paraphrase": "The Gita praises avoiding impulsive extremes of delight, hatred, grief and craving.",
+    "tags": [
+      "mood",
+      "swings",
+      "anger",
+      "rejection",
+      "disappointment"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/12.17",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_13_8",
+    "reference": "13.8",
+    "chapter": 13,
+    "verse": 8,
+    "title": "Humility and non-harm",
+    "editorial_paraphrase": "Humility, nonviolence, patience, uprightness and self-restraint are listed among qualities of knowledge.",
+    "tags": [
+      "humility",
+      "bullying",
+      "kindness",
+      "honesty",
+      "forgiveness"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/13.8",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_16_1",
+    "reference": "16.1",
+    "chapter": 16,
+    "verse": 1,
+    "title": "Cultivating constructive traits",
+    "editorial_paraphrase": "Fearlessness, purity, steadfastness in knowledge and generosity are named as elevating qualities.",
+    "tags": [
+      "courage",
+      "values",
+      "generosity",
+      "anxiety",
+      "character"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/16.1",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_16_2",
+    "reference": "16.2",
+    "chapter": 16,
+    "verse": 2,
+    "title": "Truthful and gentle conduct",
+    "editorial_paraphrase": "Non-harm, truthfulness, absence of anger, peacefulness and compassion are praised.",
+    "tags": [
+      "lying",
+      "honesty",
+      "anger",
+      "cruelty",
+      "empathy",
+      "kindness"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/16.2",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_16_3",
+    "reference": "16.3",
+    "chapter": 16,
+    "verse": 3,
+    "title": "Forgiveness and patience",
+    "editorial_paraphrase": "Forgiveness, fortitude and freedom from hostility form part of the constructive qualities described.",
+    "tags": [
+      "forgiveness",
+      "resentment",
+      "conflict",
+      "patience",
+      "sibling"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/16.3",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_17_15",
+    "reference": "17.15",
+    "chapter": 17,
+    "verse": 15,
+    "title": "Thoughtful speech",
+    "editorial_paraphrase": "Speech that is truthful, beneficial, kind and non-agitating is held up as disciplined speech.",
+    "tags": [
+      "communication",
+      "scolding",
+      "criticism",
+      "shouting",
+      "arguing",
+      "rude",
+      "language",
+      "trust"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/17.15",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_17_16",
+    "reference": "17.16",
+    "chapter": 17,
+    "verse": 16,
+    "title": "Inner composure",
+    "editorial_paraphrase": "Serenity, gentleness, silence, restraint and purity of intention are described as mental disciplines.",
+    "tags": [
+      "mindfulness",
+      "calm",
+      "anger",
+      "anxiety",
+      "reactivity"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/17.16",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_18_26",
+    "reference": "18.26",
+    "chapter": 18,
+    "verse": 26,
+    "title": "Steadfast and non-egoistic action",
+    "editorial_paraphrase": "Constructive work is associated with steadiness and not identifying with success or failure.",
+    "tags": [
+      "resilience",
+      "effort",
+      "grades",
+      "exams",
+      "sports",
+      "perseverance"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/18.26",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_18_30",
+    "reference": "18.30",
+    "chapter": 18,
+    "verse": 30,
+    "title": "Discerning responsible choices",
+    "editorial_paraphrase": "Sound discernment distinguishes what ought to be done from what should be avoided.",
+    "tags": [
+      "choices",
+      "morals",
+      "boundaries",
+      "discipline",
+      "peer-pressure",
+      "decisions"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/18.30",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  },
+  {
+    "id": "BG_18_63",
+    "reference": "18.63",
+    "chapter": 18,
+    "verse": 63,
+    "title": "Reflect and choose",
+    "editorial_paraphrase": "After explaining teachings, Krishna invites Arjuna to reflect carefully and choose how to act.",
+    "tags": [
+      "independence",
+      "autonomy",
+      "teenager",
+      "choices",
+      "dialogue",
+      "decisions",
+      "listen"
+    ],
+    "source_url": "https://heritage.iitk.ac.in/SBG/18.63",
+    "primary_corpus_url": "https://gitabhawan.org.in/gita/research",
+    "status": "editorial_draft_not_expert_verified",
+    "is_quote": false
+  }
+]

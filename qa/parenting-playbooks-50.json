@@ -1,0 +1,1585 @@
+[
+  {
+    "id": "PB01",
+    "code": "tantrums",
+    "title": "Tantrums and dysregulation",
+    "age_min": 2,
+    "age_max": 6,
+    "signals": [
+      "tantrum",
+      "meltdown",
+      "screaming",
+      "kicks",
+      "floor",
+      "cries",
+      "shop",
+      "supermarket",
+      "frustration"
+    ],
+    "guidance_pattern": "Check safety; keep your own voice calm; name the feeling briefly; offer a simple choice and reconnect after regulation.",
+    "clarifying_question": "What usually happens immediately before the outburst?",
+    "avoid": "Shaming; restraining without immediate safety need; diagnosing behaviour",
+    "routing": "normal",
+    "source_links": [
+      "https://www.cdc.gov/child-development/positive-parenting-tips/toddlers-2-3-years.html",
+      "https://www.healthychildren.org/English/family-life/family-dynamics/communication-discipline/pages/Temper-Tantrums.aspx"
+    ],
+    "retrieval_examples": [
+      "My four-year-old screams and throws herself on the floor when I say no to sweets.",
+      "Whenever we leave the supermarket my preschooler loses control and I cannot calm them."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB02",
+    "code": "sharing",
+    "title": "Sharing and taking turns",
+    "age_min": 2,
+    "age_max": 7,
+    "signals": [
+      "share",
+      "sharing",
+      "toy",
+      "toys",
+      "takes",
+      "grabs",
+      "turns",
+      "turn",
+      "playdate",
+      "possessive"
+    ],
+    "guidance_pattern": "Teach taking turns using short timers and modelling; distinguish treasured possessions from shared play items.",
+    "clarifying_question": "Does the conflict happen over one favourite object or most toys?",
+    "avoid": "Forcing immediate sharing; calling the child selfish",
+    "routing": "normal",
+    "source_links": [
+      "https://www.cdc.gov/child-development/positive-parenting-tips/preschooler-3-5-years.html"
+    ],
+    "retrieval_examples": [
+      "My five-year-old refuses to share toys at playdates.",
+      "Another child asks for a turn and my son grabs all his cars back."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB03",
+    "code": "hitting",
+    "title": "Hitting, biting and physical outbursts",
+    "age_min": 2,
+    "age_max": 9,
+    "signals": [
+      "hitting",
+      "biting",
+      "pushes",
+      "kicks",
+      "scratches",
+      "aggression",
+      "hurt",
+      "other",
+      "kids"
+    ],
+    "guidance_pattern": "Immediately prevent injury, set a calm firm limit, notice triggers, teach another way to ask for space or help.",
+    "clarifying_question": "When does the behaviour usually happen, and has anyone been injured?",
+    "avoid": "Hitting back; humiliation; overlooking injury",
+    "routing": "normal",
+    "source_links": [
+      "https://www.healthychildren.org/English/family-life/family-dynamics/communication-discipline/pages/Temper-Tantrums.aspx"
+    ],
+    "retrieval_examples": [
+      "My three-year-old has started biting other children at daycare.",
+      "When angry my six-year-old hits his little sister."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB04",
+    "code": "bedtime",
+    "title": "Bedtime resistance and sleep routine",
+    "age_min": 2,
+    "age_max": 10,
+    "signals": [
+      "bedtime",
+      "sleep",
+      "won’t",
+      "sleep",
+      "keeps",
+      "getting",
+      "up",
+      "night",
+      "sleepy",
+      "lights",
+      "out"
+    ],
+    "guidance_pattern": "Use a predictable calming routine, appropriate sleep expectations, and a clear consistent response; consult a clinician for concerning sleep symptoms.",
+    "clarifying_question": "What does the last hour before bed look like?",
+    "avoid": "Threats; punitive sleep deprivation",
+    "routing": "normal",
+    "source_links": [
+      "https://www.cdc.gov/child-development/positive-parenting-tips/toddlers-2-3-years.html",
+      "https://www.cdc.gov/child-development/positive-parenting-tips/preschooler-3-5-years.html"
+    ],
+    "retrieval_examples": [
+      "My seven-year-old keeps coming out of bed after lights out.",
+      "Every evening bedtime turns into a lengthy argument with my toddler."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB05",
+    "code": "separation",
+    "title": "Separation worries",
+    "age_min": 2,
+    "age_max": 10,
+    "signals": [
+      "clings",
+      "drop",
+      "off",
+      "separation",
+      "anxiety",
+      "cries",
+      "goodbye",
+      "daycare",
+      "goodbye",
+      "parent"
+    ],
+    "guidance_pattern": "Acknowledge worry, practise brief predictable goodbye rituals and gradual confidence; seek support if persistent and impairing.",
+    "clarifying_question": "Does your child settle after you leave, or stay upset most of the day?",
+    "avoid": "Secretly leaving; mocking fear",
+    "routing": "normal",
+    "source_links": [
+      "https://www.cdc.gov/child-development/positive-parenting-tips/preschooler-3-5-years.html",
+      "https://www.healthychildren.org/English/family-life/family-dynamics/Pages/help-your-child-manage-fears-and-anxieties.aspx"
+    ],
+    "retrieval_examples": [
+      "My five-year-old cries and clings to me at school drop-off.",
+      "Our son panics when I leave him at daycare although he settles later."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB06",
+    "code": "toileting",
+    "title": "Toileting accidents and regression",
+    "age_min": 2,
+    "age_max": 8,
+    "signals": [
+      "potty",
+      "toilet",
+      "accidents",
+      "bedwetting",
+      "wet",
+      "pants",
+      "regression",
+      "bathroom"
+    ],
+    "guidance_pattern": "Avoid punishment or shame, notice stressors, support routine and check with a healthcare professional for sudden or persistent changes.",
+    "clarifying_question": "Did the accidents begin after any change or illness?",
+    "avoid": "Punishment; withholding water; assuming laziness",
+    "routing": "normal",
+    "source_links": [
+      "https://www.cdc.gov/child-development/positive-parenting-tips/preschooler-3-5-years.html"
+    ],
+    "retrieval_examples": [
+      "My four-year-old started having toileting accidents after being dry for months.",
+      "My child is embarrassed because they wet the bed again."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB07",
+    "code": "food",
+    "title": "Picky eating and mealtime tension",
+    "age_min": 2,
+    "age_max": 11,
+    "signals": [
+      "picky",
+      "eater",
+      "refuses",
+      "vegetables",
+      "meals",
+      "dinner",
+      "lunch",
+      "eating",
+      "new",
+      "foods"
+    ],
+    "guidance_pattern": "Keep meals low-pressure, offer varied foods alongside familiar options, and consider professional support for restricted intake or growth concerns.",
+    "clarifying_question": "Is your child growing and eating a reasonable range overall?",
+    "avoid": "Force feeding; food shame; diagnosing deficiencies",
+    "routing": "normal",
+    "source_links": [
+      "https://www.cdc.gov/child-development/positive-parenting-tips/preschooler-3-5-years.html"
+    ],
+    "retrieval_examples": [
+      "My five-year-old refuses vegetables and every dinner becomes a fight.",
+      "My son eats only a handful of familiar foods and is scared to try anything new."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB08",
+    "code": "transitions",
+    "title": "Difficulty transitioning between activities",
+    "age_min": 2,
+    "age_max": 10,
+    "signals": [
+      "transition",
+      "switch",
+      "stop",
+      "play",
+      "leaving",
+      "park",
+      "clean",
+      "up",
+      "change",
+      "activity"
+    ],
+    "guidance_pattern": "Give warning and visual cues, offer limited choices, validate disappointment and maintain the necessary boundary.",
+    "clarifying_question": "Which transition is hardest, and what warning does your child get?",
+    "avoid": "Abrupt punishments; coercive restraint",
+    "routing": "normal",
+    "source_links": [
+      "https://www.healthychildren.org/English/family-life/family-dynamics/communication-discipline/pages/Temper-Tantrums.aspx"
+    ],
+    "retrieval_examples": [
+      "My child screams whenever it is time to leave the playground.",
+      "Stopping playtime to get ready for dinner causes a huge argument."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB09",
+    "code": "mornings",
+    "title": "Chaotic school mornings",
+    "age_min": 4,
+    "age_max": 14,
+    "signals": [
+      "morning",
+      "getting",
+      "ready",
+      "school",
+      "bus",
+      "shoes",
+      "breakfast",
+      "late",
+      "rushing"
+    ],
+    "guidance_pattern": "Identify the bottleneck, prepare items the night before, use a short visual checklist and problem-solve collaboratively.",
+    "clarifying_question": "Which one step causes the most delay?",
+    "avoid": "Shaming the child for being slow",
+    "routing": "normal",
+    "source_links": [
+      "https://www.healthychildren.org/english/family-life/family-dynamics/communication-discipline/pages/normal-child-behavior.aspx"
+    ],
+    "retrieval_examples": [
+      "Every school morning is shouting because my daughter will not get dressed.",
+      "My son misses the bus because we argue about breakfast and shoes."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB10",
+    "code": "new_sibling",
+    "title": "Jealousy after new sibling",
+    "age_min": 2,
+    "age_max": 10,
+    "signals": [
+      "new",
+      "baby",
+      "newborn",
+      "sibling",
+      "jealous",
+      "attention",
+      "baby",
+      "arrived"
+    ],
+    "guidance_pattern": "Acknowledge changed feelings, preserve short one-on-one time and invite age-appropriate involvement without making care their duty.",
+    "clarifying_question": "When does the jealousy show most strongly?",
+    "avoid": "Calling them bad or selfish; making child responsible for baby",
+    "routing": "normal",
+    "source_links": [
+      "https://www.cdc.gov/child-development/positive-parenting-tips/preschooler-3-5-years.html"
+    ],
+    "retrieval_examples": [
+      "My six-year-old is jealous since the new baby arrived.",
+      "She says we love the baby more and demands all my attention."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB11",
+    "code": "sibling_conflict",
+    "title": "Sibling rivalry and arguments",
+    "age_min": 3,
+    "age_max": 17,
+    "signals": [
+      "siblings",
+      "brother",
+      "sister",
+      "fighting",
+      "rivalry",
+      "competing",
+      "arguments",
+      "compare"
+    ],
+    "guidance_pattern": "Check for safety, hear each child’s perspective separately, establish fair boundaries and avoid comparisons.",
+    "clarifying_question": "Are the disagreements verbal, or is anyone getting hurt?",
+    "avoid": "Compare children; force an apology immediately",
+    "routing": "normal",
+    "source_links": [
+      "https://www.healthychildren.org/english/family-life/family-dynamics/communication-discipline/pages/normal-child-behavior.aspx"
+    ],
+    "retrieval_examples": [
+      "My two children fight over everything and I am exhausted.",
+      "My daughter says I always take her brother’s side."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB12",
+    "code": "lying",
+    "title": "Lying and hiding the truth",
+    "age_min": 5,
+    "age_max": 17,
+    "signals": [
+      "lying",
+      "lie",
+      "lied",
+      "dishonest",
+      "truth",
+      "story",
+      "made",
+      "up",
+      "hiding"
+    ],
+    "guidance_pattern": "Respond to the underlying reason, make truth-telling safer, set proportionate accountability and model honest repair.",
+    "clarifying_question": "What happened just before the lie, and what was the likely consequence they feared?",
+    "avoid": "Label as liar; public humiliation",
+    "routing": "normal",
+    "source_links": [
+      "https://www.healthychildren.org/english/family-life/family-dynamics/communication-discipline/pages/normal-child-behavior.aspx"
+    ],
+    "retrieval_examples": [
+      "My nine-year-old lies to me about homework.",
+      "My teen told me something that turned out not to be true and now I am furious."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB13",
+    "code": "stealing",
+    "title": "Taking things without permission",
+    "age_min": 6,
+    "age_max": 17,
+    "signals": [
+      "stealing",
+      "stole",
+      "shoplifting",
+      "took",
+      "money",
+      "wallet",
+      "taking",
+      "without",
+      "asking"
+    ],
+    "guidance_pattern": "Clarify facts, avoid labels, make safe restitution possible and explore needs or peer influences.",
+    "clarifying_question": "Has this happened before, and what does your child say?",
+    "avoid": "Threats; calling child a criminal",
+    "routing": "normal",
+    "source_links": [
+      "https://www.healthychildren.org/english/family-life/family-dynamics/communication-discipline/pages/normal-child-behavior.aspx"
+    ],
+    "retrieval_examples": [
+      "My eleven-year-old took money from my purse without asking.",
+      "A teacher says my son stole a classmate’s stationery."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB14",
+    "code": "chores",
+    "title": "Chores and family responsibility",
+    "age_min": 5,
+    "age_max": 17,
+    "signals": [
+      "chores",
+      "tidy",
+      "room",
+      "clean",
+      "dishes",
+      "helping",
+      "responsibility",
+      "refuses",
+      "housework"
+    ],
+    "guidance_pattern": "Agree on a small age-appropriate task, explain why it matters, set an achievable routine and notice effort.",
+    "clarifying_question": "Which task would be reasonable to start with?",
+    "avoid": "Unrealistic workload; belittling",
+    "routing": "normal",
+    "source_links": [
+      "https://www.healthychildren.org/english/family-life/family-dynamics/communication-discipline/pages/normal-child-behavior.aspx"
+    ],
+    "retrieval_examples": [
+      "My child refuses any chores and expects me to do everything.",
+      "Our teenager leaves dirty dishes everywhere and ignores reminders."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB15",
+    "code": "respectful_words",
+    "title": "Rude language and disrespect",
+    "age_min": 5,
+    "age_max": 17,
+    "signals": [
+      "rude",
+      "swearing",
+      "talks",
+      "back",
+      "insults",
+      "disrespect",
+      "nasty",
+      "words",
+      "sarcasm"
+    ],
+    "guidance_pattern": "Stay calm, separate emotion from disrespectful behaviour, model repair and agree on basic conversational boundaries.",
+    "clarifying_question": "Does it happen only in conflict or at other times too?",
+    "avoid": "Demanding unquestioning obedience; retaliatory insults",
+    "routing": "normal",
+    "source_links": [
+      "https://www.cdc.gov/child-development/positive-parenting-tips/young-teens-12-14-years.html"
+    ],
+    "retrieval_examples": [
+      "My ten-year-old talks back rudely whenever I set a limit.",
+      "My teenager called me horrible names during an argument."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB16",
+    "code": "homework",
+    "title": "Homework battles",
+    "age_min": 6,
+    "age_max": 17,
+    "signals": [
+      "homework",
+      "assignment",
+      "studying",
+      "schoolwork",
+      "revision",
+      "daily",
+      "study"
+    ],
+    "guidance_pattern": "Explore what makes the task hard, reduce shame, agree on one manageable support step and retain sensible learning expectations.",
+    "clarifying_question": "Which part of the work feels hardest to your child?",
+    "avoid": "Assume laziness; pause all study talks for days",
+    "routing": "normal",
+    "source_links": [
+      "https://www.healthychildren.org/english/family-life/family-dynamics/communication-discipline/pages/normal-child-behavior.aspx",
+      "https://www.cdc.gov/child-development/positive-parenting-tips/young-teens-12-14-years.html"
+    ],
+    "retrieval_examples": [
+      "My fourteen-year-old gets angry when I ask about homework every evening.",
+      "My child refuses to start their assignments and we keep fighting."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB17",
+    "code": "academic_esteem",
+    "title": "Low school confidence",
+    "age_min": 7,
+    "age_max": 17,
+    "signals": [
+      "stupid",
+      "school",
+      "dumb",
+      "fail",
+      "grade",
+      "not",
+      "smart",
+      "stupid",
+      "maths",
+      "feels",
+      "unintelligent"
+    ],
+    "guidance_pattern": "Affirm worth separate from grades, listen for a specific difficulty, and plan tiny attainable steps with teacher input if needed.",
+    "clarifying_question": "What subject or situation brings up this feeling most strongly?",
+    "avoid": "False guarantees; diagnosis; comparing siblings",
+    "routing": "normal",
+    "source_links": [
+      "https://www.healthychildren.org/english/family-life/family-dynamics/communication-discipline/pages/normal-child-behavior.aspx",
+      "https://www.cdc.gov/child-development/positive-parenting-tips/young-teens-12-14-years.html"
+    ],
+    "retrieval_examples": [
+      "My son told me studying makes him feel stupid.",
+      "My daughter failed a test and says she is a failure at everything."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB18",
+    "code": "school_refusal",
+    "title": "School avoidance and attendance",
+    "age_min": 5,
+    "age_max": 17,
+    "signals": [
+      "school",
+      "refuses",
+      "go",
+      "attendance",
+      "avoids",
+      "class",
+      "stomach",
+      "ache",
+      "school",
+      "mornings"
+    ],
+    "guidance_pattern": "Ask about possible bullying, anxiety, learning or physical problems; contact school and healthcare professionals for persistent absence.",
+    "clarifying_question": "When did avoiding school begin, and is there a safety concern there?",
+    "avoid": "Simply force attendance; assume malingering",
+    "routing": "normal",
+    "source_links": [
+      "https://www.healthychildren.org/English/health-issues/conditions/emotional-problems/pages/School-Avoidance.aspx"
+    ],
+    "retrieval_examples": [
+      "My child refuses to attend school and complains of stomach aches.",
+      "Our teen has missed several days of class because she is afraid of going."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB19",
+    "code": "focus",
+    "title": "Difficulty focusing on work",
+    "age_min": 6,
+    "age_max": 17,
+    "signals": [
+      "focus",
+      "distracted",
+      "concentration",
+      "daydream",
+      "homework",
+      "distracted",
+      "distracted",
+      "forgets",
+      "instructions"
+    ],
+    "guidance_pattern": "Try a quiet short task and planned breaks; explore sleep, stress and learning needs without diagnosing a disorder.",
+    "clarifying_question": "Is this difficulty happening across settings, or only during one task?",
+    "avoid": "Diagnose ADHD from one anecdote; punishment for distractibility",
+    "routing": "normal",
+    "source_links": [
+      "https://www.healthychildren.org/english/family-life/family-dynamics/communication-discipline/pages/normal-child-behavior.aspx"
+    ],
+    "retrieval_examples": [
+      "My eight-year-old gets distracted after five minutes of homework.",
+      "Our son loses track of instructions even when he tries hard."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB20",
+    "code": "exam_pressure",
+    "title": "Exam anxiety and perfectionism",
+    "age_min": 9,
+    "age_max": 17,
+    "signals": [
+      "exam",
+      "test",
+      "pressure",
+      "perfection",
+      "marks",
+      "grade",
+      "panics",
+      "score",
+      "failure",
+      "expectations"
+    ],
+    "guidance_pattern": "Discuss expectations openly, protect rest and sleep, value effort and involve school support if anxiety is impairing.",
+    "clarifying_question": "What does your child fear will happen if they do poorly?",
+    "avoid": "Promises of perfect scores; pressure to study without breaks",
+    "routing": "normal",
+    "source_links": [
+      "https://www.cdc.gov/child-development/positive-parenting-tips/young-teens-12-14-years.html",
+      "https://www.healthychildren.org/English/family-life/family-dynamics/Pages/help-your-child-manage-fears-and-anxieties.aspx"
+    ],
+    "retrieval_examples": [
+      "My daughter panics before exams because she wants perfect marks.",
+      "My teen is terrified of disappointing us with his grades."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB21",
+    "code": "bullying_target",
+    "title": "Being bullied or harassed",
+    "age_min": 6,
+    "age_max": 17,
+    "signals": [
+      "bullied",
+      "bullying",
+      "harassed",
+      "teased",
+      "threatened",
+      "classmate",
+      "target",
+      "humiliates"
+    ],
+    "guidance_pattern": "Take reports seriously, record facts, support the child, involve school safeguarding staff, escalate threats or harm.",
+    "clarifying_question": "Is your child safe today, and what has the school been told?",
+    "avoid": "Blame victim; suggest revenge",
+    "routing": "normal",
+    "source_links": [
+      "https://www.cdc.gov/healthy-youth-parent-resources/positive-parental-practices/"
+    ],
+    "retrieval_examples": [
+      "My child says other kids are bullying him at school.",
+      "My daughter is being humiliated in a group chat by classmates."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB22",
+    "code": "bullying_actor",
+    "title": "Child mistreating peers",
+    "age_min": 6,
+    "age_max": 17,
+    "signals": [
+      "my",
+      "son",
+      "bullied",
+      "others",
+      "called",
+      "names",
+      "threatened",
+      "others",
+      "teasing",
+      "cruel",
+      "excluding",
+      "classmates"
+    ],
+    "guidance_pattern": "Set a firm boundary on harm, understand what happened, support accountability and an appropriate repair with school input.",
+    "clarifying_question": "What behaviour was reported, and does anyone need immediate protection?",
+    "avoid": "Excusing harm; forced public apology; humiliation",
+    "routing": "normal",
+    "source_links": [
+      "https://www.cdc.gov/healthy-youth-parent-resources/positive-parental-practices/"
+    ],
+    "retrieval_examples": [
+      "The teacher says my son has been bullying another child.",
+      "My daughter is leading a group that excludes classmates deliberately."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB23",
+    "code": "friendship_exclusion",
+    "title": "Loneliness and exclusion",
+    "age_min": 6,
+    "age_max": 17,
+    "signals": [
+      "lonely",
+      "no",
+      "friends",
+      "left",
+      "out",
+      "excluded",
+      "friendship",
+      "birthday",
+      "rejected",
+      "playdate"
+    ],
+    "guidance_pattern": "Validate loneliness, explore specific social situations, support a small low-pressure connection and look for bullying.",
+    "clarifying_question": "Has something changed recently in your child’s friendships?",
+    "avoid": "Dismiss as trivial; force friendships",
+    "routing": "normal",
+    "source_links": [
+      "https://www.healthychildren.org/english/family-life/family-dynamics/communication-discipline/pages/normal-child-behavior.aspx",
+      "https://www.cdc.gov/child-development/positive-parenting-tips/young-teens-12-14-years.html"
+    ],
+    "retrieval_examples": [
+      "My child is never invited to birthday parties and feels excluded.",
+      "My teenager says nobody at school likes her."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB24",
+    "code": "peer_pressure",
+    "title": "Peer pressure and risky dares",
+    "age_min": 9,
+    "age_max": 17,
+    "signals": [
+      "peer",
+      "pressure",
+      "dare",
+      "friends",
+      "risky",
+      "vaping",
+      "pressured",
+      "fit",
+      "in"
+    ],
+    "guidance_pattern": "Help rehearse refusal language, identify safer friends and trusted adults, discuss consequences without scare tactics.",
+    "clarifying_question": "What is the specific risk, and is he safe right now?",
+    "avoid": "Moral panic; shaming friends without facts",
+    "routing": "normal",
+    "source_links": [
+      "https://www.cdc.gov/child-development/positive-parenting-tips/young-teens-12-14-years.html"
+    ],
+    "retrieval_examples": [
+      "My teen says all his friends are doing risky dares and he wants to join.",
+      "My daughter changes her behaviour to fit in with a popular group."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB25",
+    "code": "screen_limits",
+    "title": "Screen-time limits and meltdowns",
+    "age_min": 3,
+    "age_max": 14,
+    "signals": [
+      "screen",
+      "time",
+      "tablet",
+      "ipad",
+      "stop",
+      "video",
+      "tv",
+      "limit",
+      "meltdown",
+      "tantrum",
+      "device"
+    ],
+    "guidance_pattern": "Collaboratively set predictable limits, provide transition cues, notice sleep impacts and respond calmly to protests.",
+    "clarifying_question": "Which app or time of day triggers the biggest conflict?",
+    "avoid": "Abrupt confiscation as default; blanket device ban",
+    "routing": "normal",
+    "source_links": [
+      "https://www.healthychildren.org/English/family-life/Media/Pages/screen-time-and-temper-tantrums-helpful-tips-for-parents.aspx"
+    ],
+    "retrieval_examples": [
+      "My five-year-old has a meltdown when the tablet is put away.",
+      "My child argues every evening about how much screen time is allowed."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB26",
+    "code": "gaming",
+    "title": "Excessive gaming and disrupted routine",
+    "age_min": 7,
+    "age_max": 17,
+    "signals": [
+      "gaming",
+      "video",
+      "games",
+      "xbox",
+      "playstation",
+      "roblox",
+      "fortnite",
+      "online",
+      "gamer",
+      "night"
+    ],
+    "guidance_pattern": "Understand what gaming provides, protect sleep and obligations, agree on collaborative limits and monitor distress.",
+    "clarifying_question": "What activities are being displaced by gaming?",
+    "avoid": "Shame gaming as addiction without assessment; punitive total bans",
+    "routing": "normal",
+    "source_links": [
+      "https://www.healthychildren.org/English/family-life/Media/Pages/screen-time-and-temper-tantrums-helpful-tips-for-parents.aspx",
+      "https://www.cdc.gov/child-development/positive-parenting-tips/young-teens-12-14-years.html"
+    ],
+    "retrieval_examples": [
+      "My thirteen-year-old plays games all night and misses sleep.",
+      "Gaming is crowding out my son’s schoolwork and family activities."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB27",
+    "code": "online_safety",
+    "title": "Online privacy and stranger contact",
+    "age_min": 7,
+    "age_max": 17,
+    "signals": [
+      "online",
+      "strangers",
+      "messages",
+      "strangers",
+      "gaming",
+      "contact",
+      "personal",
+      "information",
+      "strangers",
+      "internet"
+    ],
+    "guidance_pattern": "Prioritize privacy and safety, calmly gather limited facts, review blocking/reporting, and involve authorities if exploitation is suspected.",
+    "clarifying_question": "Has anyone requested sexual images, secrecy, money or a meeting?",
+    "avoid": "Blame child; share screenshots publicly",
+    "routing": "normal",
+    "source_links": [
+      "https://www.healthychildren.org/English/family-life/Media/Pages/screen-time-and-temper-tantrums-helpful-tips-for-parents.aspx",
+      "https://www.cdc.gov/healthy-youth-parent-resources/positive-parental-practices/"
+    ],
+    "retrieval_examples": [
+      "My eleven-year-old is chatting with someone online who claims to be a teenager.",
+      "I found that my child shared our home address with a gamer."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB28",
+    "code": "social_comparison",
+    "title": "Influencer comparison and self-worth",
+    "age_min": 9,
+    "age_max": 17,
+    "signals": [
+      "social",
+      "media",
+      "influencers",
+      "appearance",
+      "compares",
+      "tiktok",
+      "instagram",
+      "followers",
+      "likes"
+    ],
+    "guidance_pattern": "Validate social pressure, discuss filtered portrayals, support offline strengths and agree on healthy online habits.",
+    "clarifying_question": "Which online experiences leave your child feeling worse?",
+    "avoid": "Dismiss peers; demand all accounts deleted immediately",
+    "routing": "normal",
+    "source_links": [
+      "https://www.healthychildren.org/English/family-life/Media/Pages/screen-time-and-temper-tantrums-helpful-tips-for-parents.aspx",
+      "https://www.cdc.gov/child-development/positive-parenting-tips/young-teens-12-14-years.html"
+    ],
+    "retrieval_examples": [
+      "My daughter compares herself with influencers and feels inadequate.",
+      "My teen says her life is worse than everyone she follows online."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB29",
+    "code": "body_image",
+    "title": "Body image concerns",
+    "age_min": 8,
+    "age_max": 17,
+    "signals": [
+      "body",
+      "image",
+      "ugly",
+      "fat",
+      "thin",
+      "weight",
+      "appearance",
+      "hates",
+      "body",
+      "looks",
+      "mirror"
+    ],
+    "guidance_pattern": "Avoid weight-focused criticism, ask about distress and bullying, support body respect and refer to healthcare professionals for concerning eating or functioning.",
+    "clarifying_question": "Has this changed eating habits, social activities or mood?",
+    "avoid": "Diet prescriptions; appearance scoring; dismissing distress",
+    "routing": "normal",
+    "source_links": [
+      "https://www.healthychildren.org/english/ages-stages/teen/pages/mental-health-and-teens-watch-for-danger-signs.aspx"
+    ],
+    "retrieval_examples": [
+      "My daughter says her body is ugly and refuses photos.",
+      "My teen keeps comparing her appearance and criticising her weight."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB30",
+    "code": "puberty_boundaries",
+    "title": "Puberty, bodily boundaries and consent",
+    "age_min": 8,
+    "age_max": 17,
+    "signals": [
+      "puberty",
+      "period",
+      "sexual",
+      "questions",
+      "body",
+      "changing",
+      "privacy",
+      "personal",
+      "boundaries",
+      "consent"
+    ],
+    "guidance_pattern": "Use age-appropriate factual language, invite questions without shame and reinforce consent, privacy and trusted adults.",
+    "clarifying_question": "Which question is your child asking and what worries you most?",
+    "avoid": "Shame; inaccurate biological claims; invasive monitoring",
+    "routing": "normal",
+    "source_links": [
+      "https://www.cdc.gov/child-development/positive-parenting-tips/young-teens-12-14-years.html"
+    ],
+    "retrieval_examples": [
+      "My ten-year-old is embarrassed to ask about puberty.",
+      "My teenager wants privacy about changes to her body."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB31",
+    "code": "teen_privacy",
+    "title": "Independence and privacy",
+    "age_min": 10,
+    "age_max": 17,
+    "signals": [
+      "privacy",
+      "phone",
+      "locked",
+      "diary",
+      "personal",
+      "space",
+      "independence",
+      "tracking",
+      "control"
+    ],
+    "guidance_pattern": "Balance age-appropriate autonomy with clear safety expectations, agree on trust-building rules and explain exceptions.",
+    "clarifying_question": "What safety concern prompted the privacy disagreement?",
+    "avoid": "Secret surveillance as default; unlimited independence",
+    "routing": "normal",
+    "source_links": [
+      "https://www.cdc.gov/child-development/positive-parenting-tips/young-teens-12-14-years.html"
+    ],
+    "retrieval_examples": [
+      "My fourteen-year-old asks for privacy and says I invade his space.",
+      "My daughter doesn’t want me to read her messages anymore."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB32",
+    "code": "teen_conflict",
+    "title": "Frequent parent-teen arguments",
+    "age_min": 10,
+    "age_max": 17,
+    "signals": [
+      "argue",
+      "arguments",
+      "fights",
+      "shouting",
+      "constant",
+      "conflict",
+      "disrespect",
+      "teenager"
+    ],
+    "guidance_pattern": "De-escalate first, identify recurring triggers, repair after conflict and co-create a specific boundary.",
+    "clarifying_question": "What is the most predictable trigger for these arguments?",
+    "avoid": "Blame only the teen; force immediate reconciliation",
+    "routing": "normal",
+    "source_links": [
+      "https://www.cdc.gov/child-development/positive-parenting-tips/young-teens-12-14-years.html"
+    ],
+    "retrieval_examples": [
+      "My teenager and I argue about everything, even small things.",
+      "We end up yelling whenever I ask my son to help at home."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB33",
+    "code": "withdrawal",
+    "title": "Teen becoming emotionally distant",
+    "age_min": 10,
+    "age_max": 17,
+    "signals": [
+      "withdrawn",
+      "distant",
+      "rarely",
+      "talks",
+      "shut",
+      "down",
+      "never",
+      "opens",
+      "up",
+      "closed",
+      "bedroom",
+      "silent"
+    ],
+    "guidance_pattern": "Create non-pressured connection opportunities, remain available and ask about mood or safety if withdrawal is persistent.",
+    "clarifying_question": "Has there been a change in friends, sleep, appetite or mood?",
+    "avoid": "Demand disclosure; presume a diagnosis",
+    "routing": "normal",
+    "source_links": [
+      "https://www.healthychildren.org/english/ages-stages/teen/pages/mental-health-and-teens-watch-for-danger-signs.aspx",
+      "https://www.cdc.gov/child-development/positive-parenting-tips/young-teens-12-14-years.html"
+    ],
+    "retrieval_examples": [
+      "My daughter has become distant and barely talks to me.",
+      "My teen spends all evening alone and doesn’t share feelings anymore."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB34",
+    "code": "anxiety",
+    "title": "Worries, fears and anxiety",
+    "age_min": 4,
+    "age_max": 17,
+    "signals": [
+      "anxiety",
+      "nervous",
+      "anxious",
+      "worries",
+      "panic",
+      "scared",
+      "frightened",
+      "overthinking"
+    ],
+    "guidance_pattern": "Listen and acknowledge feelings, help identify specific fears, support gradual coping and refer for persistent impairment.",
+    "clarifying_question": "How is the worry affecting sleep, school or everyday life?",
+    "avoid": "Dismiss fear; guarantee nothing bad will happen",
+    "routing": "normal",
+    "source_links": [
+      "https://www.healthychildren.org/English/family-life/family-dynamics/Pages/help-your-child-manage-fears-and-anxieties.aspx"
+    ],
+    "retrieval_examples": [
+      "My child worries constantly about things that might go wrong.",
+      "My daughter is nervous before every social event and wants to avoid them."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB35",
+    "code": "anger_older",
+    "title": "Anger and emotional explosions",
+    "age_min": 8,
+    "age_max": 17,
+    "signals": [
+      "furious",
+      "anger",
+      "rage",
+      "slams",
+      "doors",
+      "throws",
+      "objects",
+      "shouts",
+      "explosive"
+    ],
+    "guidance_pattern": "Ensure safety, stay regulated, discuss feelings when calm, agree on safe behaviour and seek help if injury threats occur.",
+    "clarifying_question": "Does anyone feel unsafe when these outbursts happen?",
+    "avoid": "Escalate shouting; punish feelings",
+    "routing": "normal",
+    "source_links": [
+      "https://www.cdc.gov/child-development/positive-parenting-tips/young-teens-12-14-years.html"
+    ],
+    "retrieval_examples": [
+      "My twelve-year-old gets furious and slams doors when upset.",
+      "My teen shouts at everyone after a disappointing day."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB36",
+    "code": "bereavement",
+    "title": "Grief after a death",
+    "age_min": 3,
+    "age_max": 17,
+    "signals": [
+      "grief",
+      "death",
+      "died",
+      "passed",
+      "away",
+      "bereavement",
+      "funeral",
+      "misses",
+      "grandparent"
+    ],
+    "guidance_pattern": "Use truthful age-appropriate language, make space for different grieving styles and seek support for persistent severe distress.",
+    "clarifying_question": "What does your child understand about the death so far?",
+    "avoid": "False promises of return; imposed religious explanations",
+    "routing": "normal",
+    "source_links": [
+      "https://www.healthychildren.org/English/family-life/family-dynamics/Pages/help-your-child-manage-fears-and-anxieties.aspx"
+    ],
+    "retrieval_examples": [
+      "My child is grieving because her grandmother died recently.",
+      "My teenager will not talk about losing his friend."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB37",
+    "code": "divorce",
+    "title": "Divorce and two homes",
+    "age_min": 3,
+    "age_max": 17,
+    "signals": [
+      "divorce",
+      "separated",
+      "separation",
+      "two",
+      "homes",
+      "custody",
+      "visiting",
+      "other",
+      "parent"
+    ],
+    "guidance_pattern": "Reassure child they did not cause the separation, keep predictable routines and avoid adult conflict in front of them.",
+    "clarifying_question": "What is hardest for your child about moving between homes?",
+    "avoid": "Recruit child as messenger; promise reconciliation",
+    "routing": "normal",
+    "source_links": [
+      "https://www.healthychildren.org/english/family-life/family-dynamics/communication-discipline/pages/normal-child-behavior.aspx"
+    ],
+    "retrieval_examples": [
+      "My son is struggling since our separation and now moves between two homes.",
+      "My child blames herself for our divorce."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB38",
+    "code": "coparent",
+    "title": "Parents disagree on rules",
+    "age_min": 3,
+    "age_max": 17,
+    "signals": [
+      "co",
+      "parenting",
+      "co-parent",
+      "father",
+      "mother",
+      "husband",
+      "wife",
+      "disagreement",
+      "rules",
+      "discipline"
+    ],
+    "guidance_pattern": "Find shared priorities, discuss rules away from children and make a small predictable agreement without exposing them to conflict.",
+    "clarifying_question": "Which rule has the biggest impact on your child’s wellbeing?",
+    "avoid": "Undermine other parent; ask child to take sides",
+    "routing": "normal",
+    "source_links": [
+      "https://www.healthychildren.org/english/family-life/family-dynamics/communication-discipline/pages/normal-child-behavior.aspx"
+    ],
+    "retrieval_examples": [
+      "My husband and I disagree about how to discipline our child.",
+      "My ex lets our son stay up late and I have different rules at home."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB39",
+    "code": "blended",
+    "title": "Blended-family and step-parent adjustment",
+    "age_min": 4,
+    "age_max": 17,
+    "signals": [
+      "stepfather",
+      "stepmother",
+      "blended",
+      "new",
+      "partner",
+      "step",
+      "parent",
+      "half",
+      "siblings"
+    ],
+    "guidance_pattern": "Allow trust to grow gradually, maintain connection with each parent, avoid forced closeness and clarify respectful boundaries.",
+    "clarifying_question": "How long has your family been adjusting to the new arrangement?",
+    "avoid": "Demand affection; make child responsible for adult relationship",
+    "routing": "normal",
+    "source_links": [
+      "https://www.healthychildren.org/english/family-life/family-dynamics/communication-discipline/pages/normal-child-behavior.aspx"
+    ],
+    "retrieval_examples": [
+      "My daughter resents her new stepfather and refuses to talk to him.",
+      "Our children argue since we moved in with my partner."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB40",
+    "code": "parent_stress",
+    "title": "Parent stress and burnout",
+    "age_min": 3,
+    "age_max": 17,
+    "signals": [
+      "parent",
+      "burnout",
+      "exhausted",
+      "overwhelmed",
+      "yelling",
+      "regret",
+      "no",
+      "patience",
+      "mental",
+      "load"
+    ],
+    "guidance_pattern": "Name stress, build short regulated pauses, repair harm without excusing it and seek support from trusted adults.",
+    "clarifying_question": "When does your stress usually peak, and who can help?",
+    "avoid": "Parental shame; promise quick cure",
+    "routing": "normal",
+    "source_links": [
+      "https://www.cdc.gov/child-development/positive-parenting-tips/young-teens-12-14-years.html"
+    ],
+    "retrieval_examples": [
+      "I keep losing my patience with my children and regret shouting.",
+      "I am exhausted from parenting and feel like a bad parent."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB41",
+    "code": "sensory_needs",
+    "title": "Sensory overwhelm and neurodevelopmental needs",
+    "age_min": 3,
+    "age_max": 17,
+    "signals": [
+      "sensory",
+      "overloaded",
+      "noise",
+      "textures",
+      "loud",
+      "crowds",
+      "overwhelmed",
+      "autism",
+      "needs"
+    ],
+    "guidance_pattern": "Reduce sensory triggers where possible, plan predictable exits and seek professional assessment when needs are persistent; avoid diagnosis.",
+    "clarifying_question": "Which sounds, sensations or places are hardest?",
+    "avoid": "Force exposure; diagnose autism from one story",
+    "routing": "normal",
+    "source_links": [
+      "https://www.cdc.gov/child-development/positive-parenting-tips/preschooler-3-5-years.html"
+    ],
+    "retrieval_examples": [
+      "My child covers her ears and melts down in noisy shops.",
+      "He finds clothing textures unbearable and refuses school uniform."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB42",
+    "code": "learning_support",
+    "title": "Possible learning difficulty",
+    "age_min": 6,
+    "age_max": 17,
+    "signals": [
+      "reading",
+      "spelling",
+      "dyslexia",
+      "maths",
+      "struggle",
+      "learning",
+      "disability",
+      "behind",
+      "class"
+    ],
+    "guidance_pattern": "Discuss specific difficulties with school, support confidence and consider educational assessment without diagnosing.",
+    "clarifying_question": "What has the teacher observed and what is hardest for your child?",
+    "avoid": "Call child unintelligent; speculate on diagnosis",
+    "routing": "normal",
+    "source_links": [
+      "https://www.healthychildren.org/English/health-issues/conditions/emotional-problems/pages/School-Avoidance.aspx"
+    ],
+    "retrieval_examples": [
+      "My nine-year-old struggles to read even though we practise.",
+      "My child works hard but cannot keep up with maths at school."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB43",
+    "code": "low_mood",
+    "title": "Persistent low mood and withdrawal",
+    "age_min": 10,
+    "age_max": 17,
+    "signals": [
+      "depressed",
+      "low",
+      "mood",
+      "sad",
+      "withdrawn",
+      "no",
+      "energy",
+      "sleep",
+      "changing",
+      "nothing",
+      "matters"
+    ],
+    "guidance_pattern": "Listen without judgment, ask directly about safety if indicated and contact appropriate health professionals for persistent impairment.",
+    "clarifying_question": "Has your child said anything suggesting they may hurt themselves or feel unsafe?",
+    "avoid": "Dismiss symptoms as a phase; diagnose depression",
+    "routing": "normal",
+    "source_links": [
+      "https://www.healthychildren.org/english/ages-stages/teen/pages/mental-health-and-teens-watch-for-danger-signs.aspx"
+    ],
+    "retrieval_examples": [
+      "My teenager seems sad and withdrawn for weeks.",
+      "My son says nothing feels enjoyable anymore and stays in bed."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB44",
+    "code": "self_harm",
+    "title": "Self-harm or suicide warning",
+    "age_min": 8,
+    "age_max": 17,
+    "signals": [
+      "self",
+      "harm",
+      "suicide",
+      "wants",
+      "to",
+      "die",
+      "cutting",
+      "overdose",
+      "plans",
+      "ending",
+      "life"
+    ],
+    "guidance_pattern": "Urgent safety response only: stay with child if safe, seek emergency/clinical help and do not substitute scripture coaching.",
+    "clarifying_question": "Is the child safe and with a responsible adult right now?",
+    "avoid": "Any ordinary parenting coaching or promises",
+    "routing": "urgent",
+    "source_links": [
+      "https://www.healthychildren.org/english/ages-stages/teen/pages/mental-health-and-teens-watch-for-danger-signs.aspx"
+    ],
+    "retrieval_examples": [
+      "My teenager says he plans to kill himself tonight.",
+      "My daughter has cuts she says she made deliberately and says she cannot cope."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB45",
+    "code": "sexual_abuse",
+    "title": "Sexual abuse or exploitation disclosure",
+    "age_min": 3,
+    "age_max": 17,
+    "signals": [
+      "adult",
+      "sexual",
+      "pictures",
+      "nude",
+      "requests",
+      "touching",
+      "private",
+      "parts",
+      "grooming"
+    ],
+    "guidance_pattern": "Urgent safeguarding response: protect child, contact protection services, preserve appropriate evidence without recirculating images.",
+    "clarifying_question": "Is the child away from the suspected offender right now?",
+    "avoid": "Blame child; investigate by repeated questions",
+    "routing": "urgent",
+    "source_links": [
+      "https://www.healthychildren.org/english/ages-stages/teen/pages/mental-health-and-teens-watch-for-danger-signs.aspx"
+    ],
+    "retrieval_examples": [
+      "An adult online is demanding nude photos from my daughter.",
+      "My son says someone touched him under his clothes and told him to keep it secret."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB46",
+    "code": "family_violence",
+    "title": "Violence or threats at home",
+    "age_min": 3,
+    "age_max": 17,
+    "signals": [
+      "father",
+      "threatened",
+      "hit",
+      "beat",
+      "violent",
+      "partner",
+      "domestic",
+      "violence",
+      "danger"
+    ],
+    "guidance_pattern": "Urgent safety response: move to safety where feasible, call police/emergency services and seek domestic violence support.",
+    "clarifying_question": "Are you and your child in a safe place right now?",
+    "avoid": "Confront dangerous person; rely only on prayer",
+    "routing": "urgent",
+    "source_links": [
+      "https://www.healthychildren.org/english/ages-stages/teen/pages/mental-health-and-teens-watch-for-danger-signs.aspx"
+    ],
+    "retrieval_examples": [
+      "My partner threatened to hit our child when he comes home.",
+      "My husband has been violent toward our daughter and I am scared."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB47",
+    "code": "missing_child",
+    "title": "Child missing or unaccounted for",
+    "age_min": 3,
+    "age_max": 17,
+    "signals": [
+      "missing",
+      "vanished",
+      "disappeared",
+      "gone",
+      "child",
+      "not",
+      "home",
+      "cannot",
+      "find"
+    ],
+    "guidance_pattern": "Urgent response: contact police promptly, provide last known details and follow instructions, no waiting period.",
+    "clarifying_question": "Have you contacted local police or emergency services?",
+    "avoid": "Wait 24 hours; treat it as ordinary discipline",
+    "routing": "urgent",
+    "source_links": [
+      "https://www.healthychildren.org/english/ages-stages/teen/pages/mental-health-and-teens-watch-for-danger-signs.aspx"
+    ],
+    "retrieval_examples": [
+      "My twelve-year-old has gone missing and nobody has seen her.",
+      "My son never came home from school and I cannot find him."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB48",
+    "code": "substance",
+    "title": "Teen alcohol, smoking or drugs",
+    "age_min": 11,
+    "age_max": 17,
+    "signals": [
+      "vaping",
+      "drinking",
+      "cigarettes",
+      "drugs",
+      "cannabis",
+      "alcohol",
+      "intoxication",
+      "substance"
+    ],
+    "guidance_pattern": "Check for immediate intoxication danger, set firm safety boundaries, open conversation and get professional help for repeated use.",
+    "clarifying_question": "Is your child safe and sober now, and has this happened before?",
+    "avoid": "Humiliation; ignore possible overdose symptoms",
+    "routing": "normal",
+    "source_links": [
+      "https://www.cdc.gov/child-development/positive-parenting-tips/young-teens-12-14-years.html"
+    ],
+    "retrieval_examples": [
+      "I found my sixteen-year-old vaping with friends.",
+      "My daughter came home smelling of alcohol and refuses to talk."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB49",
+    "code": "career",
+    "title": "Teen career and future choices",
+    "age_min": 12,
+    "age_max": 17,
+    "signals": [
+      "career",
+      "university",
+      "subjects",
+      "doctor",
+      "engineer",
+      "artist",
+      "future",
+      "studies",
+      "college"
+    ],
+    "guidance_pattern": "Understand strengths and values, explore concrete options with career advisers and avoid treating a parent’s preference as destiny.",
+    "clarifying_question": "What interests does your child want to explore?",
+    "avoid": "Coercive life choices; promising job outcomes",
+    "routing": "normal",
+    "source_links": [
+      "https://www.cdc.gov/child-development/positive-parenting-tips/young-teens-12-14-years.html"
+    ],
+    "retrieval_examples": [
+      "My child wants to study art but I keep pushing medicine.",
+      "My teenager says she has no idea what career suits her."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  },
+  {
+    "id": "PB50",
+    "code": "faith_questions",
+    "title": "Child questions family faith",
+    "age_min": 9,
+    "age_max": 17,
+    "signals": [
+      "faith",
+      "religion",
+      "bible",
+      "gita",
+      "god",
+      "worship",
+      "prayer",
+      "questions",
+      "doubts",
+      "spiritual"
+    ],
+    "guidance_pattern": "Listen respectfully, offer truthful sources and room to explore, avoid pressure, threats or shame.",
+    "clarifying_question": "What specific question has your child raised?",
+    "avoid": "Punish doubts; claim divine threats",
+    "routing": "normal",
+    "source_links": [
+      "https://www.cdc.gov/child-development/positive-parenting-tips/young-teens-12-14-years.html"
+    ],
+    "retrieval_examples": [
+      "My daughter questions our religious beliefs and says she does not want to pray.",
+      "My son wants to explore a different faith from our family."
+    ],
+    "provenance": "Saanjh editorial synthesis referencing external parenting resources; not a quotation or clinical endorsement.",
+    "scripture_policy": "Use only separately retrieved actual verses; no automatic verse-to-problem rule. Distinguish scripture from practical suggestion."
+  }
+]

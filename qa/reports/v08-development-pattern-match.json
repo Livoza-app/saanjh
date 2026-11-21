@@ -1,0 +1,244 @@
+{
+  "kind": "EDITORIAL_PATTERN_RECOGNITION_ONLY_NOT_ADVICE_ACCURACY",
+  "split": "development",
+  "allCases": 276,
+  "top1": 272,
+  "top1Pct": 98.6,
+  "top2": 276,
+  "top2Pct": 100,
+  "covered": 276,
+  "coveredPct": 100,
+  "misses": [],
+  "topicScores": [
+    {
+      "id": "PB01",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB02",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB03",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB04",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB05",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB06",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB07",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB08",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB09",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB10",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB11",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB12",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB13",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB14",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB15",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB16",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB17",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB18",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB19",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB20",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB21",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB22",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB23",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB24",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB25",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB26",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB27",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB28",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB29",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB30",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB31",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB32",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB33",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB34",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB35",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB36",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB37",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB38",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB39",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB40",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB41",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB42",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB43",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB48",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB49",
+      "hits": 6,
+      "count": 6
+    },
+    {
+      "id": "PB50",
+      "hits": 6,
+      "count": 6
+    }
+  ]
+}
