@@ -10,7 +10,14 @@
 import {VERSES,lexicalRetrieve,loadSourceTexts} from './core.ts';
 import {searchCorpus} from './corpus.ts';
 
-export type ScriptureCandidate={id:string;reference:string;title:string;english:string;sanskrit?:string;source_url:string;tags:string[];previous?:string|null;next?:string|null;retrieval_basis:string};
+export type ScriptureCandidate={id:string;reference:string;title:string;english:string;sanskrit?:string;source_url:string;tags:string[];previous?:string|null;next?:string|null;retrieval_basis:string;thematic_relevance?:string[]};
+
+export type ScriptureSituation={
+ reported_behaviours:string[];
+ context:string[];
+ uncertainties:string[];
+ plausible_explanations:string[];
+};
 
 type Concept={name:string;pattern:RegExp;refs:string[];weight:number};
 const CONCEPTS:Concept[]=[
@@ -40,6 +47,30 @@ const CONCEPTS:Concept[]=[
 const curated=new Map(VERSES.map(x=>[x.reference,x]));
 export function matchedConcepts(query:string){return CONCEPTS.filter(c=>c.pattern.test(query)).map(c=>c.name);}
 
+const THEMES:Record<string,string>={
+ bullying_and_exclusion:'non-harm, empathy and responding to exclusion without adding hostility',
+ school_avoidance:'careful action in the face of fear, uncertainty or difficult duties',
+ dishonesty:'truthfulness, non-harm and repair of trust',
+ family_rules_disagreement:'thoughtful speech and discernment when values or duties differ',
+ child_anxiety:'steadiness and a less reactive relationship to fear or uncertainty',
+ perfectionism:'effort without making worth depend on a single result',
+ personal_interests:'reflecting carefully and allowing responsible choice',
+ defiance_or_autonomy:'respectful discernment, autonomy and dialogue',
+ money_and_social_comparison:'freedom from comparison and status-based worth',
+ sibling_comparison:'compassion, non-harm and avoiding competitive comparison',
+ emotional_distance:'gentle, non-agitating communication and connection',
+ hurtful_communication:'truthful, beneficial and non-agitating speech',
+ parent_anger:'self-restraint and acting without escalating anger',
+ sleep_and_balance:'moderation, balance and sustainable effort',
+ screen_time:'balance, attention and deliberate choices',
+ attention_and_habits:'steady attention and returning to the task without shame',
+ study_effort_vs_results:'effort and responsible action without attachment to results',
+ grief:'acknowledging change and responding with compassion',
+ friends_and_empathy:'empathy, non-harm and belonging',
+ role_modelling:'responsible choices and the example adults set',
+ motivation_and_esteem:'self-respect, effort and resilience'
+};
+
 export function retrieveGitaCandidates(query:string,max=7):ScriptureCandidate[]{
  const source=loadSourceTexts(); if(source.size!==700)throw new Error('Gita corpus incomplete');
  const scores=new Map<string,{score:number;why:Set<string>}>();
@@ -55,11 +86,27 @@ export function retrieveGitaCandidates(query:string,max=7):ScriptureCandidate[]{
  if(!scores.size){ // General-purpose verse: reflect & choose, not a claim of subject-specific relevance.
   ['18.63','17.15','12.13'].forEach((ref,i)=>add(ref,1-i*0.2,'general-fallback'));
  }
- return [...scores.entries()].sort((a,b)=>b[1].score-a[1].score || a[0].localeCompare(b[0],undefined,{numeric:true}))
+  return [...scores.entries()].sort((a,b)=>b[1].score-a[1].score || a[0].localeCompare(b[0],undefined,{numeric:true}))
  .slice(0,Math.max(1,Math.min(max,12))).map(([reference,info])=>{
   const s=source.get(reference)!;const c=curated.get(reference);
+  const conceptNames=[...info.why].filter(x=>x.startsWith('concept:')).map(x=>x.slice('concept:'.length));
   return {id:c?.id||`BG_${reference.replace('.','_')}`,reference,title:c?.title||'Original source passage',
    english:s.english,sanskrit:s.sanskrit,source_url:s.source_url,tags:c?.tags||[],previous:s.previous_context,next:s.next_context,
-   retrieval_basis:[...info.why].join(',')};
+   retrieval_basis:[...info.why].join(','),thematic_relevance:conceptNames.map(x=>THEMES[x]).filter(Boolean)};
  });
 }
+
+/** Scripture retrieval is intentionally independent from parenting playbook
+ * retrieval. It uses situation themes and the verified corpus, then exposes
+ * why a passage was surfaced so a model cannot silently turn a keyword hit into
+ * an asserted religious instruction.
+ */
+export function retrieveGitaPassages(situation:ScriptureSituation,max=7):ScriptureCandidate[]{
+ const query=[...situation.reported_behaviours,...situation.context,...situation.uncertainties,...situation.plausible_explanations].join(' ');
+ const candidates=retrieveGitaCandidates(query,max);
+ return candidates.map((c,i)=>({...c,
+  thematic_relevance:c.thematic_relevance?.length?c.thematic_relevance:['general reflective passage; relevance must be explained cautiously'],
+  retrieval_basis:`independent-scripture:${c.retrieval_basis||'ranked-source'}${i===0?',top-ranked':''}`
+ }));
+}
+
