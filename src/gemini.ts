@@ -97,10 +97,29 @@ export function sourceDisplay(faith:'gita'|'bible',source:Source){
  return {source_sanskrit:'',source_english:source.english,source_hindi:'',source_text:source.english,source_attribution:'World English Bible (public domain). Hindi is available for AI explanations, not as a verified Bible translation.',source_url:source.source_url,context_before:source.previous||null,context_after:source.next||null};
 }
 const endings=/[.!?।॥”’"']$/u;
-const unsafeAdvice=/\b(?:hit|slap|beat|whip|humiliate|shame|threaten|blackmail|lock(?:ing)? .*in|withhold(?:ing)? food|force(?:d)? .*to confess|publicly expose|spy on|read .*private messages without|punish(?:ment)? by hurting)\b/i;
+const unsafeAdviceEnglish=/\b(?:hit(?:ting)?|slap(?:ping)?|beat(?:ing)?|whip(?:ping)?|humiliate(?:d|ing)?|sham(?:e|ing|ed)|threaten(?:ing)?|blackmail(?:ing)?|lock(?:ing)? .*in|withhold(?:ing)? food|force(?:d|ing)? .*to confess|publicly expose|spy on|read .*private messages without|punish(?:ment)? by hurting)\b/giu;
 const diagnosisClaim=/\b(?:has|is|suffers from|diagnosed with)\s+(?:adhd|autism|depression|anxiety disorder|oppositional defiant|trauma disorder|attachment disorder|bipolar|narciss\w*)\b/i;
-const unsafeAdviceHindi=/मारो|मारना|पीटो|पीटना|थप्पड़|शर्मिंदा|अपमानित|धमकी|खाना रोक|बंद कर(?:ो|ना)/u;
+const unsafeAdviceHindi=/मार(?:ो|ना|ें|ते|ती|ता)?|पीट(?:ो|ना|ें|ते|ती|ता)?|थप्पड़|शर्मिंदा|अपमानित|धमकी|खाना रोक|बंद कर(?:ो|ना|ें)/gu;
 const diagnosisClaimHindi=/(?:एडीएचडी|ऑटिज़्म|अवसाद|डिप्रेशन|चिंता विकार|द्विध्रुवी)/u;
+const englishNegationBefore=/(?:\b(?:do|does|did|should|must|can|will|would)\s+not|\b(?:don't|doesn't|didn't|shouldn't|mustn't|can't|won't|wouldn't)|\bnever|\bavoid|\bwithout|\bnot\s+to|\bno(?:\s+need)?\s+to|\bunsafe\s+to)(?:\s+(?:ever|actually|just))?\s*$/i;
+const englishNegationAfter=/^\s*(?:is|was|would be|can be)?\s*(?:not|never|unsafe|wrong|harmful|unacceptable|inappropriate)\b/i;
+const hindiNegationBefore=/(?:मत|नहीं|न|कभी\s+भी\s+नहीं|कभी\s+मत|गलत|हानिकारक|असुरक्षित)\s*$/u;
+const hindiNegationAfter=/^\s*(?:मत|नहीं|न)(?:\s|$)|^\s*(?:गलत|हानिकारक|असुरक्षित|अनुचित)\s+(?:है|हैं|होता|होती)/u;
+function unsafeMatchIsNegated(text:string,index:number,length:number):boolean{
+ const before=text.slice(Math.max(0,index-90),index).replace(/\s+/g,' ');
+ const after=text.slice(index+length,index+length+70).replace(/\s+/g,' ');
+ const clauseBefore=before.split(/\b(?:but|however|instead)\b|लेकिन|बल्कि/i).pop()||before;
+ const coordinatedNever=/\bnever\b(?:(?!\b(?:but|however|instead)\b|लेकिन|बल्कि)[^.!?;]){0,55}$/iu;
+ return englishNegationBefore.test(clauseBefore)||coordinatedNever.test(clauseBefore)||englishNegationAfter.test(after)||hindiNegationBefore.test(clauseBefore)||hindiNegationAfter.test(after);
+}
+/** Reject an unsafe instruction, while allowing explicit safety guidance such as
+ * “Do not hit your child” / “बच्चे को मत मारें”. A later positive instruction in
+ * the same response is still caught independently. */
+export function containsUnsafeRecommendation(text:string):boolean{
+ for(const m of text.matchAll(unsafeAdviceEnglish))if(!unsafeMatchIsNegated(text,m.index??0,m[0].length))return true;
+ for(const m of text.matchAll(unsafeAdviceHindi))if(!unsafeMatchIsNegated(text,m.index??0,m[0].length))return true;
+ return false;
+}
 function normaliseAction(s:string):string{return s.toLowerCase().replace(/[^a-z\p{Script=Devanagari}0-9 ]/gu,' ').replace(/\s+/g,' ').trim();}
 function repeatedAction(actions:string[],prior:string[]):boolean{
  const priorTerms=prior.map(normaliseAction).filter(Boolean);
@@ -119,7 +138,7 @@ export function validateGuidance(p:any,faith:'gita'|'bible',allowed:Source[],fin
  if(containsUnsupportedCitations(prose,faith,p.reference))throw Error('Answer referenced an unsupported passage');
  if(/(?:god|krishna|lord) (?:personally )?(?:told|commands?|wants?) (?:you|your child|this parent)\b/i.test(prose))throw Error('Answer incorrectly claimed divine authority');
  if(/(?:pause|stop|avoid) (?:all |every )?(?:homework|schoolwork|studying|school) (?:talk|discussion|conversation)s? for (?:several|a few|many) days/i.test(prose))throw Error('Overly sweeping advice about school avoidance');
- if(unsafeAdvice.test(prose)||unsafeAdviceHindi.test(prose))throw Error('Unsafe or coercive recommendation');
+ if(containsUnsafeRecommendation(prose))throw Error('Unsafe or coercive recommendation');
  if(diagnosisClaim.test(prose)||diagnosisClaimHindi.test(prose)||containsDiagnosticClaim(prose))throw Error('Unsupported diagnostic assumption');
  if(typeof p.possible_driver==='string'&&p.possible_driver.trim()&&!/(?:may|might|could|possibly|unclear|not enough|सम्भाव|हो सकता|शायद)/i.test(p.possible_driver))throw Error('Possible driver must remain explicitly uncertain');
  if(repeatedAction(p.actions,priorActions))throw Error('Guidance repeated a previously suggested action');
@@ -142,7 +161,7 @@ ${langInstruction}
 
 The parenting_pattern_catalogue contains editorial COMMON PROBLEM TYPES with possible coaching directions; this is not the model's training data or a clinical authority. Identify the best-fitting pattern INDEPENDENTLY using the current message and child's age, even if the keyword-based parenting_pattern_hints are wrong. Do not force a pattern when none fits. The pattern is NOT scripture. This selection must never override safety handling, scripture meaning, or parent-stated facts. If a child's problem involves multiple issues, focus on the parent's immediate question and optionally ask what matters most.
 
- A deterministic situation-understanding stage is supplied separately. Treat it as a cautious summary of reported data, not a diagnosis. Do not add facts to it, and do not turn plausible explanations into causes. Parenting playbooks and scripture retrieval are independent: a playbook is an editorial coaching hypothesis, never evidence for a verse connection.
+ A deterministic situation-understanding stage is supplied separately and is explicitly ROUTING-HINT-ONLY. Re-check the current wording, negation, ambiguity, age, conversation corrections and safety signals yourself; it is not the final interpretation and it is not a diagnosis. Do not add facts to it, and do not turn plausible explanations into causes. Parenting playbooks and scripture retrieval are independent: a playbook is an editorial coaching hypothesis, never evidence for a verse connection. If a hint conflicts with the current message, prefer the current message and state what remains uncertain.
 
  The response MUST have these DISTINCT sections as JSON keys:
 - parenting_pattern_id: a valid id from parenting_pattern_catalogue, or empty string if none fits. This is NOT a source citation. It is a coaching pattern hypothesis.
@@ -161,7 +180,7 @@ Never invent things the child or parent tried. Earlier assistant suggestions are
 The optional parenting_pattern_hints are evidence-informed editorial suggestions, NOT scripture, diagnoses, proven treatments, or instructions. Ignore them if the current message contradicts them. Do not claim that the external resources endorsed Saanjh. They must NEVER override user information, safety screening, or the original text of a verse. Connect scripture to the problem cautiously; do not make up a direct scriptural command about modern parenting. If a parent has already tried a proposed step without success, generate a meaningfully different option rather than restating it. If user reports a safety crisis, do not give ordinary faith coaching.
 ${isAlternative?'The user clicked ANOTHER APPROACH. They are asking for a genuinely DIFFERENT, still safe set of actions for the SAME concern. They have not necessarily tried the previous plan. Study avoid_actions and earlier plans, do not repeat their approaches or rephrase them. Keep the scripture only if it still fits, or choose a different allowed passage that fits better. Explicitly acknowledge they want a different approach.':'Make the options specific and suitable for the reported child context.'}
  Return ONLY valid JSON, concise and complete. No markdown or additional keys needed.`;
- const data={situation_understanding:situation,parenting_playbook_candidates:playbooks.map(p=>({id:p.id,title:p.title,age_relevance:p.age_relevance,guidance_pattern:p.guidance_pattern,clarifying_question:p.clarifying_question,avoid:p.avoid,retrieval_basis:(p as any).retrieval_basis||'meaning-of-situation'})),parenting_pattern_catalogue:patternCatalogue(),parenting_pattern_hints:parentingHints(ctx.message+' '+ctx.child.concerns,ctx.child.age),faith:ctx.faith,language,parent:ctx.parentName,child:ctx.child,conversation:ctx.previous.slice(-10).map(x=>({role:x.role,text:x.text.slice(0,650)})),family_memory:{source:'Parent-authored messages for the same child and same faith; do not treat as established facts',parent_notes:(ctx.familyMemory?.parentNotes||[]).slice(0,5).map(x=>x.slice(0,400)),previously_suggested_actions:(ctx.familyMemory?.suggestedActions||[]).slice(0,4).map(x=>x.slice(0,300))},prior_actions:(ctx.lastPlan||[]).slice(0,3),response_mode:isAlternative?'alternative':'normal',avoid_actions:isAlternative?(ctx.avoidActions||[]).slice(0,5).map(x=>x.slice(0,350)):[],current_message:ctx.message,allowed_sources:sources.map(s=>({reference:s.reference,title:s.title,english:s.english,hindi:s.hindi||'',sanskrit:s.sanskrit||'',context_before:s.previous||undefined,context_after:s.next||undefined,thematic_relevance:s.thematic_relevance||[],retrieval_basis:s.retrieval_basis||''}))};
+ const data={situation_understanding:situation,parenting_playbook_candidates:playbooks.map(p=>({id:p.id,title:p.title,age_relevance:p.age_relevance,guidance_pattern:p.guidance_pattern,clarifying_question:p.clarifying_question,avoid:p.avoid,retrieval_basis:(p as any).retrieval_basis||'meaning-of-situation',hint_only:true})),parenting_pattern_catalogue:patternCatalogue(),parenting_pattern_hints:parentingHints(ctx.message+' '+ctx.child.concerns,ctx.child.age),faith:ctx.faith,language,parent:ctx.parentName,child:ctx.child,conversation:ctx.previous.slice(-10).map(x=>({role:x.role,text:x.text.slice(0,650)})),family_memory:{source:'Parent-authored messages for the same child and same faith; do not treat as established facts',parent_notes:(ctx.familyMemory?.parentNotes||[]).slice(0,5).map(x=>x.slice(0,400)),previously_suggested_actions:(ctx.familyMemory?.suggestedActions||[]).slice(0,4).map(x=>x.slice(0,300))},prior_actions:(ctx.lastPlan||[]).slice(0,3),response_mode:isAlternative?'alternative':'normal',avoid_actions:isAlternative?(ctx.avoidActions||[]).slice(0,5).map(x=>x.slice(0,350)):[],current_message:ctx.message,allowed_sources:sources.map(s=>({reference:s.reference,title:s.title,english:s.english,hindi:s.hindi||'',sanskrit:s.sanskrit||'',context_before:s.previous||undefined,context_after:s.next||undefined,thematic_relevance:s.thematic_relevance||[],retrieval_basis:s.retrieval_basis||'',hint_only:true}))};
  const ac=new AbortController();const timer=setTimeout(()=>ac.abort(),48000);
  let resp:Response;
  try{resp=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(process.env.GEMINI_MODEL||'gemini-3.5-flash-lite')}:generateContent`,{
