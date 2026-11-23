@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {understandSituation,containsDiagnosticClaim} from '../src/situation-understanding.ts';
 import {retrieveParentingPlaybooks} from '../src/parenting-playbooks.ts';
 import {retrieveGitaPassages} from '../src/retrieval.ts';
-import {validateGuidance} from '../src/gemini.ts';
+import {validateGuidance,containsUnsafeRecommendation} from '../src/gemini.ts';
 
 test('situation stage separates observations, context, attempts and uncertainty across turns',()=>{
  const s=understandSituation({
@@ -63,10 +63,23 @@ test('scripture retrieval is independent and exposes thematic relevance for a pa
 test('guidance validation blocks unsafe advice, diagnosis and repeated actions',()=>{
  const allowed=[{reference:'17.15',retrieval_basis:'independent-scripture:concept:hurtful_communication'}] as any;
  const base:any={reference:'17.15',acknowledgement:'I hear how hard this argument has been for your family.',meaning:'The passage describes speech that is truthful, beneficial and not agitating.',connection:'That teaching may be relevant when you want to reconnect without escalating this specific argument.',parenting_application:'Apply it by slowing the next conversation and keeping one clear boundary.',actions:['Ask what felt hardest about the homework before offering a solution.','Offer two small ways to begin and let the child choose one.'],question:'What happened just before the argument began?',possible_driver:'The child may be feeling pressured, but that is not established.',say_this:'I want to understand what made this feel so hard.',repair_line:'I am sorry I raised my voice.',follow_up_days:2};
+ assert.doesNotThrow(()=>validateGuidance({...base,actions:['Do not hit your child; use a calm boundary instead.','Never shame the child; describe the limit and offer a choice.']},'gita',allowed));
+ assert.doesNotThrow(()=>validateGuidance({...base,actions:['बच्चे को मत मारें; शांत सीमा बताएं और विकल्प दें।','बच्चे को शर्मिंदा न करें; पहले उसकी बात सुनें।']},'gita',allowed));
  assert.throws(()=>validateGuidance({...base,actions:['Hit the child so they learn to listen.','Threaten to take away all contact until they confess.']},'gita',allowed),/Unsafe or coercive/);
  assert.throws(()=>validateGuidance({...base,actions:['बच्चे को मारो ताकि वह तुरंत सुनना सीखे।','उसे धमकी देकर चुप कराओ और बात खत्म करो।']},'gita',allowed),/Unsafe or coercive/);
  assert.throws(()=>validateGuidance({...base,possible_driver:'The child has ADHD.'},'gita',allowed),/diagnostic/);
  assert.throws(()=>validateGuidance({...base,possible_driver:'बच्चे को एडीएचडी है।'},'gita',allowed),/diagnostic/);
  assert.throws(()=>validateGuidance(base,'gita',allowed,undefined,undefined,[base.actions[0],base.actions[1]]),/repeated/);
+});
+
+test('safety validation understands English and Hindi negation without allowing a later unsafe instruction',()=>{
+ assert.equal(containsUnsafeRecommendation('Do not hit your child; use a calm boundary instead.'),false);
+ assert.equal(containsUnsafeRecommendation('Hitting is unsafe and should never be used.'),false);
+ assert.equal(containsUnsafeRecommendation('Never shame a child or threaten them.'),false);
+ assert.equal(containsUnsafeRecommendation('Do not hit your child, but hit once if they refuse.'),true);
+ assert.equal(containsUnsafeRecommendation('बच्चे को मत मारें; शांत सीमा बताएं।'),false);
+ assert.equal(containsUnsafeRecommendation('थप्पड़ न मारें और उसे अपमानित न करें।'),false);
+ assert.equal(containsUnsafeRecommendation('बच्चे को मारो ताकि वह तुरंत सुनना सीखे।'),true);
+ assert.equal(containsUnsafeRecommendation('बच्चे को मत मारें, लेकिन एक थप्पड़ दे सकते हैं।'),true);
 });
 
