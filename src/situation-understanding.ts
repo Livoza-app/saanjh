@@ -25,6 +25,7 @@ export type SituationUnderstanding = {
   evidence: string[];
   language: 'en'|'hi';
   interpretation_status?: 'routing-hint-only';
+  conversation_corrections?: string[];
 };
 
 type Signal = {
@@ -51,6 +52,8 @@ const attemptPattern=/\b(?:i|we|my partner|the teacher)\b[^.!?\n]{0,180}\b(?:tri
 const hindiAttemptPattern=/(?:मैंने|हमने|हम|मैं)[^।!?\n]{0,160}(?:कोशिश|बात|समझाया|रोक|तय|पूछा|सुना)[^।!?\n]{0,180}/u;
 const agePattern=/\b(?:age\s*)?(\d{1,2})\s*(?:year|yr|वर्ष|साल)[- ]?(?:old|का|की|के)?\b/i;
 const diagnosticPattern=/\b(?:adhd|autism|depression|anxiety disorder|oppositional defiant|trauma disorder|attachment disorder|bipolar|narciss\w*)\b|एडीएचडी|ऑटिज़्म|अवसाद|डिप्रेशन|चिंता विकार|द्विध्रुवी/iu;
+const correctionPattern=/\b(?:correction|actually|to correct that|that was wrong|please use (?:this|the) latest|i did not|i didn't|we did not|we didn't)\b/i;
+const hindiCorrectionPattern=/(?:सुधार|वास्तव में|गलत था|गलत थी|तथ्य न मानें|पिछली बात)/u;
 
 function unique(values:string[]):string[]{return [...new Set(values.map(x=>x.trim()).filter(Boolean))];}
 function signalMatches(message:string,signal:Signal):boolean{
@@ -83,6 +86,7 @@ export function understandSituation(input:SituationInput):SituationUnderstanding
  const parentMessages=(input.previous||[]).filter(x=>x.role==='parent').map(x=>String(x.text||'').trim()).filter(Boolean);
  const previous_attempts=unique(parentMessages.flatMap(text=>[...text.matchAll(new RegExp(`${attemptPattern.source}|${hindiAttemptPattern.source}`,'giu'))].map(m=>m[0])));
  for(const match of message.matchAll(new RegExp(`${attemptPattern.source}|${hindiAttemptPattern.source}`,'giu')))previous_attempts.push(match[0].trim());
+  const conversation_corrections=unique([message,...parentMessages].filter(text=>correctionPattern.test(text)||hindiCorrectionPattern.test(text)));
  const uncertainties:string[]=[];
  if(!/\b(?:before|after|when|because|during|since|yesterday|today|last night|immediately)\b/i.test(message)&&!/(?:जब|बाद|पहले|क्योंकि)/u.test(message))uncertainties.push('What happened immediately before the reported behaviour is not yet clear.');
  if(!/\b(?:child said|told me|explained|says|said|बताया|कहा)\b/i.test(message))uncertainties.push('The child’s own view is not yet included.');
@@ -103,7 +107,8 @@ export function understandSituation(input:SituationInput):SituationUnderstanding
   plausible_explanations:unique(plausible_explanations.map(x=>x.replace(/^(?:the child )?may\s+/i,'May '))),
   evidence,
   language:input.language==='hi'?'hi':'en',
-  interpretation_status:'routing-hint-only'
+  interpretation_status:'routing-hint-only',
+  conversation_corrections
  };
 }
 
