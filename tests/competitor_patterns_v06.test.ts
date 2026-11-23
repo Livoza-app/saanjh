@@ -25,6 +25,7 @@ test('demo contains specific child-appropriate words and repair line, distinct f
  assert.ok(b.run('history()[1].repair_line').includes('sorry'));
  assert.match(b.elements.get('chat').innerHTML,/Words you could use today/);
  assert.match(b.elements.get('chat').innerHTML,/If you need to repair/);
+ assert.match(b.elements.get('chat').innerHTML,/How to apply this as a parent/);
  assert.match(b.elements.get('chat').innerHTML,/Original Sanskrit/);
 });
 test('check-in prompts parent to confirm real outcome and does not silently claim they tried advice',async()=>{
@@ -48,3 +49,4 @@ test('Gemini prompt asks for spoken scripts, repair, and non-diagnostic possibil
  (globalThis as any).fetch=async(_u:string,opts:any)=>{const body=JSON.parse(opts.body);sys=body.systemInstruction.parts[0].text;const ref=JSON.parse(body.contents[0].parts[0].text).allowed_sources[0].reference;return {ok:true,json:async()=>({candidates:[{finishReason:'STOP',content:{parts:[{text:JSON.stringify({reference:ref,acknowledgement:'Ketan, this has been difficult for you.',meaning:'This teaching values patience and mindful speech.',connection:'It might help with responding gently during an argument.',actions:['Ask Aryan what he finds most difficult with this situation.','Explore one practical way to provide supportive structure.'],question:'What part feels most challenging to him?',say_this:'Aryan, I would like to hear your side.',repair_line:'I am sorry I shouted at you.',possible_driver:'He may be under pressure.',follow_up_days:2})}]}}]})} as any};
  try{const r=await geminiGuidance({faith:'gita',parentName:'Ketan',child:{name:'Aryan',age:14,concerns:'school'},message:'Angry about homework',previous:[]},'FAKE_KEY');assert.match(sys,/say_this:/);assert.match(sys,/repair_line:/);assert.match(sys,/non-diagnostic/);assert.match(r.say_this,/Aryan/);}finally{globalThis.fetch=before}
 });
+
