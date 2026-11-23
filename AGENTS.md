@@ -2,6 +2,9 @@
 
 You are the implementation agent for Saanjh, a research-stage, faith-grounded parenting-guidance website. Preserve and improve the CURRENT codebase; do not create an unrelated replacement. The owner is non-technical and wants working, tested changes with a simple Windows launch path.
 
+## Mandatory policy
+- Read `SAFETY_AND_GUIDANCE_POLICY.md` before editing the parenting engine, safety routing, privacy layer or live deployment. Treat it as the product's development requirements, not a claim that safeguards are already implemented.
+
 ## First read
 - `START_WITH_CODEX.md` (hand-off and immediate task)
 - `README_V0_8_400_SCENARIOS.md` (latest actual state)
