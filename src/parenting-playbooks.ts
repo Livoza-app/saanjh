@@ -41,6 +41,45 @@ export function matchParentingPatterns(message:string,childAge?:number,max=2):Pl
   }).filter(x=>x.score>=3 && x.age_relevance==='in-range' && x.routing==='normal')
   .sort((a,b)=>b.score-a.score || a.id.localeCompare(b.id)).slice(0,Math.max(0,Math.min(3,max)));
 }
+
+/**
+ * Meaning-first playbook retrieval. The raw parent message is deliberately not
+ * the only query: situation observations, context and uncertainty are mapped
+ * to the editorial playbook descriptions. This reduces brittle exact-keyword
+ * matches (for example, a cracked screen is not automatically screen-time
+ * conflict) while retaining the existing lexical matcher for compatibility.
+ */
+export type SituationForPlaybooks={
+ child_age:number;
+ reported_behaviours:string[];
+ context:string[];
+ uncertainties:string[];
+ plausible_explanations:string[];
+};
+export function retrieveParentingPlaybooks(situation:SituationForPlaybooks,max=3):PlaybookMatch[]{
+ const meaningTerms=tokenize([
+  ...situation.reported_behaviours,
+  ...situation.context,
+  ...situation.plausible_explanations
+ ].join(' '));
+ if(!meaningTerms.length)return [];
+ const query=new Set(meaningTerms);
+ const scored=PARENTING_PLAYBOOKS.map((p,i)=>{
+  const signalTerms=new Set(tokenize([...p.signals,p.title,p.guidance_pattern,p.retrieval_examples.join(' ')].join(' ')));
+  const exampleTerms=new Set(tokenize(p.retrieval_examples.join(' ')));
+  let score=0;
+  for(const term of query){
+   if(signalTerms.has(term))score+=1.6*idf(term);
+   if(exampleTerms.has(term))score+=0.65*idf(term);
+  }
+  const ageRelevant=situation.child_age>=p.age_min&&situation.child_age<=p.age_max;
+  if(!ageRelevant)score*=0.15;
+  if(p.routing==='urgent')score=0;
+  return {id:p.id,title:p.title,score:Number(score.toFixed(3)),source_links:p.source_links,guidance_pattern:p.guidance_pattern,clarifying_question:p.clarifying_question,avoid:p.avoid,routing:p.routing,age_relevance:ageRelevant?'in-range' as const:'out-of-range' as const};
+ }).filter(x=>x.score>=1.25&&x.age_relevance==='in-range'&&x.routing==='normal')
+  .sort((a,b)=>b.score-a.score||a.id.localeCompare(b.id)).slice(0,Math.max(0,Math.min(max,3)));
+ return scored.map(x=>({...x,retrieval_basis:'meaning-of-situation'} as PlaybookMatch & {retrieval_basis:string}));
+}
 export function parentingHints(message:string,childAge:number){
  return matchParentingPatterns(message,childAge,2).map(x=>({
   pattern_id:x.id,pattern_name:x.title,coaching_hypothesis:x.guidance_pattern,
@@ -62,3 +101,4 @@ export function patternCatalogue(){
  }));
 }
 export function validPatternId(x:string){return x===''||PARENTING_PLAYBOOKS.some(p=>p.id===x&&p.routing==='normal')}
+
