@@ -363,13 +363,15 @@ function sourceSection(m){
  </details>`;
 }
 function guidanceSection(m,i){
- const safety=m.mode==='safety',meaning=m.meaning||m.explanation||'',connection=m.connection||'';
+ const safety=m.mode==='safety',meaning=m.meaning||m.explanation||'',connection=m.connection||'',application=m.parenting_application||'';
  const language=m.language||'en';
  const meaningLabel=language==='hi'?'इस श्लोक का अर्थ':'What the passage means';
  const connectionLabel=language==='hi'?'यह आपकी स्थिति से कैसे जुड़ता है':'Why it may relate to your situation';
+ const applicationLabel=language==='hi'?'इसे पालन-पोषण में कैसे अपनाएँ':'How to apply this as a parent';
  const actionsLabel=language==='hi'?'आप क्या कोशिश कर सकते हैं':'Possible next steps';
  const meaningBlock=safety?'':`<section class="guidance-section deep"><h3 class="guidance-heading">${meaningLabel}</h3><p>${escape(meaning)}</p></section>`;
  const connectBlock=safety?`<section class="guidance-section"><p>${escape(m.connection||m.explanation||'')}</p></section>`:connection?`<section class="guidance-section deep"><h3 class="guidance-heading">${connectionLabel}</h3><p>${escape(connection)}</p></section>`:`<p class="application-note">Earlier response: the application to your circumstances was not separately recorded.</p>`;
+ const applicationBlock=safety||!application?'':`<section class="guidance-section deep"><h3 class="guidance-heading">${applicationLabel}</h3><p>${escape(application)}</p></section>`;
  const actionsBlock=`<section class="guidance-section"><h3 class="guidance-heading">${actionsLabel}</h3><ol>${(m.actions||[]).map(a=>`<li>${escape(a)}</li>`).join('')}</ol>${safety?'':`<div class="application-note">${m.mode==='sample'?'Illustrative sample suggestions':'AI-generated suggestions'}</div>`}</section>`;
  const likely=safety||!m.possible_driver?'':`<div class="possible-driver"><b>${language==='hi'?'क्या हो सकता है':'What may be happening'}:</b> ${escape(m.possible_driver)}</div>`;
  const spoken=safety||!m.say_this?'':`<section class="spoken-card"><div class="spoken-head">${language==='hi'?'आज आप यह कह सकते हैं':'Words you could use today'}</div><blockquote>“${escape(m.say_this)}”</blockquote><button type="button" data-copy-script="${i}">Copy these words</button></section>`;
@@ -383,7 +385,7 @@ function guidanceSection(m,i){
   <button type="button" data-feedback="nothelpful" data-index="${i}" ${busy||usage()>=20?'disabled':''}>Another approach</button>
   <button type="button" data-feedback="tried" data-index="${i}" ${busy||usage()>=20?'disabled':''}>${checkedIn?'Update check-in':'Check in'}</button>
  </div>`;
- return `${meaningBlock}${connectBlock}${likely}${actionsBlock}${spoken}${repair}${followUp}${controls}`;
+ return `${meaningBlock}${connectBlock}${applicationBlock}${likely}${actionsBlock}${spoken}${repair}${followUp}${controls}`;
 }
 const outcomeLabels={
  helped:'It helped',partly:'It helped a little',didnt:'It did not help',notyet:'I have not tried it yet'
@@ -547,7 +549,7 @@ function sampleReply(txt,alternate=false,priorActions=[]){const ch=child();const
  }
  const exact=st.faith==='gita'?SAMPLE_GITA_TEXTS[chosen.reference]:null;
  const words=st.faith==='gita'?'The verse offers a principle about thoughtful effort, steadiness, or considerate communication.':'This Biblical passage offers a principle for reflection; its historical context remains important.';
- return {mode:'sample',response_mode:alternate?'alternative':'normal',language:st.language,acknowledgement:alternate?`${st.parent}, here is a different possibility for ${ch.name}.`:`${st.parent}, this sounds difficult with ${ch.name}, especially at age ${ch.age}.`,reference:chosen.reference,title:chosen.title,source_sanskrit:exact?.sanskrit||'',source_english:exact?.english||chosen.text||'',source_hindi:exact?.hindi||'',source_text:exact?.english||chosen.text||'',source_attribution:exact?'Gita translation © Hansi Gita Bhawan Trust. Used with attribution for research.':'World English Bible (public domain).',source_url:exact?.url||chosen.source_url,meaning:words,connection:`A possible application to your concern is to support ${ch.name} without treating every outcome as a test. This connection is an illustration, not a direct scriptural command.`,actions,possible_driver:`${ch.name} may be reacting to feeling pressured or misunderstood, but we do not know yet.`,say_this:alternate?`Could we work out together what feels hardest, ${ch.name}, and choose one way I can support you?`:`${ch.name}, I want to understand what's been difficult for you. Can we talk without worrying about grades right now?`,repair_line:`I'm sorry I raised my voice earlier. I'd like us to try again calmly, and we can still work out a plan together.`,question:`${st.parent}, what response do you expect ${ch.name} would have to this approach?`};}
+ return {mode:'sample',response_mode:alternate?'alternative':'normal',language:st.language,acknowledgement:alternate?`${st.parent}, here is a different possibility for ${ch.name}.`:`${st.parent}, this sounds difficult with ${ch.name}, especially at age ${ch.age}.`,reference:chosen.reference,title:chosen.title,source_sanskrit:exact?.sanskrit||'',source_english:exact?.english||chosen.text||'',source_hindi:exact?.hindi||'',source_text:exact?.english||chosen.text||'',source_attribution:exact?'Gita translation © Hansi Gita Bhawan Trust. Used with attribution for research.':'World English Bible (public domain).',source_url:exact?.url||chosen.source_url,meaning:words,connection:`A possible application to your concern is to support ${ch.name} without treating every outcome as a test. This connection is an illustration, not a direct scriptural command.`,parenting_application:`As a parent, you could use this idea to support ${ch.name}'s effort while keeping expectations clear and avoiding shame.`,actions,possible_driver:`${ch.name} may be reacting to feeling pressured or misunderstood, but we do not know yet.`,say_this:alternate?`Could we work out together what feels hardest, ${ch.name}, and choose one way I can support you?`:`${ch.name}, I want to understand what's been difficult for you. Can we talk without worrying about grades right now?`,repair_line:`I'm sorry I raised my voice earlier. I'd like us to try again calmly, and we can still work out a plan together.`,question:`${st.parent}, what response do you expect ${ch.name} would have to this approach?`};}
 function safety(txt){return /suicid|self[- ]?harm|kill (myself|himself|herself|themselves)|hurt (myself|himself|herself|themselves)|sexual abuse|rape|molest|domestic violence|immediate danger/i.test(txt)}
 async function send(request={}){
  const c=child();
@@ -745,3 +747,4 @@ document.addEventListener('keydown',event=>{
 render();
 checkHealth();
 </script></body></html>
+
