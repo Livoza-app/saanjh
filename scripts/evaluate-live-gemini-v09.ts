@@ -16,8 +16,9 @@ if(!key){
  process.exitCode=2;
 }else{
  const selected=cases.filter(x=>['V09-EN-AMB-01','V09-HI-AMB-01','V09-EN-CORRECTION-01','V09-HI-CORRECTION-01','V09-EN-ALTERNATIVE-01','V09-HI-ALTERNATIVE-01','V09-EN-SCRIPTURE-01','V09-HI-SCRIPTURE-01'].includes(x.id));
- const inputRate=Number(process.env.GEMINI_INPUT_USD_PER_MILLION||'');
- const outputRate=Number(process.env.GEMINI_OUTPUT_USD_PER_MILLION||'');
+ const parseRate=(value:string|undefined)=>value&&value.trim()?Number(value):null;
+ const inputRate=parseRate(process.env.GEMINI_INPUT_USD_PER_MILLION);
+ const outputRate=parseRate(process.env.GEMINI_OUTPUT_USD_PER_MILLION);
  const results:any[]=[];
  for(const item of selected){
   const started=Date.now();
@@ -26,7 +27,7 @@ if(!key){
    const reply:any=await geminiGuidance(ctx,key);
    const usage=reply.usage||{};
    const inputTokens=Number(usage.promptTokenCount||0),outputTokens=Number(usage.candidatesTokenCount||0);
-   const estimatedCost=Number.isFinite(inputRate)&&Number.isFinite(outputRate)&&inputRate>=0&&outputRate>=0
+   const estimatedCost=Number.isFinite(inputRate)&&Number.isFinite(outputRate)&&inputRate!>=0&&outputRate!>=0
     ? (inputTokens*inputRate+outputTokens*outputRate)/1_000_000
     : null;
    const prose=[reply.acknowledgement,reply.meaning,reply.connection,reply.parenting_application,reply.possible_driver,reply.say_this,reply.repair_line,...(reply.actions||[])].filter(Boolean).join(' ');
