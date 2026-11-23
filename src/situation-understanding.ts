@@ -24,6 +24,7 @@ export type SituationUnderstanding = {
   plausible_explanations: string[];
   evidence: string[];
   language: 'en'|'hi';
+  interpretation_status?: 'routing-hint-only';
 };
 
 type Signal = {
@@ -52,6 +53,14 @@ const agePattern=/\b(?:age\s*)?(\d{1,2})\s*(?:year|yr|वर्ष|साल)[- 
 const diagnosticPattern=/\b(?:adhd|autism|depression|anxiety disorder|oppositional defiant|trauma disorder|attachment disorder|bipolar|narciss\w*)\b|एडीएचडी|ऑटिज़्म|अवसाद|डिप्रेशन|चिंता विकार|द्विध्रुवी/iu;
 
 function unique(values:string[]):string[]{return [...new Set(values.map(x=>x.trim()).filter(Boolean))];}
+function signalMatches(message:string,signal:Signal):boolean{
+ if(signal.behaviour==='screen use, gaming or difficulty changing activities'){
+  const positive=/\b(?:phone|smartphone|tablet|gaming|video game|scroll\w*|screen[ -]?(?:time|use|limit)|late.night|sleep|tired|exhaust\w*)\b/i.test(message)||/मोबाइल|स्क्रीन|गेम|नींद|थका|थकी/u.test(message);
+  const negated=/(?:\b(?:not|no|without|never)\b[^.!?]{0,35}\b(?:phone|smartphone|tablet|screen|gaming|game)\b|\b(?:phone|smartphone|tablet|screen|gaming|game)\b[^.!?]{0,35}\b(?:not|isn't|aren't|don't|do not)\b|(?:नहीं|न|बिना|मत)[^।!?]{0,25}(?:फोन|मोबाइल|स्क्रीन|गेम)|(?:फोन|मोबाइल|स्क्रीन|गेम)[^।!?]{0,25}(?:नहीं|न))/iu.test(message);
+  return positive&&!negated;
+ }
+ return signal.patterns.some(p=>p.test(message));
+}
 function ageFromText(message:string,fallback:number):number{
  const n=Number(message.match(agePattern)?.[1]);
  return Number.isInteger(n)&&n>=1&&n<=17?n:fallback;
@@ -66,7 +75,7 @@ export function understandSituation(input:SituationInput):SituationUnderstanding
  const message=String(input.message||'').trim();
  const concerns=String(input.child.concerns||'').trim();
  const combined=`${message} ${concerns}`.trim();
- const matched=SIGNALS.filter(s=>s.patterns.some(p=>p.test(combined)));
+ const matched=SIGNALS.filter(s=>signalMatches(combined,s));
  const reported_behaviours=unique(matched.map(s=>s.behaviour));
  const context=unique(matched.map(s=>s.context));
  const plausible_explanations=unique(matched.flatMap(s=>s.explanations));
@@ -93,7 +102,8 @@ export function understandSituation(input:SituationInput):SituationUnderstanding
   previous_attempts:unique(previous_attempts),
   plausible_explanations:unique(plausible_explanations.map(x=>x.replace(/^(?:the child )?may\s+/i,'May '))),
   evidence,
-  language:input.language==='hi'?'hi':'en'
+  language:input.language==='hi'?'hi':'en',
+  interpretation_status:'routing-hint-only'
  };
 }
 
