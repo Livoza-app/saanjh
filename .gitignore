@@ -11,6 +11,7 @@ cloud-config.json
 .openai/
 dist/
 outputs/
+.local-reports/
 
 # Local package-manager and editor files
 .DS_Store
