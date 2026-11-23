@@ -40,3 +40,11 @@ test('contrasting screen wording routes by circumstance rather than the shared w
  assert.equal(deviceS.reported_behaviours.some(x=>/screen use|gaming/i.test(x)),true);
 });
 
+test('conversation-correction cases are explicitly marked for latest-message priority',()=>{
+ for(const item of cases.filter(x=>x.category==='conversation-correction')){
+  const s=understandSituation({message:item.message,child:item.child,previous:item.previous,language:item.language});
+  assert.ok((s.conversation_corrections||[]).length>=1,item.id);
+  assert.ok((s.conversation_corrections||[]).some(x=>x===item.message),item.id);
+ }
+});
+
